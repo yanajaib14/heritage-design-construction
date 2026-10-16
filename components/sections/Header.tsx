@@ -1,26 +1,57 @@
-import type React from "react";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { NAV } from "@/lib/site";
+
+function isCurrent(path: string, href: string) {
+  return href === "/" ? path === "/" : path === href || path.startsWith(href + "/");
+}
 
 export default function Header() {
+  const path = usePathname();
   return (
-    <>
-<header className="site" id="hdr">
-  <div className="wrap nav">
-    <a className="logo" href="#top" aria-label="Heritage Design and Construction home"><img src="/brand/heritage-logo.webp" alt="Heritage Design & Construction" /></a>
-    <ul className="menu" id="menu">
-      <li><a className="current" href="#top">Home</a></li>
-      <li><button type="button" aria-expanded="false" aria-controls="d-about">About <i className="caret"></i></button>
-        <ul className="drop" id="d-about" hidden><li><a href="#why">About Us</a></li><li><a href="#showroom">Showroom</a></li><li><a href="#areas">Service Areas</a></li></ul></li>
-      <li><button type="button" aria-expanded="false" aria-controls="d-services">Services <i className="caret"></i></button>
-        <ul className="drop" id="d-services" hidden><li><a href="#services">Remodeling</a></li><li><a href="#services">Construction</a></li><li><a href="#services">Design</a></li></ul></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><button type="button" aria-expanded="false" aria-controls="d-res">Resources <i className="caret"></i></button>
-        <ul className="drop" id="d-res" hidden><li><a href="#resources">FAQs</a></li><li><a href="#resources">Financing</a></li><li><a href="#journal">Advice / Blog</a></li></ul></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a className="btn btn-chrome nav-cta" href="#contact">Book a Consultation</a>
-    <button className="burger" id="burger" aria-label="Open menu" aria-controls="sheet" aria-expanded="false"><span></span><span></span></button>
-  </div>
-</header>
-    </>
+    <header className="site" id="hdr">
+      <div className="wrap nav">
+        <Link className="logo" href="/" aria-label="Heritage Design and Construction home">
+          <img src="/brand/heritage-logo.webp" alt="Heritage Design & Construction" />
+        </Link>
+        <ul className="menu" id="menu">
+          {NAV.map((item) => {
+            const current = item.children
+              ? item.children.some((c) => isCurrent(path, c.href))
+              : isCurrent(path, item.href);
+            if (!item.children)
+              return (
+                <li key={item.label}>
+                  <Link className={current ? "current" : undefined} href={item.href} aria-current={current ? "page" : undefined}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            const id = "d-" + item.label.toLowerCase();
+            return (
+              <li key={item.label}>
+                <button type="button" className={current ? "current" : undefined} aria-expanded="false" aria-controls={id}>
+                  {item.label} <i className="caret"></i>
+                </button>
+                <ul className="drop" id={id} hidden>
+                  {item.children.map((c) => (
+                    <li key={c.href}>
+                      <Link href={c.href}>{c.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+        <Link className="btn btn-chrome nav-cta" href="/contact">Book a Consultation</Link>
+        <button className="burger" id="burger" aria-label="Open menu" aria-controls="sheet" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
   );
 }

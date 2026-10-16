@@ -1,6 +1,6 @@
 import type React from "react";
 
-export default function Why() {
+export default function Why({ showAboutLink = true }: { showAboutLink?: boolean }) {
   return (
     <>
 <section className="band bg-off on-light why-band" id="why">
@@ -8,7 +8,7 @@ export default function Why() {
   <div className="wrap">
     <div className="sec-head">
       <div className="left"><div className="eyebrow">Why Heritage</div><h2 className="h2">Not just a contractor. <em>A design-build house.</em></h2></div>
-      <div style={{justifySelf: 'end'} as React.CSSProperties}><a className="btn" href="#showroom">About Us →</a></div>
+      {showAboutLink && <div style={{justifySelf: 'end'} as React.CSSProperties}><a className="btn" href="/about">About Us →</a></div>}
     </div>
     <div className="why">
       <div className="wc" data-rv style={{'--d': '0.00s'} as React.CSSProperties}><span className="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21l3.5-1 11-11-2.5-2.5-11 11L3 21z" /><path d="M14 6l2.5 2.5" /><path d="M13 21h8" /></svg></span><h3>Design + build, together</h3><p>Designers and builders on one team, so the plan you approve is the project you get.</p></div>

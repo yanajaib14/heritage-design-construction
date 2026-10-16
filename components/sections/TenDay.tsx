@@ -10,7 +10,7 @@ export default function TenDay() {
       <h2 className="h2">Same layout. New kitchen. <em>In 10 business days.</em></h2>
       <p>For kitchens that keep their footprint: every cabinet, counter and finish is designed, selected and staged before day one, then a dedicated crew installs on a fixed 10-day schedule.</p>
       <div className="figs" id="figs"><div style={{'--d': '0s'} as React.CSSProperties}><strong className="chrome-text" data-to="10">10</strong><small>Business days</small></div><div style={{'--d': '.15s'} as React.CSSProperties}><strong className="chrome-text" data-to="45000" data-pre="$">$45,000</strong><small>Starting from</small></div><div style={{'--d': '.3s'} as React.CSSProperties}><strong className="chrome-text" data-to="5">5</strong><small>Year warranty</small></div></div>
-      <div className="btns"><a className="btn btn-chrome" href="#contact">See if your kitchen qualifies →</a><a className="btn" href="#kitchens">Compare with custom</a></div>
+      <div className="btns"><a className="btn btn-chrome" href="/contact">See if your kitchen qualifies →</a><a className="btn" href="/services/remodeling-services#kitchens">Compare with custom</a></div>
     </div>
     <div className="tl" id="tl">
       <div className="tl-now" aria-live="polite">

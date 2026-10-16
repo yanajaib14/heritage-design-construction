@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="eyebrow cta-eye">Complimentary consultation</div>
         <h2>Let’s build <em className="chrome-text">something exceptional.</em></h2>
         <p>Book a complimentary consultation, in your home or at our Lacey showroom.</p>
-        <div className="btns"><a className="btn btn-chrome btn-xl" href="#contact">Book a Consultation →</a><a className="btn btn-xl" href="tel:+13605573444">Call (360) 557-3444</a></div>
+        <div className="btns"><a className="btn btn-chrome btn-xl" href="/contact">Book a Consultation →</a><a className="btn btn-xl" href="tel:+13605573444">Call (360) 557-3444</a></div>
       </div>
     </div>
     <div className="visit">

@@ -1,12 +1,18 @@
 "use client";
 
 import { useEffect } from "react";
-import { initSite } from "@/lib/site-effects";
+import { usePathname } from "next/navigation";
+import { initChrome, initPage } from "@/lib/site-effects";
 
-// Wires up the scroll story, reveals, count-ups, map, slider and menu once the page is in the browser.
+// Header and menu are wired once; page interactions (scroll story, reveals, count-ups, map, slider...) re-run on every page.
 export default function SiteEffects() {
+  const path = usePathname();
   useEffect(() => {
-    initSite();
+    initChrome();
   }, []);
+  useEffect(() => {
+    const cleanup = initPage();
+    return cleanup;
+  }, [path]);
   return null;
 }

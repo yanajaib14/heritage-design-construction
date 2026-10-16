@@ -16,8 +16,14 @@ Next.js (App Router) + TypeScript + Tailwind CSS. The homepage is a faithful por
 | Path | What it is |
 | --- | --- |
 | `app/page.tsx` | Homepage: lists the sections in order |
+| `app/about`, `app/services`, `app/portfolio`, `app/resources`, `app/contact` | The main menu pages, one `page.tsx` per URL |
+| `app/layout.tsx` | Header, phone menu and footer shared by every page, plus business schema for search engines |
+| `lib/site.ts` | Phone, address, hours, service-area cities and the menu, all in one place |
+| `components/ui/` | Page hero with breadcrumbs, icons, structured data |
+| `components/ContactForm.tsx` | Consultation form (not connected to a form tool yet) |
 | `components/sections/*.tsx` | One file per homepage section (Hero, Services, TenDay, FastBath, ServiceAreas map, Contact, Footer...) |
 | `app/site.css` | Brand styles: colors, type, layouts, animations |
+| `app/pages.css` | Styles for the inner pages |
 | `app/globals.css` | Tailwind utilities and brand color tokens (`bg-charcoal`, `text-limestone`, `font-display`...) |
 | `lib/site-effects.js` | Scroll story hero, reveals, count-ups, timeline, before/after slider, estimator, map zoom and drag, menu |
 | `public/images/` | Project photos and partner logos (from the Heritage Design Center repo) |

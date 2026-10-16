@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="eyebrow lead">Design · Supply · Build · Based in Lacey, WA</div>
         <h1><span className="one">One company. Start to finish.</span>Exceptional spaces, <em>built to last.</em></h1>
         <p className="lede">We design your project, supply every material from our own Lacey showroom, and build it with our own team. Kitchens, bathrooms, whole homes and commercial spaces across the South Sound, all under one roof.</p>
-        <div className="btns"><a className="btn btn-chrome" href="#contact">Book a Consultation →</a><a className="btn" href="#contact">Call (360) 557-3444</a></div>
+        <div className="btns"><a className="btn btn-chrome" href="/contact">Book a Consultation →</a><a className="btn" href="tel:+13605573444">Call (360) 557-3444</a></div>
       </div>
       <div className="pillars"><div className="cap">Your one-stop shop</div>
         <ol style={{listStyle: 'none', margin: '0', padding: '0'} as React.CSSProperties} aria-label="Our one-stop process">

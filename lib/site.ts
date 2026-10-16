@@ -1,0 +1,54 @@
+// Business facts and navigation shared by every page. Only facts the owner has confirmed go here.
+export const SITE = {
+  name: "Heritage Design & Construction",
+  url: "https://[domain-to-confirm]",
+  phone: "(360) 557-3444",
+  tel: "tel:+13605573444",
+  showroomPhone: "(360) 557-3441",
+  street: "8695 Martin Way E #101",
+  city: "Lacey",
+  region: "WA",
+  zip: "98516",
+  hours: "Mon–Fri 9:00–5:30 · Saturday by appointment",
+  directions: "https://www.google.com/maps/dir/?api=1&destination=8695+Martin+Way+E+%23101+Lacey+WA+98516",
+};
+
+export const CITIES = [
+  "Olympia", "Lacey", "Tumwater", "Tacoma", "Puyallup", "Lakewood", "University Place", "Gig Harbor", "Federal Way", "Auburn",
+  "Bonney Lake", "Spanaway", "Steilacoom", "Centralia", "Chehalis", "DuPont", "Graham", "Yelm", "Shelton", "Fife",
+];
+
+export type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
+
+export const NAV: NavItem[] = [
+  { label: "Home", href: "/" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "Showroom", href: "/about/showroom" },
+      { label: "Service Areas", href: "/about/service-areas" },
+    ],
+  },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "Remodeling", href: "/services/remodeling-services" },
+      { label: "Construction", href: "/services/construction-services" },
+      { label: "Design", href: "/services/design-services" },
+    ],
+  },
+  { label: "Portfolio", href: "/portfolio" },
+  {
+    label: "Resources",
+    href: "/resources/faqs",
+    children: [
+      { label: "FAQs", href: "/resources/faqs" },
+      { label: "Financing", href: "/resources/financing" },
+      { label: "Advice / Blog", href: "/resources/advice-blog" },
+    ],
+  },
+  { label: "Contact", href: "/contact" },
+];
