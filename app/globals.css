@@ -1,26 +1,14 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Tailwind utilities without its base reset, so the brand styles in site.css render exactly like the approved draft. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-charcoal: #0f1010;
+  --color-graphite: #232425;
+  --color-taupe: #6b6e72;
+  --color-limestone: #c9c6bf;
+  --color-offwhite: #f2f0ec;
+  --color-paper: #f9f8f5;
+  --font-display: var(--font-bodoni);
+  --font-sans: var(--font-manrope);
 }

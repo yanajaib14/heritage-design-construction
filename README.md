@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heritage Design & Construction website
 
-## Getting Started
+Next.js (App Router) + TypeScript + Tailwind CSS. The homepage is a faithful port of the approved homepage draft.
 
-First, run the development server:
+## Run it on your PC (Windows)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install Node.js 20 or newer (LTS) from nodejs.org.
+2. Unzip this folder, open it in VS Code, and open a terminal there.
+3. `npm install`
+4. `npm run dev`, then open http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run build` makes the production build Vercel will run.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What it is |
+| --- | --- |
+| `app/page.tsx` | Homepage: lists the sections in order |
+| `components/sections/*.tsx` | One file per homepage section (Hero, Services, TenDay, FastBath, ServiceAreas map, Contact, Footer...) |
+| `app/site.css` | Brand styles: colors, type, layouts, animations |
+| `app/globals.css` | Tailwind utilities and brand color tokens (`bg-charcoal`, `text-limestone`, `font-display`...) |
+| `lib/site-effects.js` | Scroll story hero, reveals, count-ups, timeline, before/after slider, estimator, map zoom and drag, menu |
+| `public/images/` | Project photos and partner logos (from the Heritage Design Center repo) |
+| `public/brand/` | Heritage logo and mark |
 
-## Learn More
+## Still to fill in
 
-To learn more about Next.js, take a look at the following resources:
+Anything in `[square brackets]` on the page is a placeholder waiting on a real value: license number, Fast Bath and refacing prices, reviews, and photos for commercial and whole-home work.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push this folder to a GitHub repository, then in Vercel choose Add New → Project, import the repo, and keep the default Next.js settings.
