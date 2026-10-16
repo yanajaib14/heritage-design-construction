@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Manrope } from "next/font/google";
+import { Source_Serif_4, Manrope } from "next/font/google";
 import "./globals.css";
 import "./site.css";
 import "./pages.css";
@@ -12,8 +12,8 @@ import SiteEffects from "@/components/SiteEffects";
 import JsonLd from "@/components/ui/JsonLd";
 import { CITIES, SITE } from "@/lib/site";
 
-const bodoni = Bodoni_Moda({
-  variable: "--font-bodoni",
+const serif = Source_Serif_4({
+  variable: "--font-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodoni.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${serif.variable} ${manrope.variable}`}>
       <body>
         <Header />
         <MenuSheet />
