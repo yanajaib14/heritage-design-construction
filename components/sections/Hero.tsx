@@ -5,12 +5,13 @@ export default function Hero() {
     <>
 <section className="hero" id="hero">
   <div className="hero-sticky">
+  <div className="hero-lines" aria-hidden="true"><i></i><i></i><i></i></div>
   <div className="hero-photo" aria-hidden="true" style={{backgroundImage: 'url(/images/hero-showroom.webp)'} as React.CSSProperties}></div>
   <div className="wrap hero-content">
     <div className="hero-grid">
       <div className="hero-inner">
         <div className="eyebrow lead">Design · Supply · Build · Based in Lacey, WA</div>
-        <h1><span className="one">One company. Start to finish.</span>Exceptional spaces, <em>built to last.</em></h1>
+        <h1 aria-label="One company. Start to finish. Exceptional spaces, built to last."><span className="one" aria-hidden="true">One company. Start to finish.</span><span aria-hidden="true"><span className="w"><span style={{'--i': '0'} as React.CSSProperties}>Exceptional</span></span> <span className="w"><span style={{'--i': '1'} as React.CSSProperties}>spaces,</span></span> <em><span className="w"><span style={{'--i': '2'} as React.CSSProperties}>built</span></span> <span className="w"><span style={{'--i': '3'} as React.CSSProperties}>to</span></span> <span className="w"><span style={{'--i': '4'} as React.CSSProperties}>last.</span></span></em></span></h1>
         <p className="lede">We design your project, supply every material from our own Lacey showroom, and build it with our own team. Kitchens, bathrooms, whole homes and commercial spaces across the South Sound, all under one roof.</p>
         <div className="btns"><a className="btn btn-chrome" href="/contact">Book a Consultation →</a><a className="btn" href="tel:+13605573444">Call (360) 557-3444</a></div>
       </div>
