@@ -1,0 +1,51 @@
+/* Site-wide motion: gentle, short and quiet. Everything is visible without it,
+   and the reduced-motion rule in site.css switches all of it off. */
+:root{--ease:cubic-bezier(.2,.8,.2,1)}
+
+/* page-to-page: a soft fade and lift as the new page arrives */
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.page-in{animation:pageIn .6s var(--ease) both}
+
+/* inner-page hero: breadcrumbs, title, text and buttons rise in turn; the photo settles */
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.07)}to{transform:scale(1)}}
+.phero .wrap>*{animation:riseIn .9s var(--ease) both}
+.phero .wrap>:nth-child(1){animation-delay:.1s}
+.phero .wrap>:nth-child(2){animation-delay:.18s}
+.phero .wrap>:nth-child(3){animation-delay:.26s}
+.phero .wrap>:nth-child(4){animation-delay:.36s}
+.phero .wrap>:nth-child(5){animation-delay:.46s}
+.phero .bgimg{animation:settle 2.6s cubic-bezier(.25,.6,.3,1) both}
+.phero::after{transform-origin:left;animation:drawLine 1.4s .3s var(--ease) both}
+@keyframes drawLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* scroll reveals added automatically to section heads, cards, steps, photos (see initPage) */
+.sphoto[data-rv].rv-arm,.ph[data-rv].rv-arm{transform:scale(.985)}
+.sphoto[data-rv].rv-go,.ph[data-rv].rv-go{transition:opacity 1.1s var(--d,0s),transform 1.4s var(--ease) var(--d,0s)}
+.steps li[data-rv].rv-go .n{animation:riseIn .8s var(--ease) both;animation-delay:calc(var(--d,0s) + .15s)}
+
+/* small hover details */
+.btn{transition:background .3s,color .3s,filter .3s,border-color .3s,transform .3s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.link{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:3px;transition:background-size .4s var(--ease)}
+.link:hover,a:hover>.link{background-size:100% 1px;text-decoration:none}
+.menu>li>a,.menu>li>button{transition:color .25s}
+.drop{animation:riseIn .3s var(--ease) both}
+.crumbs a{transition:color .25s}
+.split .sphoto{transition:filter .6s}
+.split:hover .sphoto{filter:brightness(1.04)}
+.info a{transition:color .25s}
+
+/* FAQ answers ease open */
+.faq details[open] .ans{animation:riseIn .45s var(--ease) both}
+.faq summary{transition:color .25s}
+.faq summary:hover{color:var(--taupe)}
+
+/* form fields */
+.form input,.form select,.form textarea{transition:border-color .25s,box-shadow .25s}
+.form input:hover,.form select:hover,.form textarea:hover{border-color:#a9a6a0}
+.form-done{animation:riseIn .6s var(--ease) both}
+
+@media (prefers-reduced-motion:reduce){
+  .page-in,.phero .wrap>*,.phero .bgimg,.phero::after,.drop,.faq details[open] .ans,.form-done{animation:none!important}
+}

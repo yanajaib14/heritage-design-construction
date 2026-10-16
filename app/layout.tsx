@@ -3,6 +3,7 @@ import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
 import "./site.css";
 import "./pages.css";
+import "./motion.css";
 import Header from "@/components/sections/Header";
 import MenuSheet from "@/components/sections/MenuSheet";
 import Footer from "@/components/sections/Footer";
