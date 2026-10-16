@@ -52,7 +52,7 @@ export default function RemodelingPage() {
             <li>Consistent finishes chosen in our showroom</li>
             <li>One project manager from design to walkthrough</li>
           </ul>
-          <div className="btns"><Link className="btn btn-ink" href="/contact">Plan a whole-home remodel →</Link></div>
+          <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/whole-home-remodeling">Whole-home remodeling →</Link></div>
         </div>
         <div className="ph">Photo · whole-home project</div>
       </section>
@@ -69,7 +69,7 @@ export default function RemodelingPage() {
             <p>If your cabinet boxes are solid and the layout works, refacing gives your kitchen a new face: <strong>new doors, drawer fronts and finishes</strong> on your existing cabinets.</p>
             <p>You choose door styles, colors and hardware in our showroom, and our team handles the rest.</p>
             <p>Pricing: <span className="tbd">[Refacing pricing to confirm]</span></p>
-            <div className="btns"><Link className="btn btn-ink" href="/contact">Ask about refacing →</Link></div>
+            <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/kitchen-remodeling/cabinet-refacing">Cabinet refacing →</Link></div>
           </div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function RemodelingPage() {
             <li>Hall baths</li>
             <li>Powder rooms</li>
           </ul>
-          <div className="btns"><Link className="btn btn-ink" href="/contact">Plan your bathroom →</Link><a className="btn" href="#fast-bath">See Fast Bath</a></div>
+          <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/bathroom-remodeling">Bathroom remodeling →</Link><Link className="btn" href="/services/remodeling-services/bathroom-remodeling/fast-bath-program">Fast Bath →</Link></div>
         </div>
       </section>
 

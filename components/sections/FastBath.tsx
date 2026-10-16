@@ -15,7 +15,7 @@ export default function FastBath() {
         <div><h3>Vanity &amp; fixture upgrades</h3><p>Fresh vanity, faucets and lighting to finish the room.</p></div>
       </div>
       <div className="chips"><span>Starting at <span className="tbd">[$X,XXX]</span></span><span>5-year warranty</span><span>Financing available</span></div>
-      <div className="btns"><a className="btn btn-ink" href="#estimator">Get my AI estimate →</a><a className="btn" href="/services/remodeling-services#fast-bath">Explore Fast Bath</a></div>
+      <div className="btns"><a className="btn btn-ink" href="#estimator">Get my AI estimate →</a><a className="btn" href="/services/remodeling-services/bathroom-remodeling/fast-bath-program">Explore Fast Bath</a></div>
     </div>
     <div>
       <div className="ba" id="ba" style={{'--p': '50%'} as React.CSSProperties}>

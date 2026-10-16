@@ -1,33 +1,32 @@
 import Link from "next/link";
 import { CITIES, SITE } from "@/lib/site";
 
-const R = "/services/remodeling-services";
-
 const COLS = [
   {
     title: "Remodeling",
     links: [
-      ["Kitchen Remodeling", `${R}#kitchens`],
-      ["10-Day Kitchen Program", `${R}#ten-day`],
-      ["Cabinet Refacing", `${R}#refacing`],
-      ["Whole Home Remodeling", `${R}#whole-home`],
-      ["Bathroom Remodeling", `${R}#bathrooms`],
-      ["Fast Bath", `${R}#fast-bath`],
-      ["Bathroom AI Estimator", `${R}#estimator`],
+      ["Kitchen Remodeling", "/services/remodeling-services/kitchen-remodeling"],
+      ["10-Day Kitchen Program", "/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program"],
+      ["Cabinet Refacing", "/services/remodeling-services/kitchen-remodeling/cabinet-refacing"],
+      ["Whole Home Remodeling", "/services/remodeling-services/whole-home-remodeling"],
+      ["Bathroom Remodeling", "/services/remodeling-services/bathroom-remodeling"],
+      ["Fast Bath", "/services/remodeling-services/bathroom-remodeling/fast-bath-program"],
+      ["Bathroom AI Estimator", "/services/remodeling-services/bathroom-remodeling/fast-bath-program/bathroom-ai-estimator"],
       ["Design Services", "/services/design-services"],
     ],
   },
   {
     title: "Construction",
     links: [
-      ["Commercial Construction", "/services/construction-services"],
-      ["Tenant Improvements", "/services/construction-services#ti"],
+      ["Commercial Construction", "/services/construction-services/commercial-construction"],
+      ["Tenant Improvements", "/services/construction-services/commercial-construction/tenant-improvements-ti"],
     ],
   },
   {
     title: "Company",
     links: [
       ["About Us", "/about"],
+      ["Our Story", "/about/our-story"],
       ["Showroom", "/about/showroom"],
       ["Portfolio", "/portfolio"],
       ["FAQs", "/resources/faqs"],

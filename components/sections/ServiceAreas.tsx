@@ -1,6 +1,6 @@
 import type React from "react";
 
-export default function ServiceAreas() {
+export default function ServiceAreas({ city }: { city?: string }) {
   return (
     <>
 <section className="band bg-off on-light" id="areas">
@@ -11,7 +11,7 @@ export default function ServiceAreas() {
       <p>Based in Lacey, serving Thurston, Pierce, south King, Lewis and Mason counties.</p>
       <div className="tags" id="cityTags"><button type="button" data-city="Olympia">Olympia</button><button type="button" data-city="Lacey">Lacey</button><button type="button" data-city="Tumwater">Tumwater</button><button type="button" data-city="Tacoma">Tacoma</button><button type="button" data-city="Puyallup">Puyallup</button><button type="button" data-city="Lakewood">Lakewood</button><button type="button" data-city="University Place">University Place</button><button type="button" data-city="Gig Harbor">Gig Harbor</button><button type="button" data-city="Federal Way">Federal Way</button><button type="button" data-city="Auburn">Auburn</button><button type="button" data-city="Bonney Lake">Bonney Lake</button><button type="button" data-city="Spanaway">Spanaway</button><button type="button" data-city="Steilacoom">Steilacoom</button><button type="button" data-city="Centralia">Centralia</button><button type="button" data-city="Chehalis">Chehalis</button><button type="button" data-city="DuPont">DuPont</button><button type="button" data-city="Graham">Graham</button><button type="button" data-city="Yelm">Yelm</button><button type="button" data-city="Shelton">Shelton</button><button type="button" data-city="Fife">Fife</button></div>
     </div>
-    <div className="map" id="areaMap">
+    <div className="map" id="areaMap" data-city={city}>
       <svg viewBox="0 0 600 700" id="gmap" role="img" aria-label="Map of the South Sound cities we serve">
 <defs><filter id="pinsh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.4" floodOpacity=".35" /></filter></defs>
 <g id="gview">

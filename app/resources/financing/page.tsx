@@ -15,7 +15,7 @@ export default function FinancingPage() {
         eyebrow="Resources · Financing"
         title={<>Flexible ways <em>to invest.</em></>}
         lede="Your home is worth doing right. Ask us about financing options when you book your consultation."
-        crumbs={[{ label: "Resources", href: "/resources/faqs" }, { label: "Financing", href: "/resources/financing" }]}
+        crumbs={[{ label: "Resources", href: "/resources" }, { label: "Financing", href: "/resources/financing" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Ask about financing →</Link>
       </PageHero>

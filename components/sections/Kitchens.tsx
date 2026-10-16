@@ -10,7 +10,7 @@ export default function Kitchens() {
     <h2 className="h2">The kitchen, <em>elevated.</em></h2>
     <p>Fully custom kitchens designed around how you cook, gather and live, with premium cabinetry, natural stone and craftsmanship built to last for decades.</p>
     <ul className="rows"><li>Custom and semi-custom cabinetry</li><li>Natural stone and quartz surfaces</li><li>Layout, lighting and structural changes</li><li>Every selection made in our Lacey showroom</li></ul>
-    <div className="btns"><a className="btn btn-chrome" href="/services/remodeling-services#kitchens">Kitchen Remodeling →</a><a className="btn" href="/services/remodeling-services#whole-home">Whole Home Remodeling →</a></div>
+    <div className="btns"><a className="btn btn-chrome" href="/services/remodeling-services/kitchen-remodeling">Kitchen Remodeling →</a><a className="btn" href="/services/remodeling-services/whole-home-remodeling">Whole Home Remodeling →</a></div>
   </div>
 </section>
     </>

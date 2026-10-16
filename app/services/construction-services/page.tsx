@@ -22,6 +22,8 @@ export default function ConstructionPage() {
         crumbs={[{ label: "Services", href: "/services" }, { label: "Construction", href: "/services/construction-services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Discuss your project →</Link>
+        <Link className="btn" href="/services/construction-services/commercial-construction">Commercial construction</Link>
+        <Link className="btn" href="/services/construction-services/commercial-construction/tenant-improvements-ti">Tenant improvements</Link>
       </PageHero>
 
       <section className="band bg-off on-light" id="ti">

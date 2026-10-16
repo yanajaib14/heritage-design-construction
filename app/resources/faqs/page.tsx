@@ -108,7 +108,7 @@ export default function FaqPage() {
         eyebrow="Resources · FAQs"
         title={<>Questions, <em>answered.</em></>}
         lede="Straight answers about our programs, our showroom and how we work. Don't see your question? Give us a call."
-        crumbs={[{ label: "Resources", href: "/resources/faqs" }, { label: "FAQs", href: "/resources/faqs" }]}
+        crumbs={[{ label: "Resources", href: "/resources" }, { label: "FAQs", href: "/resources/faqs" }]}
       >
         <a className="btn btn-chrome" href="tel:+13605573444">Call (360) 557-3444</a>
       </PageHero>

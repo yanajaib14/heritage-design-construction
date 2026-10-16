@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
@@ -40,7 +41,7 @@ export default function ContactPage() {
             <div className="btns">
               <a className="btn btn-ink" href={SITE.directions} target="_blank" rel="noopener">Get directions ↗</a>
             </div>
-            <div className="ph" style={{ minHeight: 140 }}>[Online scheduling tool]</div>
+            <Link className="btn" href="/contact/schedule-consultation">Schedule online →</Link>
           </div>
         </div>
       </section>

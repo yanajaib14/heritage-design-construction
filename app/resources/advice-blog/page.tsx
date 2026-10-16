@@ -24,7 +24,7 @@ export default function BlogPage() {
         eyebrow="Resources · Advice"
         title={<>Planning <em>resources.</em></>}
         lede="Ideas and practical advice to help you plan your kitchen, bath or whole-home project."
-        crumbs={[{ label: "Resources", href: "/resources/faqs" }, { label: "Advice / Blog", href: "/resources/advice-blog" }]}
+        crumbs={[{ label: "Resources", href: "/resources" }, { label: "Advice / Blog", href: "/resources/advice-blog" }]}
       />
 
       <section className="band bg-paper on-light">
