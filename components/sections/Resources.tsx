@@ -1,25 +1,26 @@
-import type React from "react";
+const GUIDES = [
+  { href: "/resources/financing", k: "Financing", t: "Flexible ways to invest.", d: "[Financing partner, terms overview.]" },
+  { href: "/resources/faqs", k: "FAQs", t: "Questions, answered.", d: "[Timelines, permits, living at home during a remodel.]" },
+];
+const ARTICLES = [["Kitchens", "[Article title]"], ["Bathrooms", "[Article title]"], ["Commercial", "[Article title]"]];
 
 export default function Resources() {
   return (
-    <>
-<section className="band bg-paper on-light" id="resources">
-  <div className="wrap">
-    <div className="res2">
-      <a href="/resources/financing"><span className="num">Financing</span><h3>Flexible ways to invest.</h3><p className="tbd" style={{justifySelf: 'start'} as React.CSSProperties}>[Financing partner, terms overview.]</p><span className="link">Explore financing →</span></a>
-      <a href="/resources/faqs"><span className="num">FAQs</span><h3>Questions, answered.</h3><p className="tbd" style={{justifySelf: 'start'} as React.CSSProperties}>[Timelines, permits, living at home during a remodel.]</p><span className="link">Read FAQs →</span></a>
-    </div>
-    <div className="sec-head" id="journal">
-      <div className="left"><div className="eyebrow">Journal</div><h2 className="h2">Planning <em>resources.</em></h2></div>
-      <div style={{justifySelf: 'end'} as React.CSSProperties}><a className="link" href="/resources/advice-blog">All articles →</a></div>
-    </div>
-    <div className="art3">
-      <a href="/resources/advice-blog"><div className="ph">Article image</div><span className="num">Kitchens · [X] min</span><h3>[Article title]</h3></a>
-      <a href="/resources/advice-blog"><div className="ph">Article image</div><span className="num">Bathrooms · [X] min</span><h3>[Article title]</h3></a>
-      <a href="/resources/advice-blog"><div className="ph">Article image</div><span className="num">Commercial · [X] min</span><h3>[Article title]</h3></a>
-    </div>
-  </div>
-</section>
-    </>
+    <section className="band bg-paper on-light" id="resources">
+      <div className="wrap">
+        <div className="ed-head">
+          <div><div className="eyebrow">Resources</div><h2 className="h2">Planning <em>resources.</em></h2></div>
+          <p className="ed-aside"><a href="/resources/advice-blog">All articles →</a></p>
+        </div>
+        <ul className="idx">
+          {GUIDES.map((g) => (
+            <li key={g.k}><a href={g.href}><span className="idx-k">{g.k}</span><span className="idx-t">{g.t}</span><span className="idx-d tbd">{g.d}</span><i aria-hidden="true">→</i></a></li>
+          ))}
+          {ARTICLES.map(([k, t], i) => (
+            <li key={k + i}><a href="/resources/advice-blog"><span className="idx-k">Journal · {k}</span><span className="idx-t tbd">{t}</span><span className="idx-d tbd">[X] min read</span><i aria-hidden="true">→</i></a></li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }

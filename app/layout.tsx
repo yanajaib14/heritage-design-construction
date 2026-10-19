@@ -5,7 +5,7 @@ import "./site.css";
 import "./pages.css";
 import "./motion.css";
 import "./hero-intro.css";
-import "./soft.css";
+import "./editorial.css";
 import Header from "@/components/sections/Header";
 import MenuSheet from "@/components/sections/MenuSheet";
 import Footer from "@/components/sections/Footer";
