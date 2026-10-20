@@ -440,3 +440,30 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
   .cta4-trust li+li{border-left:0}
   .cta4-trust{flex-direction:column;align-items:center}
 }
+/* Homepage kitchen photo deck: a smaller stacked slideshow in place of the full-bleed photo */
+.kdeck-col{display:grid;align-content:center;justify-items:center;gap:28px;padding:clamp(56px,7vw,100px) clamp(24px,4vw,64px);background:#E9E5DD}
+.kdeck{position:relative;width:min(100%,500px);aspect-ratio:4/5;margin-right:36px;margin-top:36px}
+.kdeck figure{position:absolute;inset:0;margin:0;overflow:hidden;cursor:pointer;z-index:calc(10 - var(--k));
+  transform:translate(calc(var(--k) * 12px),calc(var(--k) * -12px)) rotate(calc(var(--k) * 1.6deg));
+  opacity:calc(1 - (var(--k) - 2) * 1);box-shadow:0 22px 44px -24px rgba(17,18,18,.55);
+  transition:transform .9s cubic-bezier(.22,1,.36,1),opacity .6s,filter .6s;filter:brightness(calc(1 - var(--k) * .06))}
+.kdeck figure img{display:block;width:100%;height:100%;object-fit:cover}
+.kdeck figure.out{transform:translate(-112%,30px) rotate(-10deg);opacity:0;transition:transform .7s cubic-bezier(.6,0,.4,1),opacity .7s}
+.kdeck figure.back{transition:none}
+.kdeck-bar{display:flex;align-items:center;gap:22px;width:min(100%,500px);margin-right:36px}
+.kdeck-bar p{flex:1;margin:0;display:grid;gap:4px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.16em;color:#3f4246}
+.kdeck-bar b{font:400 19px/1.3 var(--display);letter-spacing:0;color:var(--ink)}
+.kdeck-bar button{flex:none;width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;transition:background .25s,color .25s}
+.kdeck-bar button:hover{background:var(--ink);color:var(--offwhite)}
+@media (max-width:860px){
+  .kdeck-col{padding:48px var(--gutterR,20px) 32px var(--gutter,20px)}
+  .kdeck{width:min(100%,380px);margin-right:28px;margin-top:28px}
+  .kdeck figure{transform:translate(calc(var(--k) * 9px),calc(var(--k) * -9px)) rotate(calc(var(--k) * 1.4deg))}
+  .kdeck-bar{width:min(100%,380px);margin-right:28px}
+}
+.kdeck-col{overflow:hidden}
+@media (max-width:860px){
+  .kdeck-col{padding:48px 20px 36px}
+  .kdeck{width:calc(100% - 44px);max-width:340px;margin:24px 32px 0 0}
+  .kdeck-bar{width:calc(100% - 44px);max-width:340px;margin-right:32px}
+}
