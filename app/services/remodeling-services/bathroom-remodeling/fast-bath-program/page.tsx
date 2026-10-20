@@ -48,7 +48,7 @@ const LOCAL = [
 ];
 
 const MONEY = [
-  { t: "Monthly payment plans", p: "Available for qualified homeowners through our financing partner." },
+  { t: "Monthly payment plans", p: "Available for qualified homeowners through GreenSky, our preferred lender." },
   { t: "0% promotional options", p: "Promotional financing for qualifying projects." },
   { t: "No surprises", p: "Scope and pricing are explained before any work begins." },
 ];

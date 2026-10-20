@@ -25,6 +25,10 @@ const GROUPS: { title: string; items: QA[] }[] = [
         ],
       },
       {
+        q: "Why can a 10-Day kitchen be finished in 10 business days?",
+        a: ["We pre-order and stage every material before day one, so there's no waiting on deliveries. A dedicated crew works on your kitchen every day, following a set plan that removes the downtime of a traditional remodel."],
+      },
+      {
         q: "How much does the 10-Day Kitchen Program cost?",
         a: ["10-Day Kitchen projects start at around $45,000. Your exact price depends on your kitchen's size and the cabinetry, stone and finishes you choose in our showroom."],
       },
@@ -40,6 +44,14 @@ const GROUPS: { title: string; items: QA[] }[] = [
         a: [
           "Choose a custom remodel if you want to change the layout, refacing if you only want a new look on solid cabinets, and the 10-Day Program for a complete new kitchen in the same footprint. A designer can help you decide during a consultation.",
         ],
+      },
+      {
+        q: "Do I need a permit for my kitchen remodel?",
+        a: ["It depends on the scope. Standard cabinet and countertop replacements typically don't require permits. Structural changes, moving plumbing or adding electrical circuits may. We assess this during your consultation."],
+      },
+      {
+        q: "What countertop materials do you recommend?",
+        a: ["We often recommend quartz, which offers the look of natural stone with excellent durability and low maintenance. We can also source granite, marble and other materials to suit your style and budget."],
       },
     ],
   },
@@ -60,6 +72,18 @@ const GROUPS: { title: string; items: QA[] }[] = [
         q: "Do you do full custom bathroom remodels?",
         a: ["Yes. We design and build custom, high-end primary suites, hall baths and powder rooms, with every finish selected in our Lacey showroom."],
       },
+      {
+        q: "Can you convert my bathtub into a walk-in shower?",
+        a: ["Yes. Tub-to-shower conversions are one of our most popular bath upgrades. We handle the plumbing adjustments, waterproofing, tile or wall systems and fixture installation."],
+      },
+      {
+        q: "What is the best flooring for a bathroom?",
+        a: ["Porcelain tile is our top choice for bathroom floors: water-resistant, durable and available in countless styles. Luxury vinyl plank (LVP) is another excellent option that feels warmer underfoot and is fully waterproof."],
+      },
+      {
+        q: "How do I make a small bathroom feel bigger?",
+        a: ["Large-format tiles with fewer grout lines, frameless glass shower enclosures, floating vanities and well-placed lighting all make a small bathroom feel more open. We design with these in mind."],
+      },
     ],
   },
   {
@@ -77,7 +101,7 @@ const GROUPS: { title: string; items: QA[] }[] = [
       },
       {
         q: "Do you offer a warranty?",
-        a: ["Yes. Our work is backed by a 5-year warranty."],
+        a: ["Yes. Every project comes with a 5-year warranty on our workmanship, and manufacturers' material warranties are passed through to you."],
       },
       {
         q: "What areas do you serve?",
@@ -90,12 +114,24 @@ const GROUPS: { title: string; items: QA[] }[] = [
         a: ["Yes. We handle commercial construction and tenant improvements for tenants, landlords and brokers."],
       },
       {
+        q: "Do you handle both design and installation?",
+        a: ["Yes. We are a full design-build firm. From your consultation and 3D design through selections in our showroom and final installation, one team manages your whole project."],
+      },
+      {
+        q: "What happens if something goes wrong during the remodel?",
+        a: ["We address issues right away and openly. We keep you informed throughout, and our 5-year workmanship warranty backs every installation."],
+      },
+      {
+        q: "How do I get started?",
+        a: ["Book a free consultation. We'll look at your space, talk through your goals and give you a clear quote, typically within a few days of the visit."],
+      },
+      {
         q: "Can I stay in my home during a remodel?",
-        a: ["[Answer to confirm with the owner.]"],
+        a: ["Yes, most homeowners stay home during their remodel. We work efficiently to keep disruption low and keep the work area clean and safe. The room being remodeled will be unavailable while we work."],
       },
       {
         q: "Do you offer financing?",
-        a: ["[Financing partner and terms to confirm.]"],
+        a: ["Yes. Our preferred lender is GreenSky, with monthly payment plans and promotional options for qualified homeowners. Home equity lines, cash-out refinancing and renovation loans are other common ways to fund a remodel. See our financing page for details."],
       },
     ],
   },
