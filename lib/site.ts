@@ -37,6 +37,12 @@ export const NAV: NavItem[] = [
     href: "/services",
     children: [
       { label: "Remodeling", href: "/services/remodeling-services" },
+      { label: "Whole-Home Remodeling", href: "/services/remodeling-services/whole-home-remodeling" },
+      { label: "Kitchen Remodeling", href: "/services/remodeling-services/kitchen-remodeling" },
+      { label: "10-Day Kitchen Program", href: "/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program" },
+      { label: "Cabinet Refacing", href: "/services/remodeling-services/kitchen-remodeling/cabinet-refacing" },
+      { label: "Bathroom Remodeling", href: "/services/remodeling-services/bathroom-remodeling" },
+      { label: "Fast Bath Program", href: "/services/remodeling-services/bathroom-remodeling/fast-bath-program" },
       { label: "Construction", href: "/services/construction-services" },
       { label: "Design", href: "/services/design-services" },
     ],

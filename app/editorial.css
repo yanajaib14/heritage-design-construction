@@ -74,3 +74,89 @@ footer .tbd{background:rgba(255,255,255,.1)}
   .cta2-visit{grid-template-columns:1fr;padding-bottom:40px}
   .cta2-visit div,.cta2-visit div+div{padding:20px 0;border-left:0;border-bottom:1px solid #cbc7be}
 }
+
+/* 10-Day Kitchen Program page */
+.ed-head.td-h{grid-template-columns:1fr;gap:18px}
+.td-snap{background:var(--graphite);color:var(--offwhite);border-top:1px solid #3a3b3d}
+.td-snap .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.td-snap .wrap>div{display:flex;align-items:baseline;gap:16px;padding:30px 0 30px 28px;border-left:1px solid #3a3b3d}
+.td-snap .wrap>div:first-child{border-left:0;padding-left:0}
+.td-snap strong{font:400 clamp(34px,3.4vw,46px)/1 var(--display)}
+.td-snap span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mutedDark)}
+.td-fit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,110px);align-items:center}
+.td-fit-copy{display:grid;gap:22px;justify-items:start}
+.td-fit-copy p{color:var(--muted);font-size:17px;max-width:46ch}
+.td-link{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.td-fit-fig{position:relative;margin:0}
+.td-fit-fig img{display:block;width:100%;aspect-ratio:5/4;object-fit:cover}
+.td-stat{position:absolute;left:-1px;bottom:-1px;background:var(--offwhite);padding:22px 28px 0 0;display:flex;align-items:flex-end;gap:14px}
+.td-stat strong{font:400 clamp(72px,8vw,120px)/.8 var(--display)}
+.td-stat span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:6px}
+.td-note{color:var(--muted);font-size:16px;max-width:40ch}
+.td-note a{color:var(--ink)}
+.td-ben{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.td-ben li{padding:34px 28px 8px;border-left:1px solid #d6d3cc;display:grid;gap:12px;align-content:start}
+.td-ben li:first-child{border-left:0;padding-left:0}
+.td-ben h3{font-size:clamp(22px,1.9vw,27px);line-height:1.15}
+.td-ben p{color:var(--muted);font-size:15.5px}
+.td-days{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));counter-reset:d}
+.td-days li{padding:30px 22px 34px;border-bottom:1px solid #d6d3cc;border-left:1px solid #d6d3cc;display:grid;gap:10px;align-content:start;transition:background .3s}
+.td-days li:nth-child(5n+1){border-left:0;padding-left:0}
+.td-days li:hover{background:var(--paper)}
+.td-days .dn{font:italic 400 44px/1 var(--display);color:#a9a6a0;display:flex;align-items:baseline;gap:8px;transition:color .3s}
+.td-days .dn small{font:600 10.5px var(--body);font-style:normal;letter-spacing:.2em;text-transform:uppercase}
+.td-days li:hover .dn{color:var(--ink)}
+.td-days h3{font-size:21px;line-height:1.2}
+.td-days p{color:var(--muted);font-size:14.5px}
+.td-scope{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,6vw,96px);padding-top:36px}
+.td-scope h3{font-size:clamp(26px,2.4vw,32px);padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.td-scope ul{list-style:none;margin:0;padding:0}
+.td-scope li{display:grid;grid-template-columns:28px 1fr;padding:16px 0;border-bottom:1px solid #d6d3cc;font-size:16px}
+.td-scope .yes li::before{content:"✓";color:var(--ink)}
+.td-scope .no li{color:var(--muted)}
+.td-scope .no li::before{content:"—";color:#a9a6a0}
+.td-price{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.td-price li{padding:40px 28px 44px;border-left:1px solid #d6d3cc;display:grid;gap:14px}
+.td-price li:first-child{border-left:0;padding-left:0}
+.td-price small{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.td-price strong{font:400 clamp(30px,3vw,42px)/1.1 var(--display)}
+.td-fine{color:var(--muted);font-size:14px;padding-top:22px;border-top:1px solid #d6d3cc}
+.td-quote{margin:0 auto;text-align:center;max-width:960px}
+.td-quote blockquote{margin:0;font:italic 400 clamp(30px,3.8vw,52px)/1.2 var(--display)}
+.td-quote figcaption{margin-top:28px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.td-cta-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,100px);align-items:start;padding-block:clamp(80px,10vw,130px)}
+.td-cta-copy{display:grid;gap:24px}
+.cta2 .td-cta-copy h2{font-size:clamp(38px,4.6vw,62px);line-height:1.05}
+.td-cta-copy ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.td-cta-copy ol li{display:grid;grid-template-columns:48px 1fr;padding:16px 0;border-bottom:1px solid #cfcac0;font-size:16px}
+.td-cta-copy ol span{font:italic 400 20px var(--display);color:#8f8b84}
+.cta2 .td-trust{font-size:12px;max-width:none;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.td-cta-copy a{color:var(--ink)}
+.td-cta-form{background:var(--paper);padding:clamp(28px,4vw,48px);border:1px solid #d6d3cc}
+@media (max-width:980px){
+  .td-fit,.td-cta-grid{grid-template-columns:minmax(0,1fr)}
+  .td-ben{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .td-ben li:nth-child(3){border-left:0;padding-left:0}
+  .td-days{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .td-days li{border-left:0;padding-left:0}
+  .td-days li:nth-child(even){border-left:1px solid #d6d3cc;padding-left:22px}
+}
+@media (max-width:700px){
+  .td-snap .wrap{grid-template-columns:1fr}
+  .td-snap .wrap>div{border-left:0;padding:18px 0;border-top:1px solid #3a3b3d}
+  .td-snap .wrap>div:first-child{border-top:0}
+  .td-ben,.td-scope,.td-price,.td-days{grid-template-columns:1fr}
+  .td-ben li,.td-price li,.td-days li,.td-days li:nth-child(even){border-left:0;padding-left:0;border-bottom:1px solid #d6d3cc}
+}
+@media (min-width:981px){
+  .steps:has(>li:nth-child(5):last-child){grid-template-columns:repeat(5,minmax(0,1fr))}
+  .steps:has(>li:nth-child(5):last-child) li{padding-right:22px}
+  .steps:has(>li:nth-child(5):last-child) li+li{padding-left:22px}
+  .steps:has(>li:nth-child(5):last-child) h3{font-size:22px}
+}
+.cta2 .td-cta-copy h2 em{display:inline}
+.td-cta-form{min-width:0}.td-cta-form form,.td-cta-form .row{min-width:0}
+.form label{min-width:0}.form input,.form select,.form textarea{width:100%;min-width:0;box-sizing:border-box}
+@media (max-width:700px){.td-cta-form{padding:24px 20px}}
+@media (max-width:700px){.form{grid-template-columns:minmax(0,1fr)}.form .btn-xl{white-space:normal;padding-inline:20px;text-align:center;justify-content:center;width:100%}}
+.drop{min-width:290px}.drop a{white-space:nowrap}
