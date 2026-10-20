@@ -8,7 +8,7 @@ export default function Portfolio() {
     <div className="sec-head">
       <div className="left"><div className="eyebrow">Portfolio</div><h2 className="h2">Projects we’re <em>proud of.</em></h2></div>
       <div className="filters" role="group" aria-label="Filter projects">
-        <button type="button" data-f="all" aria-pressed="true">All <sup>8</sup></button><button type="button" data-f="kitchen" aria-pressed="false">Kitchens <sup>5</sup></button><button type="button" data-f="bath" aria-pressed="false">Bathrooms <sup>3</sup></button>
+        <button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="kitchen" aria-pressed="false">Kitchens</button><button type="button" data-f="bath" aria-pressed="false">Bathrooms</button>
       </div>
     </div>
     <div className="pgrid2" id="pgrid">

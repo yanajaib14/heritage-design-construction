@@ -1,4 +1,6 @@
 import type React from "react";
+import fs from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
@@ -29,19 +31,23 @@ const BENEFITS = [
   { t: "Less disruption", p: "Fewer days without a kitchen and fewer decisions mid-project." },
 ];
 
-// Day-by-day copy from the 10 Day Kitchens site (DayByDayTimeline).
+// Day-by-day copy and photos from the 10 Day Kitchens site (DayByDayTimeline). A day's photo only
+// shows once its file is in public/images/timeline.
 const DAYS = [
-  ["Pack-out & demo", "White-glove packing followed by precision demolition."],
-  ["Prep & repairs", "Expert drywall and plumbing adjustments."],
-  ["Cabinet base", "Leveling and installation of high-end base cabinetry."],
-  ["Uppers & templates", "Upper mounting and countertop templating."],
-  ["Cabinet detail", "Alignment, hardware, and structural securement."],
-  ["Flooring & trim", "Premium flooring surfaces and custom trim work."],
-  ["Stone & tile", "Countertop placement and backsplash installation."],
-  ["Fixtures & flow", "Appliance integration and plumbing/electrical trim-out."],
-  ["Fine-tuning", "Addressing small details that make a space feel complete."],
-  ["Unveiling", "Final walkthrough and professional cleaning."],
-];
+  ["Pack-out & demo", "White-glove packing followed by precision demolition.", "day-01-demo"],
+  ["Prep & repairs", "Expert drywall and plumbing adjustments.", "day-02-prep"],
+  ["Cabinet base", "Leveling and installation of high-end base cabinetry.", "day-03-base-cabinets"],
+  ["Uppers & templates", "Upper mounting and countertop templating.", "day-04-uppers-template"],
+  ["Cabinet detail", "Alignment, hardware, and structural securement.", "day-05-cabinet-detail"],
+  ["Flooring & trim", "Premium flooring surfaces and custom trim work.", "day-06-flooring-trim"],
+  ["Stone & tile", "Countertop placement and backsplash installation.", "day-07-stone-tile"],
+  ["Fixtures & flow", "Appliance integration and plumbing/electrical trim-out.", "day-08-fixtures-flow"],
+  ["Fine-tuning", "Addressing small details that make a space feel complete.", "day-09-fine-tuning"],
+  ["Unveiling", "Final walkthrough and professional cleaning.", "day-10-final-walkthrough"],
+].map(([t, p, f]) => {
+  const src = `/images/timeline/${f}.webp`;
+  return { t, p, img: fs.existsSync(path.join(process.cwd(), "public", src)) ? src : null };
+});
 
 const INCLUDED = [
   "New cabinets in the same footprint",
@@ -167,14 +173,19 @@ export default function TenDayPage() {
             <div className="eyebrow">The 10-day transformation</div>
             <h2 className="h2">Day <em>by day.</em></h2>
           </div>
-          <ol className="dbd">
-            {DAYS.map(([t, p], i) => (
-              <li key={t} data-rv="" style={{ "--d": `${(i % 5) * 0.06}s` } as React.CSSProperties}>
+          <ol className={`dbd${DAYS.some((d) => d.img) ? " dbd-ph" : ""}`}>
+            {DAYS.map((d, i) => (
+              <li key={d.t} data-rv="" style={{ "--d": `${(i % 5) * 0.06}s` } as React.CSSProperties}>
                 <span className="dbd-node" aria-hidden="true">{i + 1}</span>
                 <div>
+                  {d.img && (
+                    <figure className="dbd-fig">
+                      <img src={d.img} alt={`Day ${i + 1} of a 10-Day kitchen install: ${d.t.toLowerCase()}`} loading="lazy" />
+                    </figure>
+                  )}
                   <span className="dbd-tag">Day {i + 1}</span>
-                  <h3>{t}</h3>
-                  <p>{p}</p>
+                  <h3>{d.t}</h3>
+                  <p>{d.p}</p>
                 </div>
               </li>
             ))}
