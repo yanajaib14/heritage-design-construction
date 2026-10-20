@@ -159,4 +159,29 @@ footer .tbd{background:rgba(255,255,255,.1)}
 .form label{min-width:0}.form input,.form select,.form textarea{width:100%;min-width:0;box-sizing:border-box}
 @media (max-width:700px){.td-cta-form{padding:24px 20px}}
 @media (max-width:700px){.form{grid-template-columns:minmax(0,1fr)}.form .btn-xl{white-space:normal;padding-inline:20px;text-align:center;justify-content:center;width:100%}}
-.drop{min-width:290px}.drop a{white-space:nowrap}
+.drop{min-width:250px}.drop a{white-space:nowrap}
+/* Remodeling flyout inside the Services menu */
+.drop .has-fly{position:relative}
+.drop .has-fly>a::after{content:"›";font-size:18px;line-height:1;opacity:.7}
+.drop .fly{position:absolute;left:100%;top:-9px;min-width:270px;list-style:none;margin:0;padding:8px 0;background:#141516;border:1px solid #2e2f31;box-shadow:0 18px 40px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateX(-6px);transition:opacity .2s,transform .2s,visibility .2s}
+.drop .has-fly:hover>.fly,.drop .has-fly:focus-within>.fly{opacity:1;visibility:visible;transform:none}
+.drop .has-fly:hover>a,.drop .has-fly:focus-within>a{background:#1f2022;color:var(--offwhite)}
+.sheet .sub2 summary{display:flex;align-items:center;gap:10px;padding:0 0 18px 2px;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c9c7c1;cursor:pointer;list-style:none}
+.sheet .sub2 summary::-webkit-details-marker{display:none}
+.sheet .sub2[open] summary .caret{transform:translateY(2px) rotate(-135deg)}
+.sheet .sub2 ul{list-style:none;margin:-6px 0 14px;padding:0 0 0 16px;border-left:1px solid #3a3b3d}
+.sheet .sub2 ul a{padding-bottom:14px;font-size:12.5px;color:#a9a7a1}
+/* Homepage services: whole panel links to its section, each chip links to its own page */
+.svc-link{position:absolute;inset:0;z-index:1}
+.svc-link:focus-visible{outline:2px solid var(--offwhite);outline-offset:-6px}
+.svc2 .body{position:relative;z-index:2;pointer-events:none}
+.svc2 li{padding:0;border:0;background:none;backdrop-filter:none}
+.svc2 li a{pointer-events:auto;position:relative;display:inline-flex;align-items:center;gap:0;padding:8px 13px;border:1px solid rgba(242,240,236,.32);background:rgba(15,16,16,.28);backdrop-filter:blur(3px);color:#F2F0EC;font-size:12.5px;letter-spacing:.04em;text-decoration:none;overflow:hidden;isolation:isolate;transition:color .35s,border-color .35s,gap .35s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.svc2 li a::before{content:"";position:absolute;inset:0;z-index:-1;background:#F2F0EC;transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.svc2 li a::after{content:"→";display:inline-block;max-width:0;opacity:0;overflow:hidden;transition:max-width .35s,opacity .35s}
+.svc2 li a:hover,.svc2 li a:focus-visible{color:var(--ink);border-color:#F2F0EC;gap:8px;transform:translateY(-2px)}
+.svc2 li a:hover::before,.svc2 li a:focus-visible::before{transform:scaleX(1)}
+.svc2 li a:hover::after,.svc2 li a:focus-visible::after{max-width:1.2em;opacity:1}
+.svc2 li a:focus-visible{outline:2px solid #F2F0EC;outline-offset:2px}
+@media (min-width:861px){.svc2:not(.on) li a{pointer-events:none}}
+@media (prefers-reduced-motion:reduce){.svc2 li a,.svc2 li a::before{transition:none}}

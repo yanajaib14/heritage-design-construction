@@ -19,7 +19,7 @@ export default function Header() {
         <ul className="menu" id="menu">
           {NAV.map((item) => {
             const current = item.children
-              ? item.children.some((c) => isCurrent(path, c.href))
+              ? item.children.some((c) => isCurrent(path, c.href) || (c.children ?? []).some((g) => isCurrent(path, g.href)))
               : isCurrent(path, item.href);
             if (!item.children)
               return (
@@ -36,11 +36,24 @@ export default function Header() {
                   {item.label} <i className="caret"></i>
                 </button>
                 <ul className="drop" id={id} hidden>
-                  {item.children.map((c) => (
-                    <li key={c.href}>
-                      <Link href={c.href}>{c.label}</Link>
-                    </li>
-                  ))}
+                  {item.children.map((c) =>
+                    c.children ? (
+                      <li className="has-fly" key={c.href}>
+                        <Link href={c.href} aria-haspopup="true">{c.label}</Link>
+                        <ul className="fly">
+                          {c.children.map((g) => (
+                            <li key={g.href}>
+                              <Link href={g.href}>{g.label}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : (
+                      <li key={c.href}>
+                        <Link href={c.href}>{c.label}</Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </li>
             );

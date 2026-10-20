@@ -18,7 +18,23 @@ export default function MenuSheet() {
               <ul className="sub" hidden>
                 {item.children.map((c) => (
                   <li key={c.href}>
-                    <Link href={c.href}>{c.label}</Link>
+                    {c.children ? (
+                      <details className="sub2">
+                        <summary>{c.label} <i className="caret"></i></summary>
+                        <ul>
+                          <li>
+                            <Link href={c.href}>All {c.label.toLowerCase()}</Link>
+                          </li>
+                          {c.children.map((g) => (
+                            <li key={g.href}>
+                              <Link href={g.href}>{g.label}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      <Link href={c.href}>{c.label}</Link>
+                    )}
                   </li>
                 ))}
               </ul>
