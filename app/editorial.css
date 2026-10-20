@@ -542,3 +542,23 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
 
 /* the fit photo scales in from slightly larger; keep that from widening the page on phones */
 .band:has(> .td-fit){overflow-x:clip}
+
+/* hero trust bar: number, a fine rule, then a two-line label; short centred dividers, no box */
+.hero .stats{background:none;backdrop-filter:none;-webkit-backdrop-filter:none;margin-bottom:56px}
+.hero .stats::before,.hero .stats::after{background:linear-gradient(90deg,transparent,rgba(216,217,219,.55) 15%,rgba(255,255,255,.8) 50%,rgba(216,217,219,.55) 85%,transparent)}
+.hero .stat{position:relative;display:flex;align-items:center;justify-content:center;gap:18px;padding:26px 16px;border-left:0}
+.hero .stat+.stat::before{content:"";position:absolute;left:0;top:50%;height:44%;width:1px;transform:translateY(-50%);background:linear-gradient(180deg,transparent,rgba(216,217,219,.45),transparent)}
+.hero .stat:hover{background:none}
+.hero .stat strong{font-size:clamp(30px,2.9vw,44px);white-space:nowrap}
+.hero .st-l{display:grid;gap:3px;white-space:nowrap;padding-left:18px;border-left:1px solid rgba(216,217,219,.3);font-size:13px;line-height:1.35;color:#bdbbb5}
+.hero .st-l b{font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#ecebe7}
+.hero .stat:hover .st-l{border-left-color:rgba(255,255,255,.7)}
+@media (max-width:1100px) and (min-width:861px){.hero .stat{flex-direction:column;align-items:flex-start;gap:12px;justify-content:flex-start;padding-inline:22px}.hero .st-l{padding-left:0;border-left:0;padding-top:12px;border-top:1px solid rgba(216,217,219,.3)}}
+@media (max-width:860px){
+  .hero .stats{margin-bottom:40px}
+  .hero .stat{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px;padding:20px 16px 20px 18px}
+  .hero .stat:nth-child(n+3){border-top:0}
+  .hero .stat:nth-child(3)::before{display:none}
+  .hero .stat:nth-child(n+3)::after{content:"";position:absolute;top:0;left:18px;right:16px;height:1px;background:rgba(216,217,219,.2)}
+  .hero .st-l{padding:10px 0 0;border-left:0;border-top:1px solid rgba(216,217,219,.3);font-size:12.5px}
+}

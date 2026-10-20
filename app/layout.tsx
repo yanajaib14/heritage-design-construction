@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${serif.variable} ${manrope.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${serif.variable} ${manrope.variable}`}>
       <body>
         <Header />
         <MenuSheet />

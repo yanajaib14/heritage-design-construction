@@ -11,6 +11,8 @@ export default function SiteEffects() {
     initChrome();
   }, []);
   useEffect(() => {
+    // a new page always opens at the top, unless the link points at a section (#id)
+    if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     const cleanup = initPage();
     return cleanup;
   }, [path]);

@@ -24,10 +24,10 @@ export default function Hero() {
     </div>
     <div className="stats">
       <span className="sweep" aria-hidden="true"></span>
-      <div className="stat" style={{'--i': '0'} as React.CSSProperties}><strong className="chrome-text"><span data-count="800" data-from="0">800</span>+</strong><i></i><small>Projects completed</small></div>
-      <div className="stat" style={{'--i': '1'} as React.CSSProperties}><strong className="chrome-text"><span data-count="5" data-from="0">5</span>-Year</strong><i></i><small>Warranty on our work</small></div>
-      <div className="stat" style={{'--i': '2'} as React.CSSProperties}><strong className="chrome-text"><span data-count="2004" data-from="1980">2004</span></strong><i></i><small>Family owned since</small></div>
-      <div className="stat" style={{'--i': '3'} as React.CSSProperties}><strong className="chrome-text"><em>Licensed</em></strong><i></i><small>&amp; fully insured</small></div>
+      <div className="stat" style={{'--i': '0'} as React.CSSProperties}><strong className="chrome-text"><span data-count="800" data-from="0">800</span>+</strong><span className="st-l"><b>Projects</b>completed</span></div>
+      <div className="stat" style={{'--i': '1'} as React.CSSProperties}><strong className="chrome-text"><span data-count="5" data-from="0">5</span>-Year</strong><span className="st-l"><b>Warranty</b>on our work</span></div>
+      <div className="stat" style={{'--i': '2'} as React.CSSProperties}><strong className="chrome-text"><span data-count="2004" data-from="1980">2004</span></strong><span className="st-l"><b>Family owned</b>since</span></div>
+      <div className="stat" style={{'--i': '3'} as React.CSSProperties}><strong className="chrome-text"><em>Licensed</em></strong><span className="st-l"><b>&amp; insured</b>fully covered</span></div>
     </div>
   </div>
   <div className="stat-show" aria-hidden="true">
