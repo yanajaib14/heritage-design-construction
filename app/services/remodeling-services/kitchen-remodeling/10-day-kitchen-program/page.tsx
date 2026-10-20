@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import { Faq, Split, Steps } from "@/components/ui/Blocks";
-import ContactForm from "@/components/ContactForm";
-import { SITE } from "@/lib/site";
+import ConsultCta from "@/components/ui/ConsultCta";
 import { TEN_DAY_TERMS } from "@/lib/ten-day-terms";
 
 export const metadata: Metadata = {
@@ -278,24 +277,16 @@ export default function TenDayPage() {
         ]}
       />
 
-      <section className="cta2 td-cta" id="qualify-form">
-        <div className="wrap td-cta-grid">
-          <div className="td-cta-copy">
-            <div className="eyebrow">Free consultation</div>
-            <h2>Let&apos;s see if your kitchen <em>can move faster.</em></h2>
-            <ol>
-              <li><span>01</span>Send us a few details about your kitchen.</li>
-              <li><span>02</span>We visit your home to measure and confirm it qualifies.</li>
-              <li><span>03</span>You get a written plan and contract before any work begins.</li>
-            </ol>
-            <p className="td-trust">5-year warranty · Licensed and insured</p>
-            <p>Prefer to talk? Call <a href={SITE.tel}>{SITE.phone}</a>.</p>
-          </div>
-          <div className="td-cta-form">
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      <ConsultCta
+        id="qualify-form"
+        title={<>Let&apos;s see if your kitchen <em>can move faster.</em></>}
+        steps={[
+          "Send us a few details about your kitchen.",
+          "We visit your home to measure and confirm it qualifies.",
+          "You get a written plan and contract before any work begins.",
+        ]}
+        trust="5-year warranty · Licensed and insured"
+      />
     </>
   );
 }
