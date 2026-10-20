@@ -1,34 +1,23 @@
-import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import Kitchens from "@/components/sections/Kitchens";
-import KitchenOptions from "@/components/sections/KitchenOptions";
+import Hero, { TrustPhone } from "@/components/sections/Hero";
+import ThreeWays from "@/components/sections/ThreeWays";
 import TenDay from "@/components/sections/TenDay";
-import Brands from "@/components/sections/Brands";
 import FastBath from "@/components/sections/FastBath";
-import Why from "@/components/sections/Why";
-import Portfolio from "@/components/sections/Portfolio";
+import HomePortfolio from "@/components/sections/HomePortfolio";
+import WhyReviews from "@/components/sections/WhyReviews";
 import Showroom from "@/components/sections/Showroom";
-import Stories from "@/components/sections/Stories";
-import ServiceAreas from "@/components/sections/ServiceAreas";
-import Resources from "@/components/sections/Resources";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <Kitchens />
-      <KitchenOptions />
+      <TrustPhone />
+      <ThreeWays />
       <TenDay />
-      <Brands />
       <FastBath />
-      <Why />
-      <Portfolio />
-      <Showroom />
-      <Stories />
-      <ServiceAreas />
-      <Resources />
+      <HomePortfolio />
+      <WhyReviews />
+      <Showroom extras />
       <Contact />
     </>
   );

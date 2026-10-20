@@ -24,7 +24,7 @@ export default function Kitchens() {
         </div>
         <div className="kdeck-bar">
           <button type="button" className="kdeck-prev" aria-label="Previous kitchen">←</button>
-          <p aria-live="polite"><span><span className="kdeck-n">01</span> / {String(DECK.length).padStart(2, "0")}</span><b className="kdeck-t">{DECK[0].n}</b></p>
+          <p aria-live="polite"><span><span className="kdeck-n">01</span> / {String(DECK.length).padStart(2, "0")}</span></p>
           <button type="button" className="kdeck-next" aria-label="Next kitchen">→</button>
         </div>
       </div>

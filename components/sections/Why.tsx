@@ -1,4 +1,4 @@
-const REASONS = [
+export const REASONS = [
   ["Design and build, together", "Designers and builders on one team, so the plan you approve is the project you get."],
   ["Our own showroom", "Every finish chosen in person at Heritage Design Center: cabinetry, stone, tile and fixtures."],
   ["800+ projects since 2004", "A family-owned team that has been remodeling South Sound homes for two decades."],
