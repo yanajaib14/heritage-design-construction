@@ -15,10 +15,10 @@ export default function ConsultCta({
   trust: string;
 }) {
   return (
-    <section className="cta2 td-cta" id={id}>
+    <section className="cta2 td-cta cta3-formband" id={id}>
       <div className="wrap td-cta-grid">
         <div className="td-cta-copy">
-          <div className="eyebrow">Free consultation</div>
+          <span className="cta3-pill"><b></b>Free consultation · No obligation</span>
           <h2>{title}</h2>
           <ol>
             {steps.map((s, i) => (

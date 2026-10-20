@@ -27,7 +27,7 @@ export default function ServicesPage() {
       <Services />
       <KitchenOptions />
       <Why />
-      <Contact />
+      <Contact image="/images/svc-remodel.webp" title={<>Your project, <em>start to finish.</em></>} />
     </>
   );
 }

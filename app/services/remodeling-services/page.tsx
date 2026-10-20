@@ -93,7 +93,7 @@ export default function RemodelingPage() {
 
       <FastBath />
       <Portfolio />
-      <Contact />
+      <Contact image="/images/pf-forest.webp" title={<>Ready to remodel? <em>Let’s plan it.</em></>} />
 
       <JsonLd
         data={{

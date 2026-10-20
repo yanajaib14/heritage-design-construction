@@ -51,7 +51,7 @@ export default function TiPage() {
           { q: "How long does a typical build-out take?", a: "[Typical timeline to confirm.]" },
         ]}
       />
-      <Contact />
+      <Contact title={<>Let’s talk about <em>your space.</em></>} />
     </>
   );
 }

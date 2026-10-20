@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       <Stories />
-      <Contact />
+      <Contact variant="ink" />
     </>
   );
 }

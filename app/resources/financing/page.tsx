@@ -89,7 +89,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <Contact />
+      <Contact variant="ink" image="/images/pf-forest.webp" title={<>Let’s plan a project <em>that fits.</em></>} />
     </>
   );
 }

@@ -53,7 +53,7 @@ export default function CommercialPage() {
           { q: "What size projects do you take on?", a: "[Answer to confirm.]" },
         ]}
       />
-      <Contact />
+      <Contact variant="ink" title={<>Let’s talk about <em>your space.</em></>} />
     </>
   );
 }

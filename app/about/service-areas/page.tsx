@@ -45,7 +45,7 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
-      <Contact />
+      <Contact image="/images/pf-bathview.webp" />
     </>
   );
 }

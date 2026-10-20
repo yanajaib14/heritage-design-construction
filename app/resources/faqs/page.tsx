@@ -174,7 +174,7 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <Contact />
+      <Contact title={<>Still have questions? <em>Let’s talk.</em></>} />
 
       <JsonLd
         data={{

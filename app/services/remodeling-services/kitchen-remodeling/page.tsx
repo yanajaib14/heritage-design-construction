@@ -66,7 +66,7 @@ export default function KitchenRemodelingPage() {
           { q: "How long does a custom kitchen take?", a: "[Typical timeline to confirm.]" },
         ]}
       />
-      <Contact />
+      <Contact image="/images/kitchens.webp" title={<>Your dream kitchen <em>starts here.</em></>} />
     </>
   );
 }

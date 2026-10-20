@@ -24,7 +24,7 @@ export default function PortfolioPage() {
       </PageHero>
       <Portfolio />
       <Stories />
-      <Contact />
+      <Contact image="/images/pf-coastal.webp" title={<>Like what you see? <em>Let’s build yours.</em></>} />
     </>
   );
 }

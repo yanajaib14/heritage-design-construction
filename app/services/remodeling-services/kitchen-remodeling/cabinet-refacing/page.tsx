@@ -55,7 +55,7 @@ export default function RefacingPage() {
           { q: "Can I change my countertops at the same time?", a: "[Answer to confirm.]" },
         ]}
       />
-      <Contact />
+      <Contact variant="ink" image="/images/pf-quartz.webp" title={<>New-look cabinets, <em>same great bones.</em></>} />
     </>
   );
 }

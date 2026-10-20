@@ -59,7 +59,7 @@ export default function DesignPage() {
       </section>
 
       <Showroom />
-      <Contact />
+      <Contact variant="ink" image="/images/svc-design.webp" title={<>Let’s design it <em>together.</em></>} />
 
       <JsonLd
         data={{

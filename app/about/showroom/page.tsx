@@ -133,7 +133,7 @@ export default function ShowroomPage() {
       </section>
 
       <Brands />
-      <Contact />
+      <Contact variant="ink" image="/images/showroom.webp" title={<>Come see it <em>in person.</em></>} text="Book a complimentary showroom visit and walk through every finish with a designer." />
     </>
   );
 }

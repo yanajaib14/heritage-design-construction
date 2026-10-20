@@ -235,7 +235,7 @@ export default function BathroomPage() {
           { q: "Is financing available?", a: "Yes. Financing is available for qualified homeowners through GreenSky, our preferred lender. See our financing page for details." },
         ]}
       />
-      <Contact />
+      <Contact image="/images/pf-essential.webp" title={<>Your custom bathroom <em>starts here.</em></>} />
     </>
   );
 }
