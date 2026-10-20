@@ -260,3 +260,7 @@ footer .tbd{background:rgba(255,255,255,.1)}
 .fin-note{padding-block:40px}
 .fin-note .td-fine{border-top:0;padding-top:0;max-width:90ch}
 @media (max-width:700px){.fin-list li{grid-template-columns:44px minmax(0,1fr)}}
+/* Nav bar matches the charcoal footer */
+header.site.solid{background:rgba(53,55,58,.97);border-bottom-color:rgba(255,255,255,.08)}
+.drop,.drop .fly{background:#35373A;border-color:#4a4c50;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.drop a:hover,.drop .has-fly:hover>a,.drop .has-fly:focus-within>a{background:#404246}
