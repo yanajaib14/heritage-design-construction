@@ -1,9 +1,11 @@
+import type React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import { Faq, Split, Steps } from "@/components/ui/Blocks";
 import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
+import { TEN_DAY_TERMS } from "@/lib/ten-day-terms";
 
 export const metadata: Metadata = {
   title: "10-Day Kitchen Program",
@@ -28,17 +30,18 @@ const BENEFITS = [
   { t: "Less disruption", p: "Fewer days without a kitchen and fewer decisions mid-project." },
 ];
 
+// Day-by-day copy from the 10 Day Kitchens site (DayByDayTimeline).
 const DAYS = [
-  ["Pack-out & demo", "We protect your home, pack out the kitchen and remove the old cabinets and counters."],
-  ["Prep & repairs", "Walls, floors and rough-ins are prepped and repaired so everything sits level and true."],
-  ["Cabinet base", "Base cabinets go in, set to the plan approved before day one."],
-  ["Uppers & templates", "Upper cabinets are hung and countertops are templated for a precise fit."],
-  ["Cabinet detail", "Panels, trim, crown and hardware bring the cabinetry to a finished look."],
-  ["Flooring & trim", "Flooring and finish trim tie the room together."],
-  ["Stone & tile", "Countertops are installed and the backsplash tile is set."],
-  ["Fixtures & flow", "Sink, faucet, lighting and appliances are connected and tested."],
-  ["Fine-tuning", "Doors, drawers and details are adjusted, and the space is cleaned top to bottom."],
-  ["Unveiling", "A final walkthrough of your finished kitchen, with a professional clean."],
+  ["Pack-out & demo", "White-glove packing followed by precision demolition."],
+  ["Prep & repairs", "Expert drywall and plumbing adjustments."],
+  ["Cabinet base", "Leveling and installation of high-end base cabinetry."],
+  ["Uppers & templates", "Upper mounting and countertop templating."],
+  ["Cabinet detail", "Alignment, hardware, and structural securement."],
+  ["Flooring & trim", "Premium flooring surfaces and custom trim work."],
+  ["Stone & tile", "Countertop placement and backsplash installation."],
+  ["Fixtures & flow", "Appliance integration and plumbing/electrical trim-out."],
+  ["Fine-tuning", "Addressing small details that make a space feel complete."],
+  ["Unveiling", "Final walkthrough and professional cleaning."],
 ];
 
 const INCLUDED = [
@@ -160,18 +163,21 @@ export default function TenDayPage() {
         ]}
       />
 
-      <section className="band bg-off on-light">
+      <section className="band bg-off on-light dbd-band">
         <div className="wrap">
-          <div className="ed-head td-h">
-            <div className="eyebrow">The schedule</div>
-            <h2 className="h2">Day by day, <em>plan to done.</em></h2>
+          <div className="dbd-head">
+            <div className="eyebrow">The 10-day transformation</div>
+            <h2 className="h2">Day <em>by day.</em></h2>
           </div>
-          <ol className="td-days">
+          <ol className="dbd">
             {DAYS.map(([t, p], i) => (
-              <li key={t}>
-                <span className="dn"><small>Day</small>{String(i + 1).padStart(2, "0")}</span>
-                <h3>{t}</h3>
-                <p>{p}</p>
+              <li key={t} data-rv="" style={{ "--d": `${(i % 5) * 0.06}s` } as React.CSSProperties}>
+                <span className="dbd-node" aria-hidden="true">{i + 1}</span>
+                <div>
+                  <span className="dbd-tag">Day {i + 1}</span>
+                  <h3>{t}</h3>
+                  <p>{p}</p>
+                </div>
               </li>
             ))}
           </ol>
@@ -198,6 +204,34 @@ export default function TenDayPage() {
       </section>
 
       <section className="band bg-off on-light">
+        <div className="wrap">
+          <div className="ed-head">
+            <div>
+              <div className="eyebrow">Program requirements</div>
+              <h2 className="h2">The fine print, <em>in plain view.</em></h2>
+            </div>
+            <p className="ed-aside">What every 10-Day kitchen needs to qualify, and what can extend the schedule.</p>
+          </div>
+          <div className="terms">
+            {TEN_DAY_TERMS.map((sec, i) => (
+              <details key={sec.t}>
+                <summary>
+                  <span className="rn">{String(i + 1).padStart(2, "0")}</span>
+                  {sec.t}
+                </summary>
+                <ul>
+                  {sec.items.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+                {sec.note && <p className="terms-note">{sec.note}</p>}
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="band bg-paper on-light">
         <div className="wrap">
           <div className="ed-head td-h">
             <div className="eyebrow">Investment</div>
