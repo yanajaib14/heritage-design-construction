@@ -6,6 +6,7 @@ import Portfolio from "@/components/sections/Portfolio";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/bathroom-remodeling" },
   title: "Custom Bathroom Remodeling | Lacey, Olympia & the South Sound",
   description:
     "Full custom bathroom remodels from Heritage Design & Construction: new layouts, custom showers, tubs, vanities, tile and stone, with every selection made in our Lacey showroom.",

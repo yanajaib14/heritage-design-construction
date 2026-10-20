@@ -5,6 +5,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/faqs" },
   title: "FAQs | Remodeling Questions Answered",
   description:
     "Answers about the 10-Day Kitchen Program, Fast Bath, cabinet refacing, our Lacey showroom, warranty, licensing and the South Sound areas we serve.",

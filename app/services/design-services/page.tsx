@@ -8,6 +8,7 @@ import Contact from "@/components/sections/Contact";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/design-services" },
   title: "Design Services | Space Planning & 3D Renderings",
   description:
     "Space planning, 3D renderings and in-person selections at our Lacey showroom. Heritage designers plan kitchens, baths, whole homes and commercial spaces.",

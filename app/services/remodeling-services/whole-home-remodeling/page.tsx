@@ -5,6 +5,7 @@ import { Cards, Faq, Steps, Gallery, Intro, Tbd } from "@/components/ui/Blocks";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/whole-home-remodeling" },
   title: "Whole-Home Remodeling",
   description: "Whole-home remodeling in the South Sound: layout, flow, finishes and structure designed as one and built by one Lacey, WA team.",
 };

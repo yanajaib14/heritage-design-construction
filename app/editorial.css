@@ -320,7 +320,7 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
   .reasons-lead{top:120px}
   .reasons-fig img{aspect-ratio:auto;height:clamp(220px,38vh,420px)}
   .reasons-list li{padding:clamp(56px,11vh,110px) 0}
-  .reasons.scrolly .reasons-list li{opacity:.28;transition:opacity .7s cubic-bezier(.22,1,.36,1)}
+  .reasons.scrolly .reasons-list li{opacity:.5;transition:opacity .7s cubic-bezier(.22,1,.36,1)}
   .reasons.scrolly .reasons-list li.on{opacity:1}
   .reasons.scrolly .reasons-list li .rn{transition:color .7s}
   .reasons.scrolly .reasons-list li.on .rn{color:var(--ink)}
@@ -730,3 +730,4 @@ a.hpf-item:hover>img{transform:scale(1.03)}
   .phero-compact h1{font-size:clamp(32px,8.5vw,40px)}
   .phero-compact + .band{padding-top:40px}
 }
+.tw-img,.hpf-item{position:relative}

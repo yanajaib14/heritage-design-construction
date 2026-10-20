@@ -9,6 +9,7 @@ import Brands from "@/components/sections/Brands";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/kitchen-remodeling" },
   title: "Kitchen Remodeling | Custom Kitchens in the South Sound",
   description:
     "Custom kitchen remodeling from Heritage Design & Construction in Lacey, WA: premium cabinetry, natural stone, layout changes and every selection made in our showroom.",

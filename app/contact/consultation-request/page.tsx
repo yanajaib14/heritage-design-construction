@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact/consultation-request" },
   title: "Consultation Request",
   description: "Request a consultation with Heritage Design & Construction, in your home or at our Lacey showroom.",
 };

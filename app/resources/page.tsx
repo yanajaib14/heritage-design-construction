@@ -4,6 +4,7 @@ import { Cards } from "@/components/ui/Blocks";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources" },
   title: "Resources",
   description: "FAQs, financing and planning advice for your remodel from Heritage Design & Construction.",
 };

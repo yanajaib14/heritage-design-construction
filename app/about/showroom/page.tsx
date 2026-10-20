@@ -6,6 +6,7 @@ import Contact from "@/components/sections/Contact";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about/showroom" },
   title: "Showroom in Lacey, WA",
   description:
     "Visit Heritage Design Center at 8695 Martin Way E #101 in Lacey, WA. See cabinetry, countertops, tile and stone, plumbing fixtures and hardware, and make every selection with a designer.",

@@ -1,4 +1,4 @@
-import type React from "react";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 
 export default function FastBath() {
   return (
@@ -18,13 +18,7 @@ export default function FastBath() {
       <div className="btns"><a className="btn btn-ink" href="#estimator">Get my AI estimate →</a><a className="btn" href="/services/remodeling-services/bathroom-remodeling/fast-bath-program">Explore Fast Bath</a></div>
     </div>
     <div>
-      <div className="ba" id="ba" style={{'--p': '50%'} as React.CSSProperties}>
-        <img src="/images/fb-after.webp" alt="Bathroom after the remodel" loading="lazy" />
-        <div className="ba-before"><img src="/images/fb-before.webp" alt="Bathroom before the remodel" loading="lazy" /></div>
-        <i className="ba-line" aria-hidden="true"><b></b></i>
-        <span className="ba-tag l" aria-hidden="true">Before</span><span className="ba-tag r" aria-hidden="true">After</span>
-        <input type="range" min="0" max="100" defaultValue="50" aria-label="Drag to compare before and after" />
-      </div>
+      <BeforeAfter before="/images/fb-before.webp" after="/images/fb-after.webp" beforeAlt="Bathroom before the remodel" afterAlt="Bathroom after the remodel" />
       <div className="est" id="estimator">
         <div className="est-top"><b id="estStep">Step 1 of 4</b><span id="estLabel">Bathroom size</span></div>
         <div className="bar"><i id="estBar"></i></div>

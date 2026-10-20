@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact | Book a Consultation",
   description:
     "Book a consultation with Heritage Design & Construction in your home or at our Lacey showroom. Call (360) 557-3444 or visit 8695 Martin Way E #101, Lacey, WA.",

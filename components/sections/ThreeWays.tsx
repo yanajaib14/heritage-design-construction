@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PATHS, STEPS } from "@/lib/home";
 
 // Homepage: how we work (design, supply, build) and the three routes to a new kitchen, led by photos.
@@ -21,7 +22,7 @@ export default function ThreeWays() {
         <div className="tw-cols">
           {PATHS.map((p) => (
             <a key={p.t} className="tw-col" href={p.href}>
-              <span className="tw-img"><img src={p.img} alt={p.alt} loading="lazy" /></span>
+              <span className="tw-img"><Image src={p.img} alt={p.alt} fill sizes="(max-width: 860px) 100vw, 33vw" /></span>
               <h3>{p.t}</h3>
               <p>{p.p}</p>
               <span className="link">{p.link} →</span>

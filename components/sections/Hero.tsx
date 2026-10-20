@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HERO, TRUST, WALK } from "@/lib/home";
 import { SITE } from "@/lib/site";
 import { RatingSlot } from "@/components/ui/PageReview";
@@ -9,7 +10,7 @@ export default function Hero() {
     <section className="walk" id="hero" data-frames={WALK.frames} data-dir={WALK.dir} data-phone-dir={WALK.phoneDir}>
       <div className="walk-stick">
         <div className="walk-media" aria-hidden="true">
-          <img className="walk-poster" src={WALK.poster} alt="" fetchPriority="high" />
+          <Image className="walk-poster" src={WALK.poster} alt="" fill preload sizes="100vw" />
           <canvas className="walk-canvas"></canvas>
         </div>
         <div className="walk-shade" aria-hidden="true"></div>

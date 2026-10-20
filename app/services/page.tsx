@@ -7,6 +7,7 @@ import Why from "@/components/sections/Why";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Services | Design, Remodeling & Construction",
   description:
     "Design, remodeling and construction from one company in Lacey, WA: custom kitchens, cabinet refacing, the 10-Day Kitchen and Fast Bath programs, whole-home remodels and commercial tenant improvements.",

@@ -13,6 +13,15 @@ export const SITE = {
   directions: "https://www.google.com/maps/dir/?api=1&destination=8695+Martin+Way+E+%23101+Lacey+WA+98516",
 };
 
+// Absolute address used for canonical links, the sitemap and share images. Set NEXT_PUBLIC_SITE_URL once the
+// domain is live; on Vercel the project's production address is used until then.
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000");
+
+// Profiles for the business schema. Add each URL once it exists (Google Business Profile, Facebook, Houzz).
+export const SAME_AS: string[] = [];
+
 export const CITIES = [
   "Olympia", "Lacey", "Tumwater", "Tacoma", "Puyallup", "Lakewood", "University Place", "Gig Harbor", "Federal Way", "Auburn",
   "Bonney Lake", "Spanaway", "Steilacoom", "Centralia", "Chehalis", "DuPont", "Graham", "Yelm", "Shelton", "Fife",

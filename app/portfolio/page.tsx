@@ -6,6 +6,7 @@ import Stories from "@/components/sections/Stories";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/portfolio" },
   title: "Portfolio | Kitchens & Bathrooms",
   description: "Kitchens and bathrooms designed and built by Heritage Design & Construction across the South Sound.",
 };

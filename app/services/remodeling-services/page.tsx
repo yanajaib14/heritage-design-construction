@@ -11,6 +11,7 @@ import Contact from "@/components/sections/Contact";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services" },
   title: "Remodeling Services | Kitchens, Baths & Whole Home",
   description:
     "Custom kitchen remodels, cabinet refacing, the 10-Day Kitchen Program, bathroom remodels, the Fast Bath Program and whole-home remodeling across the South Sound.",

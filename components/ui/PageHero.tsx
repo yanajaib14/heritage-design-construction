@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import JsonLd from "@/components/ui/JsonLd";
-import { SITE } from "@/lib/site";
+import { BASE_URL, CITIES, SITE } from "@/lib/site";
 
 type Crumb = { label: string; href: string };
 
@@ -40,10 +40,23 @@ export default function PageHero({
             "@type": "ListItem",
             position: i + 1,
             name: c.label,
-            item: SITE.url + c.href,
+            item: BASE_URL + c.href,
           })),
         }}
       />
+      {crumbs.length > 1 && crumbs[0].href === "/services" && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: crumbs[crumbs.length - 1].label,
+            serviceType: eyebrow,
+            url: BASE_URL + crumbs[crumbs.length - 1].href,
+            provider: { "@id": `${BASE_URL}/#business`, "@type": "GeneralContractor", name: SITE.name },
+            areaServed: CITIES.map((c) => ({ "@type": "City", name: `${c}, WA` })),
+          }}
+        />
+      )}
     </section>
   );
 }

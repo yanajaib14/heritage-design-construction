@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { OLD_SITE_HOST, OLD_SITE_PATHS } from "./lib/old-site-redirects";
 
 const nextConfig: NextConfig = {
   // The sitemap lists Design Services both at the top level and under Services; keep one page.
@@ -7,6 +8,12 @@ const nextConfig: NextConfig = {
       { source: "/design-services", destination: "/services/design-services", permanent: true },
       // Our Story was folded back into About.
       { source: "/about/our-story", destination: "/about", permanent: true },
+      ...OLD_SITE_PATHS.map(([source, destination]) => ({
+        source,
+        destination,
+        permanent: true,
+        has: [{ type: "host" as const, value: OLD_SITE_HOST }],
+      })),
     ];
   },
 };

@@ -7,6 +7,7 @@ import Stories from "@/components/sections/Stories";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us",
   description:
     "Heritage Design & Construction is a family-owned design-build company in Lacey, WA. Since 2004 we have designed, supplied and built 800+ kitchens, baths and whole-home remodels across the South Sound.",

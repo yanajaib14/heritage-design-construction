@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PROJECTS } from "@/lib/home";
 import BeforeAfter from "@/components/ui/BeforeAfter";
 
@@ -15,7 +16,7 @@ export default function HomePortfolio() {
             p.before ? (
               <BeforeAfter key={p.img} className={`hpf-item hpf-${i}`} before={p.before} after={p.img} beforeAlt={p.beforeAlt ?? ""} afterAlt={p.alt} />
             ) : (
-              <a key={p.img} className={`hpf-item hpf-${i}`} href={p.href}><img src={p.img} alt={p.alt} loading="lazy" /></a>
+              <a key={p.img} className={`hpf-item hpf-${i}`} href={p.href}><Image src={p.img} alt={p.alt} fill sizes="(max-width: 860px) 100vw, 50vw" /></a>
             ),
           )}
         </div>

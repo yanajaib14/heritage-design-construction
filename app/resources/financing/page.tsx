@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/financing" },
   title: "Financing",
   description:
     "Financing options for kitchen, bathroom and whole-home remodels with Heritage Design & Construction, including our preferred lender GreenSky.",

@@ -5,6 +5,7 @@ import { Cards, Faq, Steps, Gallery } from "@/components/ui/Blocks";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/construction-services/commercial-construction/tenant-improvements-ti" },
   title: "Tenant Improvements (TI)",
   description: "Tenant improvements in the South Sound for tenants, landlords and brokers, designed, supplied and built by one Lacey, WA team.",
 };

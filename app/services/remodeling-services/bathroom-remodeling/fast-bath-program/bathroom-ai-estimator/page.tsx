@@ -5,6 +5,7 @@ import FastBath from "@/components/sections/FastBath";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/bathroom-remodeling/fast-bath-program/bathroom-ai-estimator" },
   title: "Bathroom AI Estimator",
   description: "Get a ballpark price for your Fast Bath upgrade in a few quick steps with the Heritage Bathroom AI Estimator.",
 };

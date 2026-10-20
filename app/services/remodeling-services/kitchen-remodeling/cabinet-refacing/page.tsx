@@ -5,6 +5,7 @@ import { Cards, Faq, Steps, Tbd, Intro, Gallery } from "@/components/ui/Blocks";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/kitchen-remodeling/cabinet-refacing" },
   title: "Cabinet Refacing",
   description: "Cabinet refacing in the South Sound: new doors, drawer fronts and finishes on your existing cabinet boxes, chosen in our Lacey showroom.",
 };

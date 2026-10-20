@@ -6,6 +6,7 @@ import Contact from "@/components/sections/Contact";
 import { CITIES } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about/service-areas" },
   title: "Service Areas | South Sound Remodeling",
   description:
     "Heritage Design & Construction designs and builds across the South Sound: Olympia, Lacey, Tumwater, Tacoma, Puyallup, Lakewood, Gig Harbor, Federal Way, Shelton and more.",

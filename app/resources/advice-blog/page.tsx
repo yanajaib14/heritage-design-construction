@@ -3,6 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/advice-blog" },
   title: "Advice & Blog | Remodeling Resources",
   description: "Planning advice for kitchen, bathroom, whole-home and commercial projects from the Heritage Design & Construction team.",
 };

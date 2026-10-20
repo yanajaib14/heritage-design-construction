@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact/schedule-consultation" },
   title: "Schedule a Consultation",
   description: "Pick a time for your consultation with Heritage Design & Construction, in your home or at our Lacey showroom.",
 };

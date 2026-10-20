@@ -5,9 +5,11 @@ import PageHero from "@/components/ui/PageHero";
 import { Faq, Split, Steps } from "@/components/ui/Blocks";
 import ConsultCta from "@/components/ui/ConsultCta";
 import PageReview from "@/components/ui/PageReview";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/bathroom-remodeling/fast-bath-program" },
   title: "Fast Bath Program | Bathroom Upgrades in Lacey, WA",
   description:
     "Fast, quality bathroom upgrades that keep your layout: tub-to-shower conversions, shower and tub replacements, vanities, fixtures and accessible bathrooms, planned and installed by a local South Sound team.",
@@ -174,16 +176,7 @@ export default function FastBathPage() {
             <p>Drag the handle to compare. Big impact, focused scope.</p>
             <Link className="td-link" href="/portfolio">View more projects →</Link>
           </div>
-          <div className="ba" id="ba" style={{ "--p": "50%" } as React.CSSProperties}>
-            <img src="/images/fb-after.webp" alt="Bathroom after the Fast Bath upgrade" loading="lazy" />
-            <div className="ba-before">
-              <img src="/images/fb-before.webp" alt="Bathroom before the Fast Bath upgrade" loading="lazy" />
-            </div>
-            <i className="ba-line" aria-hidden="true"><b></b></i>
-            <span className="ba-tag l" aria-hidden="true">Before</span>
-            <span className="ba-tag r" aria-hidden="true">After</span>
-            <input type="range" min="0" max="100" defaultValue="50" aria-label="Drag to compare before and after" />
-          </div>
+          <BeforeAfter before="/images/fb-before.webp" after="/images/fb-after.webp" beforeAlt="Bathroom before the Fast Bath upgrade" afterAlt="Bathroom after the Fast Bath upgrade" />
         </div>
       </section>
 

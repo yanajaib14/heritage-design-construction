@@ -11,7 +11,7 @@ import MobileBar from "@/components/MobileBar";
 import Footer from "@/components/sections/Footer";
 import SiteEffects from "@/components/SiteEffects";
 import JsonLd from "@/components/ui/JsonLd";
-import { CITIES, SITE } from "@/lib/site";
+import { BASE_URL, CITIES, SAME_AS, SITE } from "@/lib/site";
 
 const serif = Source_Serif_4({
   variable: "--font-serif",
@@ -27,6 +27,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  openGraph: { type: "website", siteName: SITE.name, locale: "en_US" },
+  twitter: { card: "summary_large_image" },
   title: {
     default: "Heritage Design & Construction | Custom Kitchens & Remodeling in Lacey, WA",
     template: "%s | Heritage Design & Construction",
@@ -54,8 +57,16 @@ export default function RootLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "GeneralContractor",
+            "@id": `${BASE_URL}/#business`,
             name: SITE.name,
-            url: SITE.url,
+            url: BASE_URL,
+            logo: `${BASE_URL}/brand/heritage-logo.webp`,
+            image: `${BASE_URL}/images/hero-showroom.webp`,
+            hasMap: SITE.directions,
+            openingHoursSpecification: [
+              { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "17:30" },
+            ],
+            ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
             telephone: "+1-360-557-3444",
             foundingDate: "2004",
             address: {

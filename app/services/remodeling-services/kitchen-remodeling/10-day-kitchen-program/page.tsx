@@ -11,6 +11,7 @@ import BeforeAfter from "@/components/ui/BeforeAfter";
 import { TEN_DAY_TERMS } from "@/lib/ten-day-terms";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program" },
   title: "10-Day Kitchen Program",
   description:
     "A faster, lower-disruption kitchen remodel for qualified same-layout kitchens in Lacey, Olympia, Tacoma and the South Sound, installed in 10 business days.",

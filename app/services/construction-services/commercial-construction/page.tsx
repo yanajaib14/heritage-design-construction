@@ -5,6 +5,7 @@ import { Cards, Faq, Steps, Gallery } from "@/components/ui/Blocks";
 import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/construction-services/commercial-construction" },
   title: "Commercial Construction",
   description: "Commercial construction in the South Sound from a Lacey, WA design-build team: design, materials and construction under one roof.",
 };
