@@ -95,7 +95,7 @@ export default function BathroomPage() {
         eyebrow="Custom bathroom remodeling"
         title={<>Baths designed <em>to unwind.</em></>}
         lede="Full custom bathroom remodels, from primary suites to powder rooms. New layouts, custom showers, tile, stone, vanities and fixtures, all selected in our showroom and built by our own team."
-        image="/images/pf-bathview.webp"
+       
         crumbs={[
           { label: "Services", href: "/services" },
           { label: "Remodeling", href: "/services/remodeling-services" },
@@ -203,7 +203,7 @@ export default function BathroomPage() {
         eyebrow="Fast Bath Program"
         title={<>Keeping your layout? <em>Go faster.</em></>}
         text="When you love your layout but not your bathroom, Fast Bath delivers a quality upgrade in about three days: tub-to-shower conversions, shower and tub replacements and vanity upgrades."
-        image="/images/fb-after.webp"
+       
         imageAlt="Finished bathroom after a Fast Bath upgrade"
         flip
       >
@@ -235,7 +235,7 @@ export default function BathroomPage() {
           { q: "Is financing available?", a: "Yes. Financing is available for qualified homeowners through GreenSky, our preferred lender. See our financing page for details." },
         ]}
       />
-      <Contact image="/images/pf-essential.webp" title={<>Your custom bathroom <em>starts here.</em></>} />
+      <Contact title={<>Your custom bathroom <em>starts here.</em></>} />
     </>
   );
 }

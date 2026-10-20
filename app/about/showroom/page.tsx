@@ -70,7 +70,7 @@ export default function ShowroomPage() {
         eyebrow="Heritage Design Center Showroom"
         title={<>See it. Touch it. <em>Choose it.</em></>}
         lede="Every Heritage project is selected in person at our sister showroom in Lacey. Cabinetry, stone, tile, fixtures and hardware, all on display and all side by side with a designer."
-        image="/images/hero-showroom.webp"
+       
         crumbs={[{ label: "About", href: "/about" }, { label: "Showroom", href: "/about/showroom" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Book a showroom visit →</Link>
@@ -133,7 +133,7 @@ export default function ShowroomPage() {
       </section>
 
       <Brands />
-      <Contact variant="ink" image="/images/showroom.webp" title={<>Come see it <em>in person.</em></>} text="Book a complimentary showroom visit and walk through every finish with a designer." />
+      <Contact title={<>Come see it <em>in person.</em></>} text="Book a complimentary showroom visit and walk through every finish with a designer." />
     </>
   );
 }

@@ -16,7 +16,7 @@ export default function RefacingPage() {
         eyebrow="Cabinet refacing"
         title={<>A new look, <em>same layout.</em></>}
         lede="New doors, drawer fronts and finishes on your existing cabinet boxes, for kitchens whose layout already works."
-        image="/images/pf-oslo.webp"
+       
         crumbs={[
           { label: "Services", href: "/services" },
           { label: "Remodeling", href: "/services/remodeling-services" },
@@ -55,7 +55,7 @@ export default function RefacingPage() {
           { q: "Can I change my countertops at the same time?", a: "[Answer to confirm.]" },
         ]}
       />
-      <Contact variant="ink" image="/images/pf-quartz.webp" title={<>New-look cabinets, <em>same great bones.</em></>} />
+      <Contact title={<>New-look cabinets, <em>same great bones.</em></>} />
     </>
   );
 }

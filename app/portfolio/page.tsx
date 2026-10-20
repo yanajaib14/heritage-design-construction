@@ -17,14 +17,14 @@ export default function PortfolioPage() {
         eyebrow="Portfolio"
         title={<>Spaces we&apos;ve <em>designed and built.</em></>}
         lede="A selection of kitchens and bathrooms from our team. Whole-home and commercial projects are coming soon."
-        image="/images/pf-university.webp"
+       
         crumbs={[{ label: "Portfolio", href: "/portfolio" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Start your project →</Link>
       </PageHero>
       <Portfolio />
       <Stories />
-      <Contact image="/images/pf-coastal.webp" title={<>Like what you see? <em>Let’s build yours.</em></>} />
+      <Contact title={<>Like what you see? <em>Let’s build yours.</em></>} />
     </>
   );
 }

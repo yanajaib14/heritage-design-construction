@@ -23,7 +23,7 @@ export default function KitchenRemodelingPage() {
         eyebrow="Kitchen remodeling"
         title={<>The kitchen, <em>elevated.</em></>}
         lede="Fully custom kitchens designed around how you cook, gather and live, with premium cabinetry, natural stone and craftsmanship built to last for decades."
-        image="/images/kitchens.webp"
+       
         crumbs={[
           { label: "Services", href: "/services" },
           { label: "Remodeling", href: "/services/remodeling-services" },
@@ -66,7 +66,7 @@ export default function KitchenRemodelingPage() {
           { q: "How long does a custom kitchen take?", a: "[Typical timeline to confirm.]" },
         ]}
       />
-      <Contact image="/images/kitchens.webp" title={<>Your dream kitchen <em>starts here.</em></>} />
+      <Contact title={<>Your dream kitchen <em>starts here.</em></>} />
     </>
   );
 }

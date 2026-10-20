@@ -47,7 +47,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Contact variant="ink" image="/images/pf-essential.webp" />
+      <Contact />
     </>
   );
 }

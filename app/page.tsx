@@ -29,7 +29,7 @@ export default function Home() {
       <Stories />
       <ServiceAreas />
       <Resources />
-      <Contact image="/images/pf-university.webp" />
+      <Contact />
     </>
   );
 }

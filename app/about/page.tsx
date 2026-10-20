@@ -19,7 +19,7 @@ export default function AboutPage() {
         eyebrow="About Heritage"
         title={<>Family owned. <em>Built to last.</em></>}
         lede="A design-build house in Lacey, Washington. We design your project, supply the materials from our own showroom and build it with our own team, for homes and businesses across the South Sound."
-        image="/images/svc-design.webp"
+       
         crumbs={[{ label: "About", href: "/about" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Book a Consultation →</Link>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       <Stories />
-      <Contact variant="ink" />
+      <Contact />
     </>
   );
 }

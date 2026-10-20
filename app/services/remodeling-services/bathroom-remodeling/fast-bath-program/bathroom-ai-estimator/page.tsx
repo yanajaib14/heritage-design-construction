@@ -30,7 +30,7 @@ export default function EstimatorPage() {
         <p>The estimator gives a ballpark range. Your final price is confirmed after a visit with our team.</p>
         <p><Tbd>[How the AI estimator works, and whether photos can be uploaded.]</Tbd></p>
       </Intro>
-      <Contact variant="ink" image="/images/fb-after.webp" />
+      <Contact />
     </>
   );
 }

@@ -53,7 +53,7 @@ export default function WholeHomePage() {
           { q: "How long does a whole-home remodel take?", a: "[Typical timeline to confirm.]" },
         ]}
       />
-      <Contact variant="ink" image="/images/pf-midnight.webp" title={<>Love where you live, <em>all over again.</em></>} />
+      <Contact title={<>Love where you live, <em>all over again.</em></>} />
     </>
   );
 }

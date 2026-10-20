@@ -20,7 +20,7 @@ export default function DesignPage() {
         eyebrow="Design services"
         title={<>Designed before <em>day one.</em></>}
         lede="Space planning, 3D renderings and selections at our showroom, so you see your project and approve every detail before construction begins."
-        image="/images/svc-design.webp"
+       
         crumbs={[{ label: "Services", href: "/services" }, { label: "Design", href: "/services/design-services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Start your design →</Link>
@@ -59,7 +59,7 @@ export default function DesignPage() {
       </section>
 
       <Showroom />
-      <Contact variant="ink" image="/images/svc-design.webp" title={<>Let’s design it <em>together.</em></>} />
+      <Contact title={<>Let’s design it <em>together.</em></>} />
 
       <JsonLd
         data={{

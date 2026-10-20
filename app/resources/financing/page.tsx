@@ -35,7 +35,7 @@ export default function FinancingPage() {
         eyebrow="Resources · Financing"
         title={<>Financing <em>your remodel.</em></>}
         lede="A remodel is a significant investment. With the right financing, it can be more affordable than you think."
-        image="/images/hero-showroom.webp"
+       
         crumbs={[{ label: "Resources", href: "/resources" }, { label: "Financing", href: "/resources/financing" }]}
       >
         <a className="btn btn-chrome" href="tel:+18669360602">Call GreenSky</a>
@@ -89,7 +89,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <Contact variant="ink" image="/images/pf-forest.webp" title={<>Let’s plan a project <em>that fits.</em></>} />
+      <Contact title={<>Let’s plan a project <em>that fits.</em></>} />
     </>
   );
 }

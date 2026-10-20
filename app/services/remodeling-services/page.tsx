@@ -32,7 +32,7 @@ export default function RemodelingPage() {
         eyebrow="Remodeling services"
         title={<>Kitchens, baths <em>and whole homes.</em></>}
         lede="From a fully custom kitchen to a three-day bath upgrade, every remodel is designed, supplied and built by one team, with every finish chosen in our Lacey showroom."
-        image="/images/kitchens.webp"
+       
         crumbs={[{ label: "Services", href: "/services" }, { label: "Remodeling", href: "/services/remodeling-services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Book a Consultation →</Link>
@@ -93,7 +93,7 @@ export default function RemodelingPage() {
 
       <FastBath />
       <Portfolio />
-      <Contact image="/images/pf-forest.webp" title={<>Ready to remodel? <em>Let’s plan it.</em></>} />
+      <Contact title={<>Ready to remodel? <em>Let’s plan it.</em></>} />
 
       <JsonLd
         data={{

@@ -26,7 +26,7 @@ export default function ResourcesPage() {
           { icon: "pencil", title: "Advice / Blog", text: "Ideas and practical advice for planning your project.", href: "/resources/advice-blog", cta: "Read the blog" },
         ]}
       />
-      <Contact variant="ink" />
+      <Contact />
     </>
   );
 }

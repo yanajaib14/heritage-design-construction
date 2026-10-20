@@ -75,7 +75,7 @@ export default function ConstructionPage() {
         </div>
       </section>
 
-      <Contact image="/images/svc-remodel.webp" title={<>Let’s talk about <em>your build.</em></>} />
+      <Contact title={<>Let’s talk about <em>your build.</em></>} />
 
       <JsonLd
         data={{

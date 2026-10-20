@@ -19,7 +19,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={<>We design, remodel <em>and build.</em></>}
         lede="Custom kitchens and whole-home remodels lead what we do, backed by bathroom remodeling, design services and commercial construction, all from one team."
-        image="/images/svc-remodel.webp"
+       
         crumbs={[{ label: "Services", href: "/services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Book a Consultation →</Link>
@@ -27,7 +27,7 @@ export default function ServicesPage() {
       <Services />
       <KitchenOptions />
       <Why />
-      <Contact image="/images/svc-remodel.webp" title={<>Your project, <em>start to finish.</em></>} />
+      <Contact title={<>Your project, <em>start to finish.</em></>} />
     </>
   );
 }
