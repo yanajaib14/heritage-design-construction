@@ -28,7 +28,6 @@ export const NAV: NavItem[] = [
     href: "/about",
     children: [
       { label: "About Us", href: "/about" },
-      { label: "Our Story", href: "/about/our-story" },
       { label: "Showroom", href: "/about/showroom" },
       { label: "Service Areas", href: "/about/service-areas" },
     ],

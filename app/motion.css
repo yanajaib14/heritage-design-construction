@@ -80,8 +80,6 @@
 /* small lifts on hover for cards and rows */
 .td-ben li,.td-price li{transition:background .35s}
 .td-ben li:hover,.td-price li:hover{background:rgba(17,18,18,.03)}
-.reasons-list li{transition:padding-left .4s var(--ease)}
-.reasons-list li:hover{padding-left:10px}
 @media (prefers-reduced-motion:reduce){
   [data-rv].rv-arm{opacity:1!important;transform:none!important;clip-path:none!important;scale:none!important}
   .par{translate:none!important}

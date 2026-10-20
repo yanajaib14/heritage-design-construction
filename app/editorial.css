@@ -314,3 +314,14 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
 .foot h4{color:#F2F0EC}
 .foot a,.foot p,.foot li{color:#e2e0da}
 .legal{color:#c9c7c1}
+/* Pinned reasons: left column sticks, the list is tall enough to scroll past it, and the row at
+   the middle of the screen is lit while the rest rest dimmed. */
+@media (min-width:861px){
+  .reasons-lead{top:120px}
+  .reasons-fig img{aspect-ratio:auto;height:clamp(220px,38vh,420px)}
+  .reasons-list li{padding:clamp(56px,11vh,110px) 0}
+  .reasons.scrolly .reasons-list li{opacity:.28;transition:opacity .7s cubic-bezier(.22,1,.36,1)}
+  .reasons.scrolly .reasons-list li.on{opacity:1}
+  .reasons.scrolly .reasons-list li .rn{transition:color .7s}
+  .reasons.scrolly .reasons-list li.on .rn{color:var(--ink)}
+}

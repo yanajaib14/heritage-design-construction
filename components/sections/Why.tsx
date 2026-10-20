@@ -1,5 +1,3 @@
-import type React from "react";
-
 const REASONS = [
   ["Design and build, together", "Designers and builders on one team, so the plan you approve is the project you get."],
   ["Our own showroom", "Every finish chosen in person at Heritage Design Center: cabinetry, stone, tile and fixtures."],
@@ -19,7 +17,7 @@ export default function Why({ showAboutLink = true }: { showAboutLink?: boolean 
         </div>
         <ol className="reasons-list">
           {REASONS.map(([t, p], i) => (
-            <li key={t} data-rv style={{ "--d": `${i * 0.1}s` } as React.CSSProperties}>
+            <li key={t}>
               <span className="rn">{String(i + 1).padStart(2, "0")}</span>
               <h3>{t}</h3>
               <p>{p}</p>
