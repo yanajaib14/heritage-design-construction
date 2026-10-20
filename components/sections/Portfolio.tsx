@@ -21,7 +21,7 @@ export default function Portfolio() {
       <a className="pf " data-k="kitchen" href="#portfolio"><div className="bgph img" role="img" aria-label="Transitional Chef Kitchen" style={{backgroundImage: 'url(/images/pf-coastal.webp)'} as React.CSSProperties}></div><div className="cap"><span className="tag">Kitchen</span><h3>Transitional Chef Kitchen</h3></div><span className="view">View project</span></a>
       <a className="pf " data-k="bath" href="#portfolio"><div className="bgph img" role="img" aria-label="Clawfoot Tub Bath" style={{backgroundImage: 'url(/images/pf-bathview.webp)'} as React.CSSProperties}></div><div className="cap"><span className="tag">Bathroom</span><h3>Clawfoot Tub Bath</h3></div><span className="view">View project</span></a>
     </div>
-    <div className="pf-foot"><span>Kitchen and bath projects from Heritage Design Center.</span><a className="btn" href="/portfolio">View full portfolio →</a></div>
+    <div className="pf-foot"><a className="btn" href="/portfolio">View full portfolio →</a></div>
   </div>
 </section>
     </>

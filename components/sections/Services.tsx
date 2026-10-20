@@ -20,7 +20,6 @@ export default function Services() {
         <div className="body"><span className="tag">Showroom</span><h3>Design</h3>
           <div className="more"><p>Space planning, 3D renderings and every selection made with a designer in our Lacey showroom.</p><ul><li><a href="/services/design-services">Space planning</a></li><li><a href="/services/design-services">3D renderings</a></li><li><a href="/services/design-services">Selections</a></li></ul><span className="go">Explore design</span></div></div></div>
     </div>
-    <p className="svc-hint" aria-hidden="true">Hover a service to open it</p>
   </div>
 </section>
     </>

@@ -11,7 +11,6 @@ export default function Contact() {
           </div>
           <figure className="cta2-fig">
             <div className="fig-clip"><img src="/images/pf-oslo.webp" alt="A finished Heritage kitchen" loading="lazy" /></div>
-            <figcaption>Heritage Design &amp; Construction · Lacey, WA</figcaption>
           </figure>
         </div>
         <div className="cta2-visit">

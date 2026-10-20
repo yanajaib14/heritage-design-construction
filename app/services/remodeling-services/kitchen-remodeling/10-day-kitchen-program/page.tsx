@@ -118,7 +118,6 @@ export default function TenDayPage() {
             <p className="td-note">If your kitchen needs a new layout, it&apos;s a better fit for a <Link href={CUSTOM}>custom kitchen remodel</Link>.</p>
             <figure className="reasons-fig">
               <div className="fig-clip"><img src="/images/pf-coastal.webp" alt="A same-layout kitchen with new cabinetry" loading="lazy" /></div>
-              <figcaption>Same footprint, new kitchen</figcaption>
             </figure>
           </div>
           <ol className="reasons-list">

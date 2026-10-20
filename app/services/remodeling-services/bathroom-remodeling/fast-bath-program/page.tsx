@@ -193,7 +193,6 @@ export default function FastBathPage() {
             <h2 className="h2">Handled <em>with care.</em></h2>
             <figure className="reasons-fig">
               <div className="fig-clip"><img src="/images/fb-room.webp" alt="A finished bathroom with a gray vanity and glass shower" loading="lazy" /></div>
-              <figcaption>Fast Bath · South Sound</figcaption>
             </figure>
           </div>
           <div>

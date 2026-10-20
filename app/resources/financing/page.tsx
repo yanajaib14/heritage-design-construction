@@ -67,7 +67,6 @@ export default function FinancingPage() {
             <p className="td-note">The most common ways homeowners fund a remodel. We&apos;re happy to talk through them at your consultation.</p>
             <figure className="reasons-fig">
               <div className="fig-clip"><img src="/images/showroom.webp" alt="Material samples at Heritage Design Center" loading="lazy" /></div>
-              <figcaption>Plan your project with confidence</figcaption>
             </figure>
           </div>
           <ol className="reasons-list fin-list">
