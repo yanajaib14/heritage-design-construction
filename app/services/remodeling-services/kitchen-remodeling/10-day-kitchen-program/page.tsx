@@ -67,10 +67,27 @@ const EXCLUDED = [
   "Hidden damage, hazardous materials or third-party delays",
 ];
 
+// Package ranges and copy from the 10 Day Kitchens site (ProgramPricingExplorer). The first photo of each
+// size is the one that site used; the others are picked from our own projects.
 const TIERS = [
-  { n: "Small kitchen", p: "$45,000–$55,000+" },
-  { n: "Medium kitchen", p: "$55,000–$70,000+" },
-  { n: "Large kitchen", p: "$70,000–$85,000+" },
+  {
+    n: "Small kitchen",
+    p: "$45,000–$55,000+",
+    d: "Compact layouts and galley kitchens that keep the same footprint.",
+    imgs: ["/images/pricing-small.webp", "/images/pf-university.webp", "/images/pf-quartz.webp"],
+  },
+  {
+    n: "Medium kitchen",
+    p: "$55,000–$70,000+",
+    d: "Standard family kitchens with approved cabinets, counters, flooring and finishes.",
+    imgs: ["/images/pricing-medium.webp", "/images/pf-coastal.webp", "/images/pf-midnight.webp"],
+  },
+  {
+    n: "Large kitchen",
+    p: "$70,000–$85,000+",
+    d: "Larger same-layout kitchens with more cabinetry, surface area and finish scope.",
+    imgs: ["/images/pricing-large.webp", "/images/pf-forest.webp", "/images/kitchens.webp"],
+  },
 ];
 
 export default function TenDayPage() {
@@ -171,9 +188,39 @@ export default function TenDayPage() {
         <div className="wrap">
           <div className="dbd-head">
             <div className="eyebrow">The 10-day transformation</div>
-            <h2 className="h2">Day <em>by day.</em></h2>
+            <h2 className="h2">Day by day, <em>plan to done.</em></h2>
           </div>
-          <ol className={`dbd${DAYS.some((d) => d.img) ? " dbd-ph" : ""}`}>
+          {/* Desktop: pinned scroll story, one day at a time. Phones get the plain list below. */}
+          <div className="dbd2" id="dbd2" style={{ "--n": DAYS.length } as React.CSSProperties}>
+            <div className="dbd2-stick">
+              <div className="dbd2-media">
+                {DAYS.map((d, i) => (
+                  <figure key={d.t} className={`${i ? "" : "on"}${d.img ? "" : " empty"}`}>
+                    {d.img ? <img src={d.img} alt={`Day ${i + 1}: ${d.t}`} loading="lazy" /> : <span className="dbd2-ph">[Day {i + 1} photo]</span>}
+                    <b className="dbd2-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</b>
+                  </figure>
+                ))}
+              </div>
+              <div className="dbd2-rail" aria-hidden="true">
+                <small>Day 1</small>
+                <span><i></i></span>
+                <small>Day {DAYS.length}</small>
+              </div>
+              <div className="dbd2-copy">
+                {DAYS.map((d, i) => (
+                  <article key={d.t} className={i ? "" : "on"} aria-hidden={i ? "true" : undefined}>
+                    <span className="dbd2-tag">Day {i + 1}</span>
+                    <h3>{d.t}</h3>
+                    <p>{d.p}</p>
+                  </article>
+                ))}
+                <div className="dbd2-dash" aria-hidden="true">
+                  {DAYS.map((d, i) => <b key={d.t} className={i ? "" : "on"}></b>)}
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol className={`dbd dbd-list${DAYS.some((d) => d.img) ? " dbd-ph" : ""}`}>
             {DAYS.map((d, i) => (
               <li key={d.t} data-rv="" style={{ "--d": `${(i % 5) * 0.06}s` } as React.CSSProperties}>
                 <span className="dbd-node" aria-hidden="true">{i + 1}</span>
@@ -241,20 +288,47 @@ export default function TenDayPage() {
       </section>
 
       <section className="band bg-paper on-light">
-        <div className="wrap">
-          <div className="ed-head td-h">
-            <div className="eyebrow">Investment</div>
+        <div className="wrap pk" id="pk">
+          <div className="pk-lead">
+            <div className="eyebrow">Package pricing</div>
             <h2 className="h2">Clear starting ranges <em>for qualified kitchens.</em></h2>
+            <p className="td-note">Choose a size to see the kind of kitchen that typically fits the range. Final pricing depends on measurements, selections, site conditions and scope.</p>
+            <ol className="pk-list">
+              {TIERS.map((t, i) => (
+                <li key={t.n}>
+                  <button type="button" className={`pk-tier${i ? "" : " on"}`} data-i={i}>
+                    <span className="pk-name">{t.n}</span>
+                    <strong>{t.p}</strong>
+                    <span className="pk-d">{t.d}</span>
+                    <i aria-hidden="true">→</i>
+                  </button>
+                </li>
+              ))}
+            </ol>
           </div>
-          <ul className="td-price">
-            {TIERS.map((t) => (
-              <li key={t.n}>
-                <small>{t.n}</small>
-                <strong>{t.p}</strong>
-              </li>
+          <div className="pk-stage">
+            <div className="pk-media">
+              {TIERS.map((t, i) =>
+                t.imgs.map((src, k) => (
+                  <img key={src} src={src} className={i || k ? "" : "on"} data-t={i} data-k={k} alt={`${t.n} remodel example ${k + 1}`} loading="lazy" />
+                )),
+              )}
+              <div className="pk-cap">
+                <small>Currently viewing</small>
+                <b className="pk-cap-n">{TIERS[0].n}</b>
+                <span className="pk-cap-p">{TIERS[0].p}</span>
+              </div>
+            </div>
+            {TIERS.map((t, i) => (
+              <div key={t.n} className={`pk-thumbs${i ? "" : " on"}`} data-t={i}>
+                {t.imgs.map((src, k) => (
+                  <button key={src} type="button" className={k ? "" : "on"} data-k={k} aria-label={`${t.n} example ${k + 1}`}>
+                    <img src={src} alt="" loading="lazy" />
+                  </button>
+                ))}
+              </div>
             ))}
-          </ul>
-          <p className="td-fine">Final pricing depends on measurements, selections, site conditions and scope.</p>
+          </div>
         </div>
       </section>
 
