@@ -10,7 +10,7 @@ export default function Contact() {
             <div className="btns"><a className="btn btn-ink btn-xl" href="/contact">Book a Consultation →</a><a className="btn btn-xl" href="tel:+13605573444">Call (360) 557-3444</a></div>
           </div>
           <figure className="cta2-fig">
-            <img src="/images/pf-oslo.webp" alt="A finished Heritage kitchen" loading="lazy" />
+            <div className="fig-clip"><img src="/images/pf-oslo.webp" alt="A finished Heritage kitchen" loading="lazy" /></div>
             <figcaption>Heritage Design &amp; Construction · Lacey, WA</figcaption>
           </figure>
         </div>

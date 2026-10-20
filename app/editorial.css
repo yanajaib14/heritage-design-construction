@@ -305,8 +305,8 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
 .eyebrow,.cta2-visit small,.idx-k,.dbd-tag,.form label,.info small,.city-grid li small,.posts .num,.svc-hint,.figs small,.visit small,.foot h4,
 .svc2 .tag,.svc .tag,.kp .tag,.pf .tag,.stat small,.pillars .cap,.hero-cap span,.why-foot,.ba-tag,.kp .badge,.pf .view,
 .td-snap span,.td-price small,.td-stat span,.cta2 .td-trust,.reasons-fig figcaption,.td-quote figcaption,.tl2-card h3,.ed-head .eyebrow{
-  font-size:13px!important;font-weight:600;letter-spacing:.12em!important}
-.ba-tag,.kp .badge{font-size:12px!important}
+  font-size:14px!important;font-weight:600;letter-spacing:.1em!important}
+.ba-tag,.kp .badge{font-size:13px!important}
 .on-light .eyebrow,.cta2 .eyebrow,.cta2-visit small,.idx-k,.form label,.info small,.city-grid li small,.posts .num,.svc-hint,
 .td-price small,.td-stat span,.reasons-fig figcaption,.td-quote figcaption,.dbd-tag{color:#3f4246}
 .eyebrow,.figs small,.visit small,.td-snap span,.tl2-card h3,.kp .tag{color:#dedcd6}

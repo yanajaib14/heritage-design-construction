@@ -117,7 +117,7 @@ export default function TenDayPage() {
             <h2 className="h2">This works when the room&apos;s <em>bones stay in place.</em></h2>
             <p className="td-note">If your kitchen needs a new layout, it&apos;s a better fit for a <Link href={CUSTOM}>custom kitchen remodel</Link>.</p>
             <figure className="reasons-fig">
-              <img src="/images/pf-coastal.webp" alt="A same-layout kitchen with new cabinetry" loading="lazy" />
+              <div className="fig-clip"><img src="/images/pf-coastal.webp" alt="A same-layout kitchen with new cabinetry" loading="lazy" /></div>
               <figcaption>Same footprint, new kitchen</figcaption>
             </figure>
           </div>

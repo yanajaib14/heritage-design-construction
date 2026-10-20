@@ -63,9 +63,9 @@
 /* photos: a curtain wipe upward while the picture settles */
 [data-rv="img"]{overflow:hidden}
 [data-rv="img"].rv-arm{opacity:1;clip-path:inset(100% 0 0 0);transform:none}
-[data-rv="img"].rv-arm img,.sphoto[data-rv="img"].rv-arm{scale:1.18}
+[data-rv="img"].rv-arm img{scale:1.18}
 [data-rv="img"].rv-go{clip-path:inset(0 0 0 0);transition:clip-path 1.3s cubic-bezier(.77,0,.18,1) var(--d,0s)}
-[data-rv="img"].rv-go img,.sphoto[data-rv="img"].rv-go{scale:1.08;transition:scale 1.8s var(--ease) var(--d,0s)}
+[data-rv="img"].rv-go img{scale:1.08;transition:scale 1.8s var(--ease) var(--d,0s)}
 .sphoto[data-rv="img"].rv-arm,.ph[data-rv="img"].rv-arm{transform:none}
 /* section heads: the rule under the heading draws across */
 .ed-head[data-rv]{border-bottom-color:transparent;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat}
@@ -87,3 +87,5 @@
   .par{translate:none!important}
   .scroll-bar{display:none}
 }
+.fig-clip{overflow:hidden}
+.fig-clip>img{display:block}

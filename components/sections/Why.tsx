@@ -15,7 +15,7 @@ export default function Why({ showAboutLink = true }: { showAboutLink?: boolean 
           <div className="eyebrow">Why Heritage</div>
           <h2 className="h2">Not just a contractor. <em>A design-build house.</em></h2>
           {showAboutLink && <a className="link" href="/about">About us →</a>}
-          <figure className="reasons-fig"><img src="/images/svc-design.webp" alt="A Heritage designer reviewing plans with a client" loading="lazy" /><figcaption>Design meeting, Heritage Design Center, Lacey</figcaption></figure>
+          <figure className="reasons-fig"><div className="fig-clip"><img src="/images/svc-design.webp" alt="A Heritage designer reviewing plans with a client" loading="lazy" /></div><figcaption>Design meeting, Heritage Design Center, Lacey</figcaption></figure>
         </div>
         <ol className="reasons-list">
           {REASONS.map(([t, p], i) => (
