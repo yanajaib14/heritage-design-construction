@@ -57,6 +57,20 @@ export default function ContactForm() {
           ))}
         </select>
       </label>
+      <label>
+        Best time to call
+        <select name="time" defaultValue="Any time">
+          <option>Any time</option>
+          <option>Morning</option>
+          <option>Midday</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
+        </select>
+      </label>
+      <label>
+        Photos of your space <span className="opt-l">(optional)</span>
+        <input name="photos" type="file" accept="image/*" multiple />
+      </label>
       <label className="full">Tell us about your project<textarea name="message" /></label>
       <label className="full">
         Where would you like to meet?
@@ -68,7 +82,7 @@ export default function ContactForm() {
       </label>
       <div className="full btns" style={{ alignItems: "center" }}>
         <button className="btn btn-ink btn-xl" type="submit">Request my consultation →</button>
-        <span className="note">Prefer to talk? Call (360) 557-3444.</span>
+        <span className="note">We reply within <span className="tbd">[one business day]</span>. Prefer to talk? Call (360) 557-3444.</span>
       </div>
     </form>
   );

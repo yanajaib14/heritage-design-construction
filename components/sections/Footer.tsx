@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
         <div className="legal">
           <span>
-            © 2026 Heritage Design &amp; Construction · Family owned since 2004 · WA Contractor Lic. <span className="tbd">[#]</span>
+            © 2026 Heritage Design &amp; Construction · Family owned since 2004 · WA Contractor Lic. <span className="tbd">[#]</span> · Insured <span className="tbd">[carrier]</span> · <span className="tbd">[BBB / NKBA]</span>
           </span>
           <span>
             Sister company:{" "}

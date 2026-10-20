@@ -12,6 +12,7 @@ export default function PageHero({
   image,
   crumbs,
   children,
+  compact = false,
 }: {
   eyebrow: string;
   title: ReactNode;
@@ -19,10 +20,11 @@ export default function PageHero({
   image?: string;
   crumbs: Crumb[];
   children?: ReactNode;
+  compact?: boolean;
 }) {
   const trail = [{ label: "Home", href: "/" }, ...crumbs];
   return (
-    <section className="phero">
+    <section className={`phero${compact ? " phero-compact" : ""}`}>
       {image && <div className="bgimg" aria-hidden="true" style={{ backgroundImage: `url(${image})` }} />}
       <div className="wrap">
         <div className="eyebrow lead">{eyebrow}</div>

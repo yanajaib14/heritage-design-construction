@@ -19,6 +19,7 @@ export default function ContactPage() {
         lede="Book a consultation in your home or at our Lacey showroom. Tell us a little about your project and we'll take it from there."
         image="/images/hero-showroom.webp"
         crumbs={[{ label: "Contact", href: "/contact" }]}
+        compact
       >
         <a className="btn btn-chrome" href={SITE.tel}>Call {SITE.phone}</a>
       </PageHero>

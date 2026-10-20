@@ -6,6 +6,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import { Faq, Split, Steps } from "@/components/ui/Blocks";
 import ConsultCta from "@/components/ui/ConsultCta";
+import PageReview from "@/components/ui/PageReview";
+import BeforeAfter from "@/components/ui/BeforeAfter";
 import { TEN_DAY_TERMS } from "@/lib/ten-day-terms";
 
 export const metadata: Metadata = {
@@ -95,8 +97,8 @@ export default function TenDayPage() {
     <>
       <PageHero
         eyebrow="10-Day Kitchen Program"
-        title={<>A faster kitchen remodel <em>for the right home.</em></>}
-        lede="A lower-disruption option for qualified same-layout kitchens in Lacey, Olympia, Tacoma and across Thurston and Pierce counties."
+        title={<>A new kitchen <em>in 10 business days.</em></>}
+        lede="Same layout, no months of disruption. For qualified same-layout kitchens in Lacey, Olympia, Tacoma and across Thurston and Pierce counties."
         image="/images/pf-midnight.webp"
         crumbs={[
           { label: "Services", href: "/services" },
@@ -287,6 +289,17 @@ export default function TenDayPage() {
         </div>
       </section>
 
+      <section className="band bg-off on-light">
+        <div className="wrap td-ba">
+          <div className="td-ba-copy">
+            <div className="eyebrow">Before and after</div>
+            <h2 className="h2">Same layout. <em>A whole new kitchen.</em></h2>
+            <p className="td-note">Drag the line to compare. The footprint stayed the same; the cabinets, counters, flooring and finishes are all new.</p>
+          </div>
+          <BeforeAfter before="/images/ba-kitchen-before.webp" after="/images/ba-kitchen-after.webp" beforeAlt="The kitchen before, with dated wood cabinets" afterAlt="The same kitchen after, with white cabinets and dark granite counters" />
+        </div>
+      </section>
+
       <section className="band bg-paper on-light">
         <div className="wrap pk" id="pk">
           <div className="pk-lead">
@@ -343,12 +356,7 @@ export default function TenDayPage() {
         <Link className="btn btn-ink" href={CUSTOM}>View custom kitchen remodels →</Link>
       </Split>
 
-      <section className="band bg-paper on-light">
-        <figure className="wrap td-quote">
-          <blockquote>&ldquo;Highly recommend. Very happy with the outcome of our kitchen.&rdquo;</blockquote>
-          <figcaption>Cathy S. · Kitchen remodel</figcaption>
-        </figure>
-      </section>
+      <PageReview tags={["ten-day"]} />
 
       <Faq
         bg="off"

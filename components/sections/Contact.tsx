@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SITE } from "@/lib/site";
+import { RatingSlot } from "@/components/ui/PageReview";
 
 // Closing call to action: one calm, centered panel with a single clear next step.
 // Pages can swap the headline and line of copy.
@@ -26,6 +27,7 @@ export default function Contact({
             <li>Designer-led</li>
             <li>5-year warranty</li>
           </ul>
+          <RatingSlot />
         </div>
         <div className="cta4-visit">
           <div><small>Visit</small><span>8695 Martin Way E #101<br />Lacey, WA 98516</span></div>

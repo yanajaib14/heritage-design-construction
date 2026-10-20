@@ -7,6 +7,7 @@ import "./motion.css";
 import "./editorial.css";
 import Header from "@/components/sections/Header";
 import MenuSheet from "@/components/sections/MenuSheet";
+import MobileBar from "@/components/MobileBar";
 import Footer from "@/components/sections/Footer";
 import SiteEffects from "@/components/SiteEffects";
 import JsonLd from "@/components/ui/JsonLd";
@@ -47,6 +48,7 @@ export default function RootLayout({
         <MenuSheet />
         <main id="top">{children}</main>
         <Footer />
+        <MobileBar />
         <SiteEffects />
         <JsonLd
           data={{

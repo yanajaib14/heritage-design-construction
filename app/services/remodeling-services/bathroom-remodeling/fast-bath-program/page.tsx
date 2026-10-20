@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import { Faq, Split, Steps } from "@/components/ui/Blocks";
 import ConsultCta from "@/components/ui/ConsultCta";
+import PageReview from "@/components/ui/PageReview";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -234,12 +235,7 @@ export default function FastBathPage() {
         </div>
       </section>
 
-      <section className="band bg-paper on-light">
-        <figure className="wrap td-quote">
-          <blockquote>&ldquo;Highly recommend. Very happy with the outcome of our kitchen.&rdquo;</blockquote>
-          <figcaption>Cathy S. · Kitchen remodel</figcaption>
-        </figure>
-      </section>
+      <PageReview tags={["fast-bath"]} />
 
       <Faq
         bg="off"
