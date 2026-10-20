@@ -562,3 +562,10 @@ header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255
   .hero .stat:nth-child(n+3)::after{content:"";position:absolute;top:0;left:18px;right:16px;height:1px;background:rgba(216,217,219,.2)}
   .hero .st-l{padding:10px 0 0;border-left:0;border-top:1px solid rgba(216,217,219,.3);font-size:12.5px}
 }
+
+/* closing CTA: a faded Heritage mark behind the panel, so the light panel has some depth */
+.cta4-panel{overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#fbfaf7 0%,#F4F2EE 55%,#ece8e0 100%)}
+.cta4-panel>*{position:relative;z-index:1}
+.cta4-panel::after{content:"";position:absolute;z-index:0;left:50%;top:50%;width:min(92%,640px);aspect-ratio:300/251;transform:translate(-50%,-46%);
+  background:url(/brand/heritage-mark-faded.webp) center/contain no-repeat;opacity:.085;mix-blend-mode:multiply;pointer-events:none}
+.cta4-panel::before{z-index:1}
