@@ -1,11 +1,10 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 import JsonLd from "@/components/ui/JsonLd";
 import { SITE } from "@/lib/site";
 
 type Crumb = { label: string; href: string };
 
-// Dark opening hero used by every inner page, with breadcrumbs (and BreadcrumbList schema).
+// Dark opening hero used by every inner page. Breadcrumbs are not shown, but stay in the BreadcrumbList schema.
 export default function PageHero({
   eyebrow,
   title,
@@ -26,15 +25,6 @@ export default function PageHero({
     <section className="phero">
       {image && <div className="bgimg" aria-hidden="true" style={{ backgroundImage: `url(${image})` }} />}
       <div className="wrap">
-        <nav aria-label="Breadcrumb">
-          <ol className="crumbs">
-            {trail.map((c, i) => (
-              <li key={c.href}>
-                {i === trail.length - 1 ? <span aria-current="page">{c.label}</span> : <Link href={c.href}>{c.label}</Link>}
-              </li>
-            ))}
-          </ol>
-        </nav>
         <div className="eyebrow lead">{eyebrow}</div>
         <h1>{title}</h1>
         {lede && <p className="lede">{lede}</p>}

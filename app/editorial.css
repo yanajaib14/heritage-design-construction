@@ -48,11 +48,11 @@
 .cta2-visit span,.cta2-visit a{font:400 22px/1.35 var(--display);color:var(--ink);text-decoration:none}
 
 /* footer: warm charcoal gray, lighter than the near-black sections */
-footer{background:#35373A;color:#cfcdc7;border-top:0}
+footer{background:#1F2022;color:#cfcdc7;border-top:0}
 .foot h4{color:#F2F0EC}
 .foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.foot .brand img{filter:brightness(1.15)}
-.legal{border-top-color:#4a4c50;color:#b3b1ab}
+.foot .brand img{filter:brightness(1.25) contrast(1.1) drop-shadow(0 0 14px rgba(255,255,255,.08))}
+.legal{border-top-color:#3a3b3e;color:#b3b1ab}
 .legal b{color:#F2F0EC}
 footer .tbd{background:rgba(255,255,255,.1)}
 
@@ -261,9 +261,9 @@ footer .tbd{background:rgba(255,255,255,.1)}
 .fin-note .td-fine{border-top:0;padding-top:0;max-width:90ch}
 @media (max-width:700px){.fin-list li{grid-template-columns:44px minmax(0,1fr)}}
 /* Nav bar matches the charcoal footer */
-header.site.solid{background:rgba(53,55,58,.97);border-bottom-color:rgba(255,255,255,.08)}
-.drop,.drop .fly{background:#35373A;border-color:#4a4c50;box-shadow:0 18px 40px rgba(0,0,0,.3)}
-.drop a:hover,.drop .has-fly:hover>a,.drop .has-fly:focus-within>a{background:#404246}
+header.site.solid{background:rgba(31,32,34,.97);border-bottom-color:rgba(255,255,255,.08)}
+.drop,.drop .fly{background:#1F2022;border-color:#3a3b3e;box-shadow:0 18px 40px rgba(0,0,0,.3)}
+.drop a:hover,.drop .has-fly:hover>a,.drop .has-fly:focus-within>a{background:#2c2d30}
 /* Homepage 10-Day: intro row, then a short phase timeline that alternates above and below one line */
 #ten-day .tenday{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}
 #ten-day .intro{grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(40px,6vw,96px);align-items:end}
@@ -300,3 +300,17 @@ header.site.solid{background:rgba(53,55,58,.97);border-bottom-color:rgba(255,255
   .tl2-card::after{display:none}
   .tl2.arm:not(.in) li:nth-child(n) .tl2-card{transform:translateX(-12px)}
 }
+/* Readable small labels: Ben found the tiny tracked uppercase text hard to read, so every label
+   is set larger, bolder, less spaced out and with more contrast. */
+.eyebrow,.cta2-visit small,.idx-k,.dbd-tag,.form label,.info small,.city-grid li small,.posts .num,.svc-hint,.figs small,.visit small,.foot h4,
+.svc2 .tag,.svc .tag,.kp .tag,.pf .tag,.stat small,.pillars .cap,.hero-cap span,.why-foot,.ba-tag,.kp .badge,.pf .view,
+.td-snap span,.td-price small,.td-stat span,.cta2 .td-trust,.reasons-fig figcaption,.td-quote figcaption,.tl2-card h3,.ed-head .eyebrow{
+  font-size:13px!important;font-weight:600;letter-spacing:.12em!important}
+.ba-tag,.kp .badge{font-size:12px!important}
+.on-light .eyebrow,.cta2 .eyebrow,.cta2-visit small,.idx-k,.form label,.info small,.city-grid li small,.posts .num,.svc-hint,
+.td-price small,.td-stat span,.reasons-fig figcaption,.td-quote figcaption,.dbd-tag{color:#3f4246}
+.eyebrow,.figs small,.visit small,.td-snap span,.tl2-card h3,.kp .tag{color:#dedcd6}
+.on-light .eyebrow,.cta2 .eyebrow{color:#3f4246}
+.foot h4{color:#F2F0EC}
+.foot a,.foot p,.foot li{color:#e2e0da}
+.legal{color:#c9c7c1}
