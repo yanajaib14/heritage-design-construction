@@ -1136,3 +1136,27 @@ a.hpf-item:hover>img{transform:scale(1.03)}
 .tb2-row i{width:22px}
 .tb2-row span{font-size:10.5px;letter-spacing:.22em}
 @media (max-width:860px){.tb2-row{row-gap:26px}.tb2-row strong{font-size:clamp(28px,8vw,34px)}.tb2-row span{font-size:10px;letter-spacing:.16em}}
+/* before/after pair, smaller: narrower column and a landscape crop */
+.hpf3-pair{max-width:980px;margin-inline:auto;gap:clamp(18px,2.4vw,36px)}
+.hpf3-pair .ba{aspect-ratio:4/3}
+.hpf3-pair figure{gap:14px}
+.hpf3-pair figcaption{padding-top:14px}
+.hpf3-pair figcaption b{font-size:clamp(19px,1.6vw,23px)}
+/* finished-projects carousel, smaller: same width as the before/after pair, square photos */
+.hpf3-gal{max-width:980px;margin-inline:auto;margin-top:clamp(48px,5vw,80px)}
+.hpf3-bar h3{font-size:clamp(21px,1.9vw,27px)}
+.hpf3-track button{aspect-ratio:1/1}
+@media (max-width:860px){.hpf3-track{grid-auto-columns:64%}}
+/* why + reviews, calmer: reasons as a quiet 2x2 grid, the review in a soft panel at a smaller size */
+.wr-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,96px);align-items:center}
+.wr-why{gap:18px}
+.wr-why ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 36px;margin-top:16px;padding-top:26px;border-top:1px solid #d6d3cc}
+.wr-why li,.wr-why li:last-child{display:block;padding:0;border:0}
+.wr-why h3{font-size:19px;margin-bottom:6px}
+.wr-why p{font-size:14.5px;color:#55585c}
+.wr-quotes{position:static;background:#efece6;padding:clamp(28px,3.4vw,48px)}
+.wr-quotes .rq blockquote{font-size:clamp(20px,1.8vw,26px);line-height:1.4}
+@media (max-width:600px){.wr-why ol{grid-template-columns:1fr;gap:20px}}
+.wr-quotes .rq{border-top:0;padding-top:0}
+.wr-quotes .rq blockquote{margin-top:14px}
+@media (max-width:860px){.wr-grid{grid-template-columns:1fr}}

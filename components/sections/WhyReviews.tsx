@@ -11,10 +11,9 @@ export default function WhyReviews() {
           <div className="eyebrow">Why Heritage</div>
           <h2 className="h2">Not just a contractor. <em>A design-build house.</em></h2>
           <ol>
-            {REASONS.map(([t, p], i) => (
+            {REASONS.map(([t, p]) => (
               <li key={t}>
-                <span className="rn">{String(i + 1).padStart(2, "0")}</span>
-                <div><h3>{t}</h3><p>{p}</p></div>
+                <h3>{t}</h3><p>{p}</p>
               </li>
             ))}
           </ol>
