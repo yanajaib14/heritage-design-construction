@@ -25,7 +25,7 @@ export default function Home() {
       <WhyReviews />
       <Showroom extras />
       <ServiceAreas />
-      <Contact />
+      <Contact photo={{ src: "/images/sr-consult.webp", alt: "Designers going over a material board with a client" }} />
     </>
   );
 }

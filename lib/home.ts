@@ -59,22 +59,38 @@ export const PATHS = [
   },
 ];
 
-// Homepage projects. `before` turns the photo into a drag-to-compare slider.
-export const PROJECTS: { img: string; alt: string; before?: string; beforeAlt?: string; href: string }[] = [
+// Homepage before/after projects: the tabs switch the large drag-to-compare slider.
+export const BA_PROJECTS = [
   {
-    img: "/images/ba-kitchen-after.webp",
-    alt: "The finished kitchen with white cabinets and dark granite counters",
+    t: "Kitchen remodel",
+    p: "Dated wood cabinets out; bright white cabinetry and dark granite in.",
     before: "/images/ba-kitchen-before.webp",
-    beforeAlt: "The same kitchen before, with dated wood cabinets",
-    href: "/portfolio",
+    beforeAlt: "The kitchen before, with dated wood cabinets",
+    after: "/images/ba-kitchen-after.webp",
+    afterAlt: "The finished kitchen with white cabinets and dark granite counters",
   },
   {
-    img: "/images/ba-bath-after.webp",
-    alt: "The finished bathroom with a black-framed glass shower and hex tile floor",
+    t: "Bathroom remodel",
+    p: "A tired tub and vanity turned into a glass shower and a clean new vanity.",
     before: "/images/ba-bath-before.webp",
-    beforeAlt: "The same bathroom before the remodel",
-    href: "/portfolio",
+    beforeAlt: "The bathroom before the remodel",
+    after: "/images/ba-bath-after.webp",
+    afterAlt: "The finished bathroom with a black-framed glass shower and hex tile floor",
   },
-  { img: "/images/pf-midnight.webp", alt: "A navy kitchen with a quartz island and brass bar stools", href: "/portfolio" },
-  { img: "/images/pf-oslo.webp", alt: "A walk-in wet room shower with large-format tile", href: "/portfolio" },
+  {
+    t: "Fast Bath",
+    p: "A full bathroom refresh on the Fast Bath schedule.",
+    before: "/images/fb-before.webp",
+    beforeAlt: "A bathroom before its Fast Bath upgrade",
+    after: "/images/fb-after.webp",
+    afterAlt: "The same bathroom after its Fast Bath upgrade",
+  },
+];
+
+// More finished projects, shown as a strip under the slider.
+export const GALLERY = [
+  { img: "/images/pf-midnight.webp", alt: "A navy kitchen with a quartz island and brass bar stools" },
+  { img: "/images/pf-oslo.webp", alt: "A walk-in wet room shower with large-format tile" },
+  { img: "/images/pf-forest.webp", alt: "A custom kitchen with a large stone island and warm wood cabinetry" },
+  { img: "/images/pf-bathview.webp", alt: "A finished primary bathroom" },
 ];
