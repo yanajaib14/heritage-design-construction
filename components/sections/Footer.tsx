@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CITIES, SITE } from "@/lib/site";
 
+// Construction and Design share a column, each with its own heading.
 const COLS = [
   {
     title: "Remodeling",
@@ -12,7 +13,6 @@ const COLS = [
       ["Bathroom Remodeling", "/services/remodeling-services/bathroom-remodeling"],
       ["Fast Bath", "/services/remodeling-services/bathroom-remodeling/fast-bath-program"],
       ["Bathroom AI Estimator", "/services/remodeling-services/bathroom-remodeling/fast-bath-program/bathroom-ai-estimator"],
-      ["Design Services", "/services/design-services"],
     ],
   },
   {
@@ -21,6 +21,10 @@ const COLS = [
       ["Commercial Construction", "/services/construction-services/commercial-construction"],
       ["Tenant Improvements", "/services/construction-services/commercial-construction/tenant-improvements-ti"],
     ],
+  },
+  {
+    title: "Design",
+    links: [["Design Services", "/services/design-services"]],
   },
   {
     title: "Company",
@@ -51,16 +55,20 @@ export default function Footer() {
               {SITE.phone} · <span className="tbd">[Email]</span>
             </p>
           </div>
-          {COLS.map((c) => (
-            <div key={c.title}>
-              <h4>{c.title}</h4>
-              <ul>
-                {c.links.map(([label, href]) => (
-                  <li key={label}>
-                    <Link href={href}>{label}</Link>
-                  </li>
-                ))}
-              </ul>
+          {[[COLS[0]], [COLS[1], COLS[2]], [COLS[3]]].map((col) => (
+            <div key={col[0].title} className="foot-col">
+              {col.map((c) => (
+                <div key={c.title}>
+                  <h4>{c.title}</h4>
+                  <ul>
+                    {c.links.map(([label, href]) => (
+                      <li key={label}>
+                        <Link href={href}>{label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           ))}
           <div className="areas-col">

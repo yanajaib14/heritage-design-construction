@@ -27,7 +27,6 @@ export default function Hero() {
             <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
             <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
           </div>
-          <Trust />
         </div>
         <div className="walk-end">
           <div className="eyebrow">Heritage Design Center · Lacey</div>
@@ -42,10 +41,10 @@ export default function Hero() {
   );
 }
 
-// on phones the trust bar sits just below the hero instead of inside it
-export function TrustPhone() {
+// the trust bar sits in its own band just below the hero
+export function TrustBand() {
   return (
-    <div className="walk trust-phone">
+    <div className="walk trust-band">
       <div className="wrap"><Trust /></div>
     </div>
   );

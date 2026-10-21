@@ -1,4 +1,4 @@
-import type React from "react";
+import PhotoDeck from "@/components/ui/PhotoDeck";
 
 // Kitchen photos shown as a stacked deck: the top card rotates to the back every few seconds,
 // or on the arrows. Names match the portfolio grid.
@@ -14,20 +14,7 @@ const DECK = [
 export default function Kitchens() {
   return (
     <section className="split bg-off on-light" id="kitchens">
-      <div className="kdeck-col">
-        <div className="kdeck" id="kdeck" aria-roledescription="carousel" aria-label="Kitchen projects">
-          {DECK.map((d, i) => (
-            <figure key={d.src} style={{ "--k": i } as React.CSSProperties} aria-hidden={i ? "true" : undefined}>
-              <img src={d.src} alt={d.n} loading={i ? "lazy" : undefined} />
-            </figure>
-          ))}
-        </div>
-        <div className="kdeck-bar">
-          <button type="button" className="kdeck-prev" aria-label="Previous kitchen">←</button>
-          <p aria-live="polite"><span><span className="kdeck-n">01</span> / {String(DECK.length).padStart(2, "0")}</span></p>
-          <button type="button" className="kdeck-next" aria-label="Next kitchen">→</button>
-        </div>
-      </div>
+      <PhotoDeck photos={DECK.map((d) => ({ src: d.src, alt: d.n }))} label="Kitchen projects" />
       <div className="copy">
         <div className="eyebrow">Custom kitchens</div>
         <h2 className="h2">The kitchen, <em>elevated.</em></h2>

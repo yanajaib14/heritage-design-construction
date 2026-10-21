@@ -1,12 +1,27 @@
 import { BRANDS } from "@/components/sections/Brands";
-import { CITIES, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import PhotoDeck from "@/components/ui/PhotoDeck";
 
-// Showroom split. On the homepage `extras` adds the brand logo strip and the cities we serve.
+// Swap in real showroom photos here when the pro shoot is done.
+export const SHOWROOM_PHOTOS = [
+  { src: "/images/showroom.webp", alt: "Material selection boards with stone, tile and finish samples" },
+  { src: "/images/hero-showroom.webp", alt: "The Heritage Design Center showroom floor with cabinetry, countertop and tile displays" },
+  { src: "/images/sr-design-review.webp", alt: "A designer walking a couple through a 3D kitchen rendering" },
+  { src: "/images/svc-design.webp", alt: "Planning a kitchen design with a designer" },
+  { src: "/images/sr-door-samples.webp", alt: "Cabinet door samples with brass hardware and fabric swatches" },
+  { src: "/images/sr-tile.webp", alt: "A blue tile backsplash sample with a brass faucet" },
+];
+
+// Showroom split. On the homepage `extras` adds the photo deck and the brand logo strip.
 export default function Showroom({ extras = false }: { extras?: boolean }) {
   return (
     <section className={`bg-off on-light${extras ? " sr-home" : ""}`} id="showroom">
       <div className="split">
-        <div className="sphoto" role="img" aria-label="Material selection boards with stone, tile and finish samples" style={{ backgroundImage: "url(/images/showroom.webp)" }}></div>
+        {extras ? (
+          <PhotoDeck photos={SHOWROOM_PHOTOS} label="Showroom photos" />
+        ) : (
+          <div className="sphoto" role="img" aria-label={SHOWROOM_PHOTOS[0].alt} style={{ backgroundImage: `url(${SHOWROOM_PHOTOS[0].src})` }}></div>
+        )}
         <div className="copy">
           <div className="eyebrow">Heritage Design Center Showroom</div>
           <h2 className="h2">Design, materials and showroom, <em>all under one roof.</em></h2>
@@ -23,7 +38,6 @@ export default function Showroom({ extras = false }: { extras?: boolean }) {
           <ul className="sr-logos" aria-label="Brands on display in our showroom">
             {BRANDS.map((b) => <li key={b.src}><img src={b.src} alt={b.alt} loading="lazy" /></li>)}
           </ul>
-          <p className="sr-cities"><span>Serving</span> {CITIES.slice(0, 12).join(" · ")} <a href="/about/service-areas">and more →</a></p>
         </div>
       )}
     </section>
