@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { HERO, TRUST, WALK } from "@/lib/home";
 import { SITE } from "@/lib/site";
-import { RatingSlot } from "@/components/ui/PageReview";
 
 // Scroll walk-in: the page pins while scrolling walks you through the showroom doors.
 // lib/site-effects.js drives it from scroll progress; with reduced motion it is a still hero.
@@ -27,7 +26,6 @@ export default function Hero() {
           <div className="btns">
             <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
             <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
-            <RatingSlot className="walk-rating" />
           </div>
           <Trust />
         </div>
