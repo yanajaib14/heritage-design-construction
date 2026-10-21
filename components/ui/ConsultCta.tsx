@@ -1,40 +1,55 @@
 import type { ReactNode } from "react";
-import ContactForm from "@/components/ContactForm";
+import QuickConsultForm from "@/components/ui/QuickConsultForm";
 import { SITE } from "@/lib/site";
 
-// Closing consultation block: three next steps beside the request form.
+// Closing consultation block for the program pages: headline and three next steps on a dark band,
+// a short booking form in a light card beside them.
 export default function ConsultCta({
   id,
   title,
+  text,
   steps,
   trust,
+  program,
 }: {
   id?: string;
   title: ReactNode;
-  steps: string[];
+  text: string;
+  steps: { t: string; p: string }[];
   trust: string;
+  program: string;
 }) {
   return (
-    <section className="cta2 td-cta" id={id}>
-      <div className="wrap td-cta-grid">
-        <div className="td-cta-copy">
-          <div className="eyebrow">Free consultation</div>
+    <section className="cc" id={id}>
+      <div className="wrap cc-grid">
+        <div className="cc-copy">
+          <div className="eyebrow">Ready to start planning?</div>
           <h2>{title}</h2>
-          <ol>
+          <p className="cc-lede">{text}</p>
+          <ol className="cc-steps">
             {steps.map((s, i) => (
-              <li key={s}>
-                <span>{String(i + 1).padStart(2, "0")}</span>
-                {s}
+              <li key={s.t}>
+                <span>{i + 1}</span>
+                <b>{s.t}</b>
+                <p>{s.p}</p>
               </li>
             ))}
           </ol>
-          <p className="td-trust">{trust}</p>
-          <p>
-            Prefer to talk? Call <a href={SITE.tel}>{SITE.phone}</a>.
-          </p>
+          <div className="cc-foot">
+            <a className="cc-call" href={SITE.tel}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" fill="none" stroke="currentColor" strokeWidth="1.5" /></svg>
+              Prefer to talk? {SITE.phone}
+            </a>
+            <p className="cc-trust">{trust}</p>
+          </div>
         </div>
-        <div className="td-cta-form">
-          <ContactForm />
+        <div className="cc-side">
+          <div className="cc-card">
+            <h3>Book your free consultation</h3>
+            <p>Free, no pressure, and right in your home.</p>
+            <QuickConsultForm program={program} />
+          </div>
+          <p className="cc-alt">Not ready for a home visit? <a href={SITE.tel}>Call us at {SITE.phone}</a></p>
         </div>
       </div>
     </section>

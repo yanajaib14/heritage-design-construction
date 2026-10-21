@@ -373,12 +373,14 @@ export default function TenDayPage() {
       <ConsultCta
         id="qualify-form"
         title={<>Let&apos;s see if your kitchen <em>can move faster.</em></>}
+        text="We will review your current layout, photos, selections and timeline so you know whether the 10-Day Kitchen Program or a full custom kitchen remodel is the better fit."
         steps={[
-          "Send us a few details about your kitchen.",
-          "We visit your home to measure and confirm it qualifies.",
-          "You get a written plan and contract before any work begins.",
+          { t: "Send your details", p: "Takes about a minute, then we call to set a time that suits you." },
+          { t: "We come to you", p: "We measure the space, confirm it qualifies and walk you through materials, finishes and options." },
+          { t: "Get a clear plan", p: "A written plan and contract before work starts, so there are no surprises." },
         ]}
-        trust="5-year warranty · Licensed and insured"
+        trust="Fast turnaround by experts · 5-year warranty · Licensed & insured"
+        program="10-Day Kitchen Program"
       />
     </>
   );

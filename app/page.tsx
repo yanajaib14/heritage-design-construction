@@ -16,14 +16,22 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TrustBand />
-      <Services />
-      <Programs />
-      <HomePortfolio />
-      <WhyReviews />
-      <Showroom extras />
-      <ServiceAreas />
-      <Contact photo={{ src: "/images/sr-consult.webp", alt: "Designers going over a material board with a client" }} />
+      {/* the rest of the page rises over the pinned hero as one continuous panel */}
+      <div className="home-story">
+        <TrustBand />
+        <Services />
+        <Programs />
+        <HomePortfolio />
+        <WhyReviews />
+        <Showroom extras />
+        <ServiceAreas />
+        <Contact
+          photo={{
+            src: "/images/sr-consult.webp",
+            alt: "Designers going over a material board with a client",
+          }}
+        />
+      </div>
     </>
   );
 }

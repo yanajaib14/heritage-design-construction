@@ -245,12 +245,14 @@ export default function FastBathPage() {
 
       <ConsultCta
         title={<>Ready for a cleaner, <em>brighter bathroom?</em></>}
+        text="We will look at your bathroom, your photos and your goals so you know whether Fast Bath or a full bathroom remodel is the better fit."
         steps={[
-          "Send us your details and pick a time.",
-          "We visit your home to measure.",
-          "You get a written plan and contract before work starts.",
+          { t: "Send your details", p: "Takes about a minute, then we call to set a time that suits you." },
+          { t: "We come to you", p: "We measure the bathroom and walk you through surrounds, vanities, fixtures and finishes." },
+          { t: "Get a clear plan", p: "A written plan and contract before work starts, so there are no surprises." },
         ]}
-        trust="Fast turnaround · 5-year warranty · Licensed and insured"
+        trust="Fast turnaround by experts · 5-year warranty · Licensed & insured"
+        program="Fast Bath"
       />
     </>
   );

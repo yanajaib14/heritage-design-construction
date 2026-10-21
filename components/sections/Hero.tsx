@@ -21,13 +21,20 @@ export default function Hero() {
         )}
         <div className="wrap walk-intro">
           <div className="eyebrow lead">{HERO.eyebrow}</div>
-          <h1><span className="one">{HERO.kicker}</span>{HERO.title} <em>{HERO.titleEm}</em></h1>
-          <p className="lede">{HERO.sub}</p>
-          <div className="btns">
-            <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
-            <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
+          <h1>
+            <span className="one">{HERO.kicker}</span>
+            <span className="ln"><span>{HERO.title}</span></span>
+            <span className="ln"><em>{HERO.titleEm}</em></span>
+          </h1>
+          <div className="walk-foot">
+            <p className="lede">{HERO.sub}</p>
+            <div className="btns">
+              <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
+              <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
+            </div>
           </div>
         </div>
+        <div className="walk-cue" aria-hidden="true"><span>Scroll to step inside</span><i></i></div>
         <div className="walk-end">
           <div className="eyebrow">Heritage Design Center · Lacey</div>
           <h2 className="h2">Step inside <em>the showroom.</em></h2>
