@@ -59,7 +59,7 @@ export const PATHS = [
   },
 ];
 
-// Homepage before/after projects: the tabs switch the large drag-to-compare slider.
+// Homepage before/after pair (drag-to-compare).
 export const BA_PROJECTS = [
   {
     t: "Kitchen remodel",
@@ -77,20 +77,20 @@ export const BA_PROJECTS = [
     after: "/images/ba-bath-after.webp",
     afterAlt: "The finished bathroom with a black-framed glass shower and hex tile floor",
   },
-  {
-    t: "Fast Bath",
-    p: "A full bathroom refresh on the Fast Bath schedule.",
-    before: "/images/fb-before.webp",
-    beforeAlt: "A bathroom before its Fast Bath upgrade",
-    after: "/images/fb-after.webp",
-    afterAlt: "The same bathroom after its Fast Bath upgrade",
-  },
 ];
 
-// More finished projects, shown as a strip under the slider.
+// Finished projects in the homepage carousel. Click one to open it large.
 export const GALLERY = [
   { img: "/images/pf-midnight.webp", alt: "A navy kitchen with a quartz island and brass bar stools" },
   { img: "/images/pf-oslo.webp", alt: "A walk-in wet room shower with large-format tile" },
+  { img: "/images/pf-university.webp", alt: "A transitional white kitchen" },
+  { img: "/images/pf-essential.webp", alt: "A spa-style primary bathroom" },
   { img: "/images/pf-forest.webp", alt: "A custom kitchen with a large stone island and warm wood cabinetry" },
-  { img: "/images/pf-bathview.webp", alt: "A finished primary bathroom" },
+  { img: "/images/pf-bathview.webp", alt: "A primary bathroom with a clawfoot tub" },
+  { img: "/images/pf-coastal.webp", alt: "A transitional chef's kitchen" },
+  { img: "/images/fb-walkin.webp", alt: "A low-threshold walk-in shower" },
+  { img: "/images/pf-quartz.webp", alt: "A kitchen with a quartz slab backsplash" },
+  { img: "/images/fb-room.webp", alt: "A finished bathroom with a freestanding tub" },
+  { img: "/images/kitchens.webp", alt: "An open white kitchen" },
+  { img: "/images/pricing-large.webp", alt: "A large kitchen with an island" },
 ];

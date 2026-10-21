@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Hero, { TrustBand } from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
-import KitchenOptions from "@/components/sections/KitchenOptions";
 import Programs from "@/components/sections/Programs";
 import HomePortfolio from "@/components/sections/HomePortfolio";
 import WhyReviews from "@/components/sections/WhyReviews";
@@ -19,7 +18,6 @@ export default function Home() {
       <Hero />
       <TrustBand />
       <Services />
-      <KitchenOptions />
       <Programs />
       <HomePortfolio />
       <WhyReviews />
