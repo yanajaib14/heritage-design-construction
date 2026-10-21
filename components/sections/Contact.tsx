@@ -15,7 +15,7 @@ export default function Contact({
 }) {
   if (photo) {
     return (
-      <section className="cta5" id="contact">
+      <section className="cta5 on-light" id="contact">
         <div className="wrap cta5-grid">
           <figure className="cta5-fig">
             <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 860px) 100vw, 50vw" />

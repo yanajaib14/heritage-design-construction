@@ -819,15 +819,15 @@ a.hpf-item:hover>img{transform:scale(1.03)}
 .cta5-copy{display:grid;gap:22px;justify-items:start}
 .cta5-copy .h2{font-size:clamp(40px,4.8vw,70px);line-height:1.02;max-width:12ch}
 .cta5-copy .h2 em{display:block}
-.cta5-copy>p{margin:0;font-size:clamp(17px,1.4vw,19px);color:#4a4c50;max-width:40ch}
+.cta5-copy>p{margin:0;font-size:clamp(17px,1.4vw,19px);color:#2f3236;max-width:40ch}
 .cta5-copy .btn:not(.btn-ink){border-color:var(--ink)}
 .cta5-copy .btn:not(.btn-ink):hover{background:var(--ink);color:var(--offwhite)}
-.cta5-perks{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#55585c}
+.cta5-perks{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#2f3236}
 .cta5-perks li{padding-right:16px}
 .cta5-perks li+li{padding-left:16px;border-left:1px solid #bdb8ae}
 .cta5-info{margin:8px 0 0;width:100%;border-top:1px solid var(--ink)}
 .cta5-info div{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #cbc7be}
-.cta5-info dt{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#3f4246;padding-top:3px}
+.cta5-info dt{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#2f3236;padding-top:3px}
 .cta5-info dd{margin:0;font:400 18px/1.4 var(--display)}
 .cta5-info a{color:inherit;text-decoration:none}
 .cta5-info a:hover{text-decoration:underline;text-underline-offset:4px}
@@ -853,3 +853,4 @@ a.hpf-item:hover>img{transform:scale(1.03)}
   .cta5-perks li{padding-right:10px}.cta5-perks li+li{padding-left:10px}
 }
 @media (max-width:480px){.cta5-perks{gap:6px 16px}.cta5-perks li,.cta5-perks li+li{padding:0;border:0}}
+.cta5 .eyebrow{color:#2f3236;font-weight:600}
