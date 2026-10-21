@@ -3,7 +3,16 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import Contact from "@/components/sections/Contact";
-import { CITIES } from "@/lib/site";
+import { SITE } from "@/lib/site";
+
+// The towns we serve, grouped by county.
+const COUNTIES = [
+  { n: "Thurston County", towns: ["Lacey (home base and showroom)", "Olympia", "Tumwater", "Yelm"] },
+  { n: "Pierce County", towns: ["Tacoma", "Puyallup", "Lakewood", "University Place", "Gig Harbor", "Bonney Lake", "Spanaway", "Steilacoom", "DuPont", "Graham", "Fife"] },
+  { n: "South King County", towns: ["Federal Way", "Auburn"] },
+  { n: "Lewis County", towns: ["Centralia", "Chehalis"] },
+  { n: "Mason County", towns: ["Shelton"] },
+];
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about/service-areas" },
@@ -26,23 +35,29 @@ export default function ServiceAreasPage() {
 
       <ServiceAreas />
 
-      <section className="band bg-paper on-light">
-        <div className="wrap">
-          <div className="sec-head">
-            <div className="left">
-              <div className="eyebrow">All communities</div>
-              <h2 className="h2">Where <em>we build.</em></h2>
+      <section className="band bg-graph sa2">
+        <div className="wrap sa2-grid">
+          <div className="sa2-head">
+            <div className="eyebrow">By county</div>
+            <h2 className="h2">Five counties, <em>one team.</em></h2>
+            <p>
+              Wherever you are in the South Sound, it works the same way: a consultation in your home or at our Lacey showroom, every
+              selection made in one place, and our own crew on site.
+            </p>
+            <div className="sa2-call">
+              <small>Don&apos;t see your town?</small>
+              <a href={SITE.tel}>Call {SITE.phone}</a>
             </div>
-            <p>Don&apos;t see your town? Call us. If you&apos;re near the South Sound, there&apos;s a good chance we can help.</p>
           </div>
-          <ul className="city-grid">
-            {CITIES.map((c) => (
-              <li key={c}>
-                {c}
-                <small>{c === "Lacey" ? "Home base and showroom" : "Kitchens · Baths · Whole home"}</small>
+          <ol className="sa2-list">
+            {COUNTIES.map((c, i) => (
+              <li key={c.n}>
+                <span className="sa2-n">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{c.n}</h3>
+                <p>{c.towns.join(" · ")}</p>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       </section>
 
