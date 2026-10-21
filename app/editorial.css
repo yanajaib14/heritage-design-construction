@@ -774,3 +774,5 @@ a.hpf-item:hover>img{transform:scale(1.03)}
 }
 
 .foot-col{display:grid;gap:36px;align-content:start}
+.walk-intro h1 .one{display:block;font-size:.42em;letter-spacing:.14em;font-style:normal;margin-bottom:.35em;background:var(--chrome);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.walk-intro .lede{max-width:54ch}

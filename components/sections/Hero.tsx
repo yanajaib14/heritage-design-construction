@@ -21,7 +21,7 @@ export default function Hero() {
         )}
         <div className="wrap walk-intro">
           <div className="eyebrow lead">{HERO.eyebrow}</div>
-          <h1>{HERO.title}</h1>
+          <h1><span className="one">{HERO.kicker}</span>{HERO.title} <em>{HERO.titleEm}</em></h1>
           <p className="lede">{HERO.sub}</p>
           <div className="btns">
             <a className="btn btn-chrome" href="/contact">Book a consultation →</a>

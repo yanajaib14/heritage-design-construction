@@ -12,9 +12,11 @@ export const WALK = {
 };
 
 export const HERO = {
-  eyebrow: "Design · Supply · Build · Lacey, WA",
-  title: "Your kitchen, designed, supplied and built by one Lacey team.",
-  sub: "Custom remodels, a 10-Day Kitchen program, and bathrooms in as little as 3 days.",
+  eyebrow: "Design · Supply · Build · Based in Lacey, WA",
+  kicker: "One company. Start to finish.",
+  title: "Exceptional spaces,",
+  titleEm: "built to last.",
+  sub: "We design your project, supply every material from our own Lacey showroom, and build it with our own team. Kitchens, bathrooms, whole homes and commercial spaces across the South Sound, all under one roof.",
 };
 
 export const TRUST = [
