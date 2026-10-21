@@ -1105,3 +1105,9 @@ a.hpf-item:hover>img{transform:scale(1.03)}
 .svc2 .tag{color:#fff}
 .svc2 .more p{color:#f2f0ec}
 .svc2 li a{background:rgba(15,16,16,.6);border-color:rgba(242,240,236,.45);text-shadow:none}
+
+/* inner-page heroes: photo on the right, a deep fade on the left where the text sits */
+.phero .bgimg::after{background:linear-gradient(90deg,rgba(15,16,16,.94) 0%,rgba(15,16,16,.86) 34%,rgba(15,16,16,.45) 66%,rgba(15,16,16,.18) 100%),linear-gradient(180deg,rgba(15,16,16,.55) 0%,transparent 30%,transparent 62%,rgba(15,16,16,.7) 100%)}
+.phero .bgimg{background-position:70% 50%}
+.phero .wrap{z-index:1}
+@media (max-width:860px){.phero .bgimg::after{background:linear-gradient(180deg,rgba(15,16,16,.72) 0%,rgba(15,16,16,.78) 50%,rgba(15,16,16,.92) 100%)}}

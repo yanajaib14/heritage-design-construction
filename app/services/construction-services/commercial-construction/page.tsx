@@ -18,6 +18,7 @@ export default function CommercialPage() {
       <PageHero
         eyebrow="Commercial construction"
         title={<>Commercial spaces, <em>built right.</em></>}
+        image="/images/showroom.webp"
         lede="Design, materials and construction for commercial projects, from one team."
         crumbs={[
           { label: "Services", href: "/services" },

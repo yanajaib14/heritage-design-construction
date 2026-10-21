@@ -95,6 +95,7 @@ export default function BathroomPage() {
       <PageHero
         eyebrow="Custom bathroom remodeling"
         title={<>Baths designed <em>to unwind.</em></>}
+        image="/images/bath-zen.webp"
         lede="Full custom bathroom remodels, from primary suites to powder rooms. New layouts, custom showers, tile, stone, vanities and fixtures, all selected in our showroom and built by our own team."
        
         crumbs={[

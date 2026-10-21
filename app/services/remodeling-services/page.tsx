@@ -32,6 +32,7 @@ export default function RemodelingPage() {
       <PageHero
         eyebrow="Remodeling services"
         title={<>Kitchens, baths <em>and whole homes.</em></>}
+        image="/images/wh-kitchen.webp"
         lede="From a fully custom kitchen to a three-day bath upgrade, every remodel is designed, supplied and built by one team, with every finish chosen in our Lacey showroom."
        
         crumbs={[{ label: "Services", href: "/services" }, { label: "Remodeling", href: "/services/remodeling-services" }]}

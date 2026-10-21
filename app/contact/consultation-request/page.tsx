@@ -15,6 +15,7 @@ export default function ConsultationRequestPage() {
       <PageHero
         eyebrow="Consultation request"
         title={<>Tell us about <em>your project.</em></>}
+        image="/images/sr-consult.webp"
         lede="Share a few details and our team will reach out to set up your consultation."
         crumbs={[{ label: "Contact", href: "/contact" }, { label: "Consultation Request", href: "/contact/consultation-request" }]}
       >

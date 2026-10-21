@@ -16,6 +16,7 @@ export default function RefacingPage() {
       <PageHero
         eyebrow="Cabinet refacing"
         title={<>A new look, <em>same layout.</em></>}
+        image="/images/rf-white-shaker.webp"
         lede="New doors, drawer fronts and finishes on your existing cabinet boxes, for kitchens whose layout already works."
        
         crumbs={[

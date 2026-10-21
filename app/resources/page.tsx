@@ -15,6 +15,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title={<>Plan with <em>confidence.</em></>}
+        image="/images/sr-tile.webp"
         lede="Answers, financing and advice to help you plan your project."
         crumbs={[{ label: "Resources", href: "/resources" }]}
       />

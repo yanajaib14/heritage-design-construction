@@ -16,6 +16,7 @@ export default function TiPage() {
       <PageHero
         eyebrow="Tenant improvements"
         title={<>Spaces ready <em>for business.</em></>}
+        image="/images/hero-showroom.webp"
         lede="Tenant improvement build-outs for tenants, landlords and brokers, with design, materials and construction under one roof."
         crumbs={[
           { label: "Services", href: "/services" },

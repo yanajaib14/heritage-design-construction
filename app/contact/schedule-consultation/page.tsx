@@ -15,6 +15,7 @@ export default function SchedulePage() {
       <PageHero
         eyebrow="Schedule a consultation"
         title={<>Pick a time <em>that works.</em></>}
+        image="/images/sr-design-review.webp"
         lede="Choose a time for your consultation, in your home or at our Lacey showroom."
         crumbs={[{ label: "Contact", href: "/contact" }, { label: "Schedule", href: "/contact/schedule-consultation" }]}
       >

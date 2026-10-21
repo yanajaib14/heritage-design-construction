@@ -19,6 +19,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Heritage"
         title={<>Family owned. <em>Built to last.</em></>}
+        image="/images/about-team.webp"
         lede="A design-build house in Lacey, Washington. We design your project, supply the materials from our own showroom and build it with our own team, for homes and businesses across the South Sound."
        
         crumbs={[{ label: "About", href: "/about" }]}

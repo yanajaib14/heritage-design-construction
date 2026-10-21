@@ -35,6 +35,7 @@ export default function FinancingPage() {
       <PageHero
         eyebrow="Resources · Financing"
         title={<>Financing <em>your remodel.</em></>}
+        image="/images/pf-coastal.webp"
         lede="A remodel is a significant investment. With the right financing, it can be more affordable than you think."
        
         crumbs={[{ label: "Resources", href: "/resources" }, { label: "Financing", href: "/resources/financing" }]}

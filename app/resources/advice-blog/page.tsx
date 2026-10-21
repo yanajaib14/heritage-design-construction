@@ -24,6 +24,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Resources · Advice"
         title={<>Planning <em>resources.</em></>}
+        image="/images/sr-door-samples.webp"
         lede="Ideas and practical advice to help you plan your kitchen, bath or whole-home project."
         crumbs={[{ label: "Resources", href: "/resources" }, { label: "Advice / Blog", href: "/resources/advice-blog" }]}
       />

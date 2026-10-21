@@ -19,6 +19,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title={<>We design, remodel <em>and build.</em></>}
+        image="/images/svc-remodel.webp"
         lede="Custom kitchens and whole-home remodels lead what we do, backed by bathroom remodeling, design services and commercial construction, all from one team."
        
         crumbs={[{ label: "Services", href: "/services" }]}

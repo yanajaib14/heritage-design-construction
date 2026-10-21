@@ -19,6 +19,7 @@ export default function ConstructionPage() {
       <PageHero
         eyebrow="Construction services"
         title={<>Commercial spaces, <em>built right.</em></>}
+        image="/images/showroom.webp"
         lede="Commercial construction and tenant improvements for tenants, landlords and brokers, with the same design, supply and build team behind our residential work."
         crumbs={[{ label: "Services", href: "/services" }, { label: "Construction", href: "/services/construction-services" }]}
       >

@@ -23,6 +23,7 @@ export default function KitchenRemodelingPage() {
       <PageHero
         eyebrow="Kitchen remodeling"
         title={<>The kitchen, <em>elevated.</em></>}
+        image="/images/kitchens.webp"
         lede="Fully custom kitchens designed around how you cook, gather and live, with premium cabinetry, natural stone and craftsmanship built to last for decades."
        
         crumbs={[

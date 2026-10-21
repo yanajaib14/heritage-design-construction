@@ -16,6 +16,7 @@ export default function WholeHomePage() {
       <PageHero
         eyebrow="Whole-home remodeling"
         title={<>One vision, <em>every room.</em></>}
+        image="/images/wh-open-plan.webp"
         lede="When a kitchen is only the start, we plan the whole home together: layout, flow, finishes and structure, designed as one and built by one team."
         crumbs={[
           { label: "Services", href: "/services" },

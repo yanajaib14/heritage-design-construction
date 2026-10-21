@@ -20,6 +20,7 @@ export default function DesignPage() {
       <PageHero
         eyebrow="Design services"
         title={<>Designed before <em>day one.</em></>}
+        image="/images/svc-design.webp"
         lede="Space planning, 3D renderings and selections at our showroom, so you see your project and approve every detail before construction begins."
        
         crumbs={[{ label: "Services", href: "/services" }, { label: "Design", href: "/services/design-services" }]}

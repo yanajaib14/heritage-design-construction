@@ -16,6 +16,7 @@ export default function EstimatorPage() {
       <PageHero
         eyebrow="Bathroom AI Estimator"
         title={<>Your ballpark price, <em>in four steps.</em></>}
+        image="/images/pf-bathview.webp"
         lede="Answer four quick questions about your bathroom and get an estimated range for your Fast Bath upgrade."
         crumbs={[
           { label: "Services", href: "/services" },

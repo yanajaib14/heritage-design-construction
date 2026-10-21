@@ -144,6 +144,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="Resources · FAQs"
         title={<>Questions, <em>answered.</em></>}
+        image="/images/pf-essential.webp"
         lede="Straight answers about our programs, our showroom and how we work. Don't see your question? Give us a call."
         crumbs={[{ label: "Resources", href: "/resources" }, { label: "FAQs", href: "/resources/faqs" }]}
       >

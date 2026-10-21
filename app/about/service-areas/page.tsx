@@ -27,6 +27,7 @@ export default function ServiceAreasPage() {
       <PageHero
         eyebrow="Service areas"
         title={<>Building across <em>the South Sound.</em></>}
+        image="/images/pf-forest.webp"
         lede="Based in Lacey, we design and build in twenty communities across Thurston, Pierce, south King, Lewis and Mason counties."
         crumbs={[{ label: "About", href: "/about" }, { label: "Service Areas", href: "/about/service-areas" }]}
       >

@@ -17,6 +17,7 @@ export default function PortfolioPage() {
       <PageHero
         eyebrow="Portfolio"
         title={<>Spaces we&apos;ve <em>designed and built.</em></>}
+        image="/images/pf-oslo.webp"
         lede="A selection of kitchens and bathrooms from our team. Whole-home and commercial projects are coming soon."
        
         crumbs={[{ label: "Portfolio", href: "/portfolio" }]}
