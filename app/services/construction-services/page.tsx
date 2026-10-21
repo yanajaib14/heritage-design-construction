@@ -69,9 +69,9 @@ export default function ConstructionPage() {
             </div>
           </div>
           <div className="cards">
-            <div className="ph" style={{ aspectRatio: "4/3" }}>Photo · commercial project</div>
-            <div className="ph" style={{ aspectRatio: "4/3" }}>Photo · tenant improvement</div>
-            <div className="ph" style={{ aspectRatio: "4/3" }}>Photo · commercial project</div>
+            <div className="ph shot" style={{ aspectRatio: "4/3" }}><small>Photo to come</small>Finished commercial interior</div>
+            <div className="ph shot" style={{ aspectRatio: "4/3" }}><small>Photo to come</small>Tenant improvement build-out</div>
+            <div className="ph shot" style={{ aspectRatio: "4/3" }}><small>Photo to come</small>Crew on a commercial job site</div>
           </div>
         </div>
       </section>

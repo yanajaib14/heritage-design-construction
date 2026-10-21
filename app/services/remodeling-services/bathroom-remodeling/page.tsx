@@ -204,7 +204,7 @@ export default function BathroomPage() {
         eyebrow="Fast Bath Program"
         title={<>Keeping your layout? <em>Go faster.</em></>}
         text="When you love your layout but not your bathroom, Fast Bath delivers a quality upgrade in about three days: tub-to-shower conversions, shower and tub replacements and vanity upgrades."
-       
+        image="/images/fb-after.webp"
         imageAlt="Finished bathroom after a Fast Bath upgrade"
         flip
       >

@@ -859,3 +859,34 @@ a.hpf-item:hover>img{transform:scale(1.03)}
   .hpf3-arrows button{width:44px;height:44px}
   .hpf3-view .hpf3-x{top:-46px}
 }
+
+/* About: our story with a team photo, a lead line, and three facts */
+.story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,100px);align-items:center}
+.story-fig{position:relative;margin:0 0 18px 18px}
+.story-fig::before{content:"";position:absolute;inset:18px 18px -18px -18px;border:1px solid #c9c4ba}
+.story-fig img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.story-copy{display:grid;gap:20px;justify-items:start}
+.story-copy .h2{max-width:16ch}
+.story-copy p{margin:0;font-size:17px;line-height:1.7;color:#3c3e41;max-width:56ch}
+.story-copy .story-lead{font:400 clamp(21px,1.9vw,26px)/1.45 var(--display);color:var(--ink);max-width:34ch}
+.story-facts{margin:10px 0 0;width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid #cbc7be}
+.story-facts div{padding:20px 18px 18px 0}
+.story-facts div+div{padding-left:22px;border-left:1px solid #cbc7be}
+.story-facts dt{font:400 clamp(30px,3vw,42px)/1 var(--display);color:var(--ink)}
+.story-facts dd{margin:10px 0 0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#3f4246}
+.story-copy .story-sign{font:italic 400 19px/1.4 var(--display);color:var(--ink)}
+@media (max-width:860px){
+  .story{grid-template-columns:1fr}
+  .story-fig{margin:0 10px 10px 10px}.story-fig::before{inset:10px 10px -10px -10px}
+  .story-fig img{aspect-ratio:4/3}
+  .story-facts dt{font-size:28px}
+  .story-facts div+div{padding-left:14px}
+}
+
+/* placeholders that tell the photo team what to shoot */
+.ph.shot,.bgph.shot{display:grid;place-content:center;gap:10px;text-align:center;padding:24px;border:1px solid #c9c4ba;background:repeating-linear-gradient(135deg,#e7e3db 0 14px,#e2ded5 14px 28px);color:#2f3236;font:400 19px/1.35 var(--display);letter-spacing:0;text-transform:none}
+.ph.shot small{font:600 11px/1 var(--sans,inherit);letter-spacing:.2em;text-transform:uppercase;color:#55585c}
+.svc2 .bgph.shot{background:repeating-linear-gradient(135deg,#202123 0 14px,#1c1d1f 14px 28px);border:0;place-content:start;padding:28px}
+.svc2 .bgph.shot span{font:600 11px/1.6 var(--sans,inherit);letter-spacing:.18em;text-transform:uppercase;color:#8d8a85;border:0;padding:0;background:none}
+.gal-ph{aspect-ratio:4/3;background-size:cover;background-position:center}
+.svc2 .bgph.shot span{top:28px;left:28px;right:auto;white-space:normal;max-width:calc(100% - 56px)}

@@ -30,7 +30,6 @@ export default function Contact({
             </div>
             <ul className="cta5-perks">
               <li>No obligation</li>
-              <li>Designer-led</li>
               <li>5-year warranty</li>
             </ul>
             <dl className="cta5-info">
@@ -56,7 +55,6 @@ export default function Contact({
           </div>
           <ul className="cta4-trust">
             <li>No obligation</li>
-            <li>Designer-led</li>
             <li>5-year warranty</li>
           </ul>
         </div>

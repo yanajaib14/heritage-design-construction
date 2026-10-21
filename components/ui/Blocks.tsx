@@ -231,11 +231,13 @@ export function Gallery({
   eyebrow,
   title,
   labels,
+  photos,
   bg = "paper",
 }: {
   eyebrow: string;
   title: ReactNode;
-  labels: string[];
+  labels?: string[];
+  photos?: { src: string; alt: string }[];
   bg?: Bg;
 }) {
   return (
@@ -243,11 +245,16 @@ export function Gallery({
       <div className="wrap">
         <Head eyebrow={eyebrow} title={title} />
         <div className="cards">
-          {labels.map((l, i) => (
-            <div className="ph" style={{ aspectRatio: "4/3" }} key={i}>
-              {l}
-            </div>
-          ))}
+          {photos
+            ? photos.map((p) => (
+                <div className="sphoto gal-ph" role="img" aria-label={p.alt} key={p.src} style={{ backgroundImage: `url(${p.src})` }} />
+              ))
+            : (labels ?? []).map((l, i) => (
+                <div className="ph shot" style={{ aspectRatio: "4/3" }} key={i}>
+                  <small>Photo to come</small>
+                  {l}
+                </div>
+              ))}
         </div>
       </div>
     </section>

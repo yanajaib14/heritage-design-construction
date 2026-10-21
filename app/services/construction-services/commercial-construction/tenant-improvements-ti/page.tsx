@@ -44,7 +44,7 @@ export default function TiPage() {
           { title: "Build-out", text: "Our team builds the space. [Typical timeline to confirm.]" },
         ]}
       />
-      <Gallery eyebrow="Projects" title={<>Recent <em>build-outs.</em></>} labels={["[TI project photo]", "[TI project photo]", "[TI project photo]"]} />
+      <Gallery eyebrow="Projects" title={<>Recent <em>build-outs.</em></>} labels={["Empty suite before the build-out", "Framing and finishes in progress", "Finished suite, ready to open"]} />
       <Faq
         title={<>TI <em>questions.</em></>}
         items={[

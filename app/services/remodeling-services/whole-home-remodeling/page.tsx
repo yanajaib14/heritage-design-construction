@@ -43,7 +43,7 @@ export default function WholeHomePage() {
           { title: "Build", text: "One project manager from design to final walkthrough." },
         ]}
       />
-      <Gallery eyebrow="Projects" title={<>Whole-home <em>transformations.</em></>} labels={["[Whole-home project photo]", "[Whole-home project photo]", "[Whole-home project photo]"]} />
+      <Gallery eyebrow="Projects" title={<>Whole-home <em>transformations.</em></>} photos={[{ src: "/images/wh-open-plan.webp", alt: "An open kitchen and living space" }, { src: "/images/wh-kitchen.webp", alt: "A navy and white kitchen with a large island" }, { src: "/images/wh-bath.webp", alt: "A spa-style primary bathroom" }]} />
       <Intro eyebrow="Investment" title={<>Planning <em>your budget.</em></>}>
         <p><Tbd>[How you price whole-home projects.]</Tbd></p>
       </Intro>

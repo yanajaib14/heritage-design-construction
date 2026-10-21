@@ -46,7 +46,7 @@ export default function CommercialPage() {
           { title: "Build", text: "Construction managed and built by our own team." },
         ]}
       />
-      <Gallery eyebrow="Projects" title={<>Commercial <em>work.</em></>} labels={["[Commercial project photo]", "[Commercial project photo]", "[Commercial project photo]"]} />
+      <Gallery eyebrow="Projects" title={<>Commercial <em>work.</em></>} labels={["Finished office or retail interior", "Restaurant or clinic build-out", "Crew on a commercial job site"]} />
       <Faq
         title={<>Commercial <em>questions.</em></>}
         items={[

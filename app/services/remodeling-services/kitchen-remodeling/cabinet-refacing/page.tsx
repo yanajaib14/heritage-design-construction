@@ -48,7 +48,7 @@ export default function RefacingPage() {
       <Intro eyebrow="Investment" title={<>Refacing <em>pricing.</em></>} bg="paper">
         <p><Tbd>[Refacing pricing to confirm.]</Tbd></p>
       </Intro>
-      <Gallery eyebrow="Before & after" title={<>Refaced <em>kitchens.</em></>} labels={["[Before / after photo]", "[Before / after photo]", "[Before / after photo]"]} />
+      <Gallery eyebrow="Before & after" title={<>Refaced <em>kitchens.</em></>} photos={[{ src: "/images/rf-before.webp", alt: "A kitchen with dated wood cabinets before" }, { src: "/images/rf-after.webp", alt: "The same kitchen with white cabinet fronts after" }, { src: "/images/rf-white-shaker.webp", alt: "A kitchen with white shaker cabinet doors" }]} />
       <Faq
         title={<>Refacing <em>questions.</em></>}
         items={[

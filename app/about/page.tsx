@@ -28,28 +28,31 @@ export default function AboutPage() {
       </PageHero>
 
       <section className="band bg-off on-light" id="our-story">
-        <div className="wrap pintro">
-          <div className="sec-head left" style={{ marginBottom: 0 }}>
-            <div className="left">
-              <div className="eyebrow">Our story</div>
-              <h2 className="h2">Two decades of <em>South Sound homes.</em></h2>
-            </div>
-          </div>
-          <div className="prose">
-            <p>
-              Heritage Design &amp; Construction has been remodeling homes across the South Sound since <strong>2004</strong>. We are
-              family owned, and we have completed <strong>more than 800 projects</strong>, from custom kitchens and spa-like baths to
-              whole-home remodels.
+        <div className="wrap story">
+          <figure className="story-fig">
+            <img src="/images/about-team.webp" alt="A Heritage project lead walking a finished kitchen with a homeowner" loading="lazy" />
+          </figure>
+          <div className="story-copy">
+            <div className="eyebrow">Our story</div>
+            <h2 className="h2">Two decades of <em>South Sound homes.</em></h2>
+            <p className="story-lead">
+              Since 2004, our family has been remodeling homes across the South Sound. More than 800 projects later, the way we work
+              hasn&rsquo;t changed: one team, start to finish.
             </p>
             <p>
-              You may know us as <strong>10 Day Kitchens</strong>. Our clients kept asking us for more: fully custom kitchens, whole-home
-              remodels and commercial build-outs. Heritage Design &amp; Construction is the name for everything we do today.
+              Many of our clients first knew us as 10 Day Kitchens. As they asked for more, from fully custom kitchens to whole-home
+              remodels and commercial build-outs, we grew into Heritage Design &amp; Construction.
             </p>
             <p>
-              Our sister company, <strong>Heritage Design Center</strong>, is the showroom where our clients choose their cabinetry,
-              countertops, tile, fixtures and hardware. One team designs it, one showroom supplies it, and one crew builds it.
+              Our sister company, Heritage Design Center, is our showroom in Lacey. It&rsquo;s where you see and choose your cabinetry,
+              stone, tile, fixtures and hardware with a designer beside you, before our own crew builds it.
             </p>
-            <p className="tbd" style={{ justifySelf: "start", whiteSpace: "normal" }}>[Founder story and family photo, if you would like to add them.]</p>
+            <dl className="story-facts">
+              <div><dt>2004</dt><dd>Family owned since</dd></div>
+              <div><dt>800+</dt><dd>Projects completed</dd></div>
+              <div><dt>Lacey</dt><dd>Showroom &amp; design center</dd></div>
+            </dl>
+            <p className="story-sign"><span className="tbd">[Founder name]</span>, Founder</p>
           </div>
         </div>
       </section>

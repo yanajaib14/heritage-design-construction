@@ -55,7 +55,7 @@ export default function RemodelingPage() {
           </ul>
           <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/whole-home-remodeling">Whole-home remodeling →</Link></div>
         </div>
-        <div className="ph">Photo · whole-home project</div>
+        <div className="sphoto" role="img" aria-label="An open kitchen and living space after a whole-home remodel" style={{ backgroundImage: "url(/images/wh-open-plan.webp)" }} />
       </section>
 
       <KitchenOptions />
