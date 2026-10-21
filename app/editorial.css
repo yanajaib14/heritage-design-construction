@@ -1129,3 +1129,10 @@ a.hpf-item:hover>img{transform:scale(1.03)}
   .tb2-row strong{font-size:clamp(38px,11vw,48px)}
   .tb2-row span{font-size:10.5px;letter-spacing:.18em}
 }
+/* trust band, compact */
+.tb2-row{padding-top:clamp(26px,2.6vw,38px);padding-bottom:clamp(26px,2.6vw,38px)}
+.tb2-row li{gap:10px}
+.tb2-row strong{font-size:clamp(30px,2.6vw,40px)}
+.tb2-row i{width:22px}
+.tb2-row span{font-size:10.5px;letter-spacing:.22em}
+@media (max-width:860px){.tb2-row{row-gap:26px}.tb2-row strong{font-size:clamp(28px,8vw,34px)}.tb2-row span{font-size:10px;letter-spacing:.16em}}
