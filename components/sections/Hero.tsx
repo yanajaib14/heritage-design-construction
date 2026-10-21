@@ -48,24 +48,19 @@ export default function Hero() {
   );
 }
 
-// the trust bar sits in its own band just below the hero
+// the trust bar sits in its own band just below the hero: four big chrome figures, each with a short label
 export function TrustBand() {
   return (
-    <div className="walk trust-band">
-      <div className="wrap"><Trust /></div>
-    </div>
-  );
-}
-
-function Trust() {
-  return (
-    <div className="stats">
-      {TRUST.map((t) => (
-        <div className="stat" key={t.b}>
-          <strong className="chrome-text">{t.em ? <em>{t.n}</em> : t.n}</strong>
-          <span className="st-l"><b>{t.b}</b>{t.s}</span>
-        </div>
-      ))}
+    <div className="tb2">
+      <ul className="wrap tb2-row">
+        {TRUST.map((t) => (
+          <li key={t.b}>
+            <strong className="chrome-text">{t.em ? <em>{t.n}</em> : t.n}</strong>
+            <i aria-hidden="true"></i>
+            <span>{t.b}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

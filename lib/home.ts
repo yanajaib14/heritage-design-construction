@@ -20,10 +20,10 @@ export const HERO = {
 };
 
 export const TRUST = [
-  { n: "800+", b: "Projects", s: "completed" },
-  { n: "5-Year", b: "Warranty", s: "on our work" },
-  { n: "2004", b: "Family owned", s: "since" },
-  { n: "Licensed", b: "& insured", s: "fully covered", em: true },
+  { n: "800+", b: "Projects completed" },
+  { n: "5-Year", b: "Warranty on our work" },
+  { n: "2004", b: "Family owned since" },
+  { n: "Licensed", b: "And fully insured", em: true },
 ];
 
 export const STEPS = [
