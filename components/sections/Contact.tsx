@@ -8,11 +8,34 @@ export default function Contact({
   title,
   text = "Book a complimentary consultation, in your home or at our Lacey showroom.",
   photo,
+  backdrop,
 }: {
   title?: ReactNode;
   text?: string;
   photo?: { src: string; alt: string };
+  backdrop?: { src: string; alt: string };
 }) {
+  // Homepage closer: a full-bleed finished room under a dark wash, so it reads apart from the light showroom split above it
+  if (backdrop) {
+    return (
+      <section className="cta6" id="contact">
+        <Image className="cta6-bg" src={backdrop.src} alt={backdrop.alt} fill sizes="100vw" />
+        <div className="wrap cta6-inner">
+          <div className="eyebrow">Complimentary consultation</div>
+          <h2>{title ?? <>Let’s build <em>something exceptional.</em></>}</h2>
+          <p>{text}</p>
+          <div className="cta6-btns">
+            <a className="btn btn-chrome btn-xl cta6-main" href="/contact">Book a consultation <i aria-hidden="true">→</i></a>
+            <a className="btn btn-xl" href={SITE.tel}>Call {SITE.phone}</a>
+          </div>
+          <ul className="cta6-trust">
+            <li>No obligation</li>
+            <li>5-year warranty</li>
+          </ul>
+        </div>
+      </section>
+    );
+  }
   if (photo) {
     return (
       <section className="cta5 on-light" id="contact">

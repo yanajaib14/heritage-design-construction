@@ -1192,13 +1192,13 @@ header.site:not(.solid) .burger,header.site:not(.solid) [aria-label*="menu" i]{f
 @media (max-width:860px){.walk-shade{background:linear-gradient(180deg,rgba(12,13,13,.7) 0%,rgba(12,13,13,.55) 35%,rgba(12,13,13,.9) 100%)}}
 
 /* primary hero CTA: chrome with a slow light sweep, a soft glow and an arrow that nudges on hover */
-.walk .btn-chrome,.phero .btn-chrome,.srh .btn-chrome{position:relative;overflow:hidden;padding:18px 32px;font-weight:600;color:#111;border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 34px -14px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.9),0 0 0 1px rgba(0,0,0,.25);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,filter .35s}
-.walk .btn-chrome::after,.phero .btn-chrome::after,.srh .btn-chrome::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.8),transparent);transform:skewX(-20deg);animation:btnshine 5s ease-in-out 2.4s infinite;pointer-events:none}
-.walk .btn-chrome:hover,.phero .btn-chrome:hover,.srh .btn-chrome:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 20px 40px -14px rgba(0,0,0,.85),inset 0 1px 0 #fff,0 0 0 1px rgba(0,0,0,.25),0 0 28px -6px rgba(255,255,255,.35)}
+.walk .btn-chrome,.phero .btn-chrome,.srh .btn-chrome,.cta6 .btn-chrome{position:relative;overflow:hidden;padding:18px 32px;font-weight:600;color:#111;border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 34px -14px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.9),0 0 0 1px rgba(0,0,0,.25);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,filter .35s}
+.walk .btn-chrome::after,.phero .btn-chrome::after,.srh .btn-chrome::after,.cta6 .btn-chrome::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.8),transparent);transform:skewX(-20deg);animation:btnshine 5s ease-in-out 2.4s infinite;pointer-events:none}
+.walk .btn-chrome:hover,.phero .btn-chrome:hover,.srh .btn-chrome:hover,.cta6 .btn-chrome:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 20px 40px -14px rgba(0,0,0,.85),inset 0 1px 0 #fff,0 0 0 1px rgba(0,0,0,.25),0 0 28px -6px rgba(255,255,255,.35)}
 
 /* before/after: on desktop the divider follows the mouse */
 .ba-hint-touch{display:none}
-@media not all and (hover:hover) and (pointer:fine){.ba-hint-fine{display:none}.ba-hint-touch{display:inline}}
+@media (hover:none){.ba-hint-fine{display:none}.ba-hint-touch{display:inline}}
 .ba.ba-hover input{cursor:col-resize}
 .ba.ba-hover .ba-before,.ba.ba-hover .ba-line{transition:clip-path .12s linear,left .12s linear}
 
@@ -1235,3 +1235,21 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
 @media (max-width:1440px){header.site:not(.solid) .logo img{width:clamp(260px,31vw,450px)}}
 @media (max-width:1300px){header.site:not(.solid) .logo img{width:clamp(250px,26vw,350px)}}
 @media (max-width:860px){header.site:not(.solid) .logo img{width:clamp(250px,68vw,300px)}}
+
+/* ===== Homepage closing CTA (cta6): full-bleed finished room, dark wash, centered invitation ===== */
+.cta6{position:relative;isolation:isolate;overflow:hidden;color:var(--offwhite);background:#0e0f0f;padding-block:clamp(110px,14vw,200px);text-align:center}
+.cta6-bg{object-fit:cover;z-index:-2}
+.cta6::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 50%,rgba(10,11,11,.62) 0%,rgba(10,11,11,.8) 70%),linear-gradient(180deg,rgba(10,11,11,.35),rgba(10,11,11,.6))}
+.cta6-inner{display:grid;justify-items:center;gap:24px}
+.cta6 .eyebrow{color:rgba(255,255,255,.82)}
+.cta6 h2{margin:0;font:400 clamp(44px,5.6vw,88px)/1.02 var(--display);max-width:14ch;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.cta6 h2 em{display:block}
+.cta6 p{margin:0;font-size:clamp(17px,1.4vw,20px);color:rgba(255,255,255,.86);max-width:44ch}
+.cta6-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:10px}
+.cta6-btns .btn:not(.btn-chrome){color:#fff;border-color:rgba(255,255,255,.7)}
+.cta6-btns .btn:not(.btn-chrome):hover{background:#fff;color:var(--ink)}
+.cta6-trust{list-style:none;margin:6px 0 0;padding:0;display:flex;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.cta6-trust li{padding:0 16px}
+.cta6-trust li+li{border-left:1px solid rgba(255,255,255,.35)}
+@media (max-width:640px){.cta6-btns{flex-direction:column;align-self:stretch}.cta6-btns .btn{width:100%;justify-content:center}}
+@media (max-width:640px){.cta6 .eyebrow::after,.cta6 .eyebrow::before{display:none}}

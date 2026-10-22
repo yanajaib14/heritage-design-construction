@@ -26,9 +26,9 @@ export default function Home() {
         <Showroom extras />
         <ServiceAreas />
         <Contact
-          photo={{
-            src: "/images/sr-consult.webp",
-            alt: "Designers going over a material board with a client",
+          backdrop={{
+            src: "/images/wh-kitchen.webp",
+            alt: "A finished open kitchen with a large island",
           }}
         />
       </div>
