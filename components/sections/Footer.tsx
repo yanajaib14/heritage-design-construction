@@ -94,9 +94,33 @@ export default function Footer() {
             </h4>
             <p className="cities">{CITIES.join(" · ")}</p>
           </div>
+          {/* phones: the same links folded into tap-to-open groups */}
+          <div className="foot-acc">
+            <details>
+              <summary>Services</summary>
+              <ul>
+                {[...COLS[0].links, ...COLS[1].links, ...COLS[2].links].map(([label, href]) => (
+                  <li key={label}><Link href={href}>{label}</Link></li>
+                ))}
+              </ul>
+            </details>
+            <details>
+              <summary>Company</summary>
+              <ul>
+                {COLS[3].links.map(([label, href]) => (
+                  <li key={label}><Link href={href}>{label}</Link></li>
+                ))}
+              </ul>
+            </details>
+            <details>
+              <summary>Service areas</summary>
+              <p className="cities">{CITIES.join(" · ")}</p>
+              <Link className="foot-acc-more" href="/about/service-areas">See all service areas →</Link>
+            </details>
+          </div>
         </div>
         <div className="legal">
-          <span>
+          <span className="legal-full">
             © 2026 Heritage Design &amp; Construction · Family owned since 2004 · WA Contractor Lic. <span className="tbd">[#]</span> · Insured <span className="tbd">[carrier]</span> · <span className="tbd">[BBB / NKBA]</span>
           </span>
           <span>
@@ -106,6 +130,7 @@ export default function Footer() {
             </a>{" "}
             · Privacy · Terms · Accessibility
           </span>
+          <span className="legal-short">© 2026 Heritage Design &amp; Construction · WA Lic. <span className="tbd">[#]</span></span>
         </div>
       </div>
     </footer>

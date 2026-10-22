@@ -1378,3 +1378,27 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
   .wr-quotes.mm-in{transition-delay:.45s}
   .wr-why li.mm:not(.mm-in){transform:translateY(30px)}
 }
+
+/* footer on phones: logo, contact rows, then link groups that open on tap; a one-line legal footer */
+.foot-acc,.legal-short{display:none}
+@media (max-width:760px){
+  footer{padding-block:48px 96px}
+  .foot{display:block}
+  .foot .foot-col,.foot .areas-col{display:none}
+  .foot .brand img{width:220px}
+  .foot-visit{margin-top:22px;max-width:none}
+  .foot-acc{display:block;margin-top:18px}
+  .foot-acc details{border-bottom:1px solid rgba(255,255,255,.14)}
+  .foot-acc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font:600 12.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:#f2f0ec}
+  .foot-acc summary::-webkit-details-marker{display:none}
+  .foot-acc summary::after{content:"+";font:300 22px/1 var(--body);letter-spacing:0;color:rgba(255,255,255,.7);transition:transform .3s}
+  .foot-acc details[open] summary::after{transform:rotate(45deg)}
+  .foot-acc ul{list-style:none;margin:0;padding:0 0 18px;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+  .foot-acc li a{color:#cfcdc8;text-decoration:none;font-size:14.5px;line-height:1.35}
+  .foot-acc .cities{margin:0 0 12px;font-size:14px;line-height:1.9;color:#b3b1ab}
+  .foot-acc-more{display:inline-block;margin-bottom:18px;color:#f2f0ec;font-size:13px;letter-spacing:.06em}
+  .legal{margin-top:10px;padding-top:18px;border-top:0;display:flex;flex-direction:column-reverse;gap:8px}
+  .legal-full{display:none}
+  .legal-short{display:block}
+  .legal{font-size:12px}
+}
