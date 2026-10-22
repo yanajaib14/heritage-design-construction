@@ -26,10 +26,11 @@ export default function Showroom({ extras = false }: { extras?: boolean }) {
           <div className="eyebrow">Heritage Design Center Showroom</div>
           <h2 className="h2">Design, materials and showroom, <em>all under one roof.</em></h2>
           <p>Visit our showroom in Lacey to see cabinetry, stone, tile, plumbing fixtures and hardware on display, and make every selection side by side with a designer.</p>
-          <div className="sr-facts">
-            <p><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</a></p>
-            <p>{SITE.hours} · <a href={SITE.showroomTel}>{SITE.showroomPhone}</a></p>
-          </div>
+          <dl className="sr-visit">
+            <div><dt>Address</dt><dd><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}<br />{SITE.city}, {SITE.region} {SITE.zip}</a></dd></div>
+            <div><dt>Hours</dt><dd>Mon–Fri 9:00–5:30<br />Saturday by appointment</dd></div>
+            <div><dt>Showroom</dt><dd><a href={SITE.showroomTel}>{SITE.showroomPhone}</a></dd></div>
+          </dl>
           <div className="btns"><a className="btn btn-ink" href="/contact">Book a showroom visit →</a><a className="btn" href="https://www.heritagedesignctr.com" target="_blank" rel="noopener">heritagedesignctr.com ↗</a></div>
         </div>
       </div>

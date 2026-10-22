@@ -11,7 +11,7 @@ export default function HomePortfolio() {
         <header className="hpf3-head">
           <div className="eyebrow">Recent transformations</div>
           <h2 className="h2">Before, <em>and after.</em></h2>
-          <p>Drag the line on each photo to see what changed.</p>
+          <p><span className="ba-hint-fine">Move across each photo to see what changed.</span><span className="ba-hint-touch">Drag the line on each photo to see what changed.</span></p>
         </header>
         <div className="hpf3-pair">
           {BA_PROJECTS.map((p, i) => (
