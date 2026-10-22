@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CITIES } from "@/lib/site";
+import { CITIES, SITE } from "@/lib/site";
 
 const TYPES = [
   "Custom kitchen remodel",
@@ -82,7 +82,7 @@ export default function ContactForm() {
       </label>
       <div className="full btns" style={{ alignItems: "center" }}>
         <button className="btn btn-ink btn-xl" type="submit">Request my consultation →</button>
-        <span className="note">We reply within <span className="tbd">[one business day]</span>. Prefer to talk? Call (360) 557-3444.</span>
+        <span className="note">We reply within <span className="tbd">[one business day]</span>. Prefer to talk? Call <a href={SITE.tel}>{SITE.phone}</a>.</span>
       </div>
     </form>
   );

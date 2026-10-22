@@ -53,7 +53,7 @@ export default function AboutPage() {
               <div><dt>800+</dt><dd>Projects completed</dd></div>
               <div><dt>Lacey</dt><dd>Showroom &amp; design center</dd></div>
             </dl>
-            <p className="story-sign"><span className="tbd">[Founder name]</span>, Founder</p>
+            <p className="story-sign">Kevin Godfrey, Founder</p>
           </div>
         </div>
       </section>

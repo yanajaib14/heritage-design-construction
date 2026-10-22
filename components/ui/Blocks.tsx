@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import Icon from "@/components/ui/Icon";
 import JsonLd from "@/components/ui/JsonLd";
+import Linkify from "@/components/ui/Linkify";
 
 // Building blocks for the inner pages, so each page is a short list of sections.
 // Anything in [square brackets] is a placeholder for the owner to fill in.
@@ -208,7 +209,7 @@ export function Faq({ eyebrow = "Questions", title, items, bg = "paper" }: { eye
             <details key={it.q}>
               <summary>{it.q}</summary>
               <div className="ans">
-                <p>{it.a}</p>
+                <p><Linkify text={it.a} /></p>
               </div>
             </details>
           ))}

@@ -8,7 +8,7 @@ export const WALK = {
   frames: 0,
   dir: "/images/walk",
   phoneDir: "/images/walk-sm",
-  doors: true,
+  doors: false,
 };
 
 export const HERO = {

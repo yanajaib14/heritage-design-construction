@@ -27,8 +27,8 @@ export default function Showroom({ extras = false }: { extras?: boolean }) {
           <h2 className="h2">Design, materials and showroom, <em>all under one roof.</em></h2>
           <p>Visit our showroom in Lacey to see cabinetry, stone, tile, plumbing fixtures and hardware on display, and make every selection side by side with a designer.</p>
           <div className="sr-facts">
-            <p>{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</p>
-            <p>{SITE.hours} · {SITE.showroomPhone}</p>
+            <p><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</a></p>
+            <p>{SITE.hours} · <a href={SITE.showroomTel}>{SITE.showroomPhone}</a></p>
           </div>
           <div className="btns"><a className="btn btn-ink" href="/contact">Book a showroom visit →</a><a className="btn" href="https://www.heritagedesignctr.com" target="_blank" rel="noopener">heritagedesignctr.com ↗</a></div>
         </div>

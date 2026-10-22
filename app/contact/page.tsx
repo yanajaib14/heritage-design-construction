@@ -36,9 +36,9 @@ export default function ContactPage() {
             <div className="eyebrow">Visit or call</div>
             <div className="info">
               <div><small>Call</small><a href={SITE.tel}>{SITE.phone}</a></div>
-              <div><small>Showroom</small><span>{SITE.street}<br />{SITE.city}, {SITE.region} {SITE.zip}</span></div>
+              <div><small>Showroom</small><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}<br />{SITE.city}, {SITE.region} {SITE.zip}</a></div>
               <div><small>Hours</small><span>Mon–Fri 9:00–5:30<br />Saturday by appointment</span></div>
-              <div><small>Email</small><span className="tbd">[Email]</span></div>
+              <div><small>Email</small>{SITE.email ? <a href={`mailto:${SITE.email}`}>{SITE.email}</a> : <span className="tbd">[Email]</span>}</div>
             </div>
             <div className="btns">
               <a className="btn btn-ink" href={SITE.directions} target="_blank" rel="noopener">Get directions ↗</a>

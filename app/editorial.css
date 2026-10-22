@@ -1160,3 +1160,23 @@ a.hpf-item:hover>img{transform:scale(1.03)}
 .wr-quotes .rq{border-top:0;padding-top:0}
 .wr-quotes .rq blockquote{margin-top:14px}
 @media (max-width:860px){.wr-grid{grid-template-columns:1fr}}
+
+/* ===== Large desktops (24"–30" screens, 1680–2560px wide): wider content column, split copy aligned to it ===== */
+@media (min-width:1680px){
+  :root{--wrap:1480px}
+  .split>.copy:last-child{padding-right:calc((100vw - var(--wrap)) / 2 + 48px)}
+  .split>.copy:first-child{padding-left:calc((100vw - var(--wrap)) / 2 + 48px)}
+  .split{min-height:700px}
+  .hpf3-pair,.hpf3-gal{max-width:1160px}
+}
+@media (min-width:2000px){
+  :root{--wrap:1560px}
+  body{font-size:18px}
+  .split{min-height:780px}
+  .split .copy p{font-size:18.5px}
+}
+@media (min-width:2400px){
+  :root{--wrap:1720px}
+  header.site .wrap{max-width:1720px}
+  .hpf3-pair,.hpf3-gal{max-width:1320px}
+}

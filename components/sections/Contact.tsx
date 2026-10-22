@@ -33,7 +33,7 @@ export default function Contact({
               <li>5-year warranty</li>
             </ul>
             <dl className="cta5-info">
-              <div><dt>Visit</dt><dd>{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</dd></div>
+              <div><dt>Visit</dt><dd><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</a></dd></div>
               <div><dt>Hours</dt><dd>Mon–Fri 9:00–5:30 · Saturday by appointment</dd></div>
               <div><dt>Call</dt><dd><a href={SITE.tel}>{SITE.phone}</a></dd></div>
             </dl>
@@ -59,7 +59,7 @@ export default function Contact({
           </ul>
         </div>
         <div className="cta4-visit">
-          <div><small>Visit</small><span>8695 Martin Way E #101<br />Lacey, WA 98516</span></div>
+          <div><small>Visit</small><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}<br />{SITE.city}, {SITE.region} {SITE.zip}</a></div>
           <div><small>Hours</small><span>Mon–Fri 9:00–5:30<br />Saturday by appointment</span></div>
           <div><small>Call</small><a href={SITE.tel}>{SITE.phone}</a></div>
         </div>

@@ -48,11 +48,12 @@ export default function Footer() {
           <div className="brand">
             <img src="/brand/heritage-logo.webp" alt="Heritage Design & Construction" />
             <p>
-              Showroom: {SITE.street}
+              Showroom: <a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}
               <br />
-              {SITE.city}, {SITE.region} {SITE.zip}
+              {SITE.city}, {SITE.region} {SITE.zip}</a>
               <br />
-              {SITE.phone} · <span className="tbd">[Email]</span>
+              <a href={SITE.tel}>{SITE.phone}</a> ·{" "}
+              {SITE.email ? <a href={`mailto:${SITE.email}`}>{SITE.email}</a> : <span className="tbd">[Email]</span>}
             </p>
           </div>
           {[[COLS[0]], [COLS[1], COLS[2]], [COLS[3]]].map((col) => (

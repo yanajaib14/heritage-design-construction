@@ -5,6 +5,9 @@ export const SITE = {
   phone: "(360) 557-3444",
   tel: "tel:+13605573444",
   showroomPhone: "(360) 557-3441",
+  showroomTel: "tel:+13605573441",
+  // leave empty until the owner confirms it; pages show an [Email] placeholder meanwhile
+  email: "",
   street: "8695 Martin Way E #101",
   city: "Lacey",
   region: "WA",

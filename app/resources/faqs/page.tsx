@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Linkify from "@/components/ui/Linkify";
 import PageHero from "@/components/ui/PageHero";
 import JsonLd from "@/components/ui/JsonLd";
 import Contact from "@/components/sections/Contact";
@@ -162,7 +163,7 @@ export default function FaqPage() {
                     <summary>{it.q}</summary>
                     <div className="ans">
                       {it.a.map((p) => (
-                        <p key={p}>{p}</p>
+                        <p key={p}><Linkify text={p} /></p>
                       ))}
                     </div>
                   </details>

@@ -101,9 +101,9 @@ export default function ShowroomPage() {
           </div>
         </div>
         <dl className="srh-bar wrap">
-          <div><dt>Visit</dt><dd>{SITE.street}, {SITE.city}</dd></div>
+          <div><dt>Visit</dt><dd><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}, {SITE.city}</a></dd></div>
           <div><dt>Hours</dt><dd>{SITE.hours}</dd></div>
-          <div><dt>Showroom</dt><dd><a href="tel:+13605573441">{SITE.showroomPhone}</a></dd></div>
+          <div><dt>Showroom</dt><dd><a href={SITE.showroomTel}>{SITE.showroomPhone}</a></dd></div>
         </dl>
         <JsonLd
           data={{
@@ -216,9 +216,9 @@ export default function ShowroomPage() {
           <div className="eyebrow">Plan your visit</div>
           <h2 className="h2">Visit us <em>in Lacey.</em></h2>
           <div className="info">
-            <div><small>Address</small><span>{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</span></div>
+            <div><small>Address</small><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</a></div>
             <div><small>Hours</small><span>{SITE.hours}</span></div>
-            <div><small>Showroom phone</small><a href="tel:+13605573441">{SITE.showroomPhone}</a></div>
+            <div><small>Showroom phone</small><a href={SITE.showroomTel}>{SITE.showroomPhone}</a></div>
           </div>
           <div className="btns">
             <Link className="btn btn-ink" href="/contact">Book a showroom visit →</Link>
