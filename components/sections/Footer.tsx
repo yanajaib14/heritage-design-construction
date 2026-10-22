@@ -47,14 +47,30 @@ export default function Footer() {
         <div className="foot">
           <div className="brand">
             <img src="/brand/heritage-logo.webp" alt="Heritage Design & Construction" />
-            <p>
-              Showroom: <a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}
-              <br />
-              {SITE.city}, {SITE.region} {SITE.zip}</a>
-              <br />
-              <a href={SITE.tel}>{SITE.phone}</a> ·{" "}
-              {SITE.email ? <a href={`mailto:${SITE.email}`}>{SITE.email}</a> : <span className="tbd">[Email]</span>}
-            </p>
+            <dl className="foot-visit">
+              <div>
+                <dt>Visit</dt>
+                <dd>
+                  <a href={SITE.directions} target="_blank" rel="noopener">
+                    {SITE.street}
+                    <br />
+                    {SITE.city}, {SITE.region} {SITE.zip}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd>Mon–Fri 9:00–5:30<br />Saturday by appointment</dd>
+              </div>
+              <div>
+                <dt>Call</dt>
+                <dd><a href={SITE.tel}>{SITE.phone}</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>{SITE.email ? <a href={`mailto:${SITE.email}`}>{SITE.email}</a> : <span className="tbd">[Email]</span>}</dd>
+              </div>
+            </dl>
           </div>
           {[[COLS[0]], [COLS[1], COLS[2]], [COLS[3]]].map((col) => (
             <div key={col[0].title} className="foot-col">

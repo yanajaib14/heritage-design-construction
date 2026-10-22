@@ -1253,3 +1253,13 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
 .cta6-trust li+li{border-left:1px solid rgba(255,255,255,.35)}
 @media (max-width:640px){.cta6-btns{flex-direction:column;align-self:stretch}.cta6-btns .btn{width:100%;justify-content:center}}
 @media (max-width:640px){.cta6 .eyebrow::after,.cta6 .eyebrow::before{display:none}}
+
+/* footer contact: labeled rows instead of one wrapped paragraph */
+.foot-visit{margin:28px 0 0;display:grid;gap:0;max-width:360px;border-top:1px solid rgba(255,255,255,.14)}
+.foot-visit div{display:grid;grid-template-columns:84px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.foot-visit dt{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);padding-top:3px}
+.foot-visit dd{margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.9)}
+.foot-visit a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:4px}
+.foot-visit a:hover{text-decoration-color:#fff}
+.foot-visit .tbd{background:none;padding:0;color:rgba(255,255,255,.5)}
+@media (min-width:1001px){.foot{grid-template-columns:1.75fr 1fr 1fr .9fr 1.25fr;gap:36px}.foot-visit div{grid-template-columns:76px 1fr;gap:12px}.foot-visit dd{font-size:14.5px}}
