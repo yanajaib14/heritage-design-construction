@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { REASONS } from "@/components/sections/Why";
 import { Quotes } from "@/components/sections/Stories";
 import { reviewsFor } from "@/lib/reviews";
@@ -10,6 +11,9 @@ export default function WhyReviews() {
         <div className="wr-why">
           <div className="eyebrow">Why Heritage</div>
           <h2 className="h2">Not just a contractor. <em>A design-build house.</em></h2>
+          <figure className="wr-fig">
+            <Image src="/images/about-team.webp" alt="The Heritage team in the showroom" fill sizes="100vw" />
+          </figure>
           <ol>
             {REASONS.map(([t, p]) => (
               <li key={t}>

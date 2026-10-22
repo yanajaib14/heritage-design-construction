@@ -1263,3 +1263,23 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
 .foot-visit a:hover{text-decoration-color:#fff}
 .foot-visit .tbd{background:none;padding:0;color:rgba(255,255,255,.5)}
 @media (min-width:1001px){.foot{grid-template-columns:1.75fr 1fr 1fr .9fr 1.25fr;gap:36px}.foot-visit div{grid-template-columns:76px 1fr;gap:12px}.foot-visit dd{font-size:14.5px}}
+@media (max-width:860px){.walk-intro .btns,.walk-end .btns{display:none}.walk-foot{padding-bottom:72px}}
+
+/* Why Heritage on phones: a framed team photo, reasons as panels with a chrome edge, and a dark review card */
+.wr-fig{display:none}
+@media (max-width:860px){
+  .wr-fig{display:block;position:relative;margin:10px 14px 18px 0;aspect-ratio:4/3}
+  .wr-fig::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid #b9b4aa;z-index:0}
+  .wr-fig img{object-fit:cover;z-index:1}
+  .wr-why ol{border-top:0;padding-top:0;gap:12px;margin-top:8px}
+  .wr-why li,.wr-why li:last-child{position:relative;background:#efece6;padding:20px 20px 20px 24px;border:0}
+  .wr-why li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--chrome)}
+  .wr-why h3{font-size:21px}
+  .wr-why p{font-size:15px;color:#4a4d51}
+  .wr-quotes{background:#151616;color:var(--offwhite);margin-top:12px}
+  .wr-quotes .rq blockquote{color:#f2f0ec;font-size:22px}
+  .wr-quotes .rq cite,.wr-quotes .rq figcaption,.wr-quotes .rq .who{color:rgba(255,255,255,.7)}
+  .wr-quotes button,.wr-quotes .rq-nav button{border-color:rgba(255,255,255,.5);color:#fff}
+  .wr-quotes .rq-n{color:rgba(255,255,255,.75)}
+  .wr-quotes .mk{color:rgba(255,255,255,.55)}
+}
