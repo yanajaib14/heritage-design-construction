@@ -24,6 +24,7 @@ const SERVICES = [
   "Bathroom remodeling",
   "Fast Bath Program",
   "Whole-home remodeling",
+  "Home additions & ADU/DADU",
 ];
 
 export default function RemodelingPage() {
@@ -38,7 +39,7 @@ export default function RemodelingPage() {
         crumbs={[{ label: "Services", href: "/services" }, { label: "Remodeling", href: "/services/remodeling-services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Book a Consultation →</Link>
-        <a className="btn" href="#fast-bath">Fast Bath</a>
+        <Link className="btn" href="/services/remodeling-services/remodeling-packages">Remodeling packages</Link>
       </PageHero>
 
       <Kitchens />
@@ -54,7 +55,7 @@ export default function RemodelingPage() {
             <li>Consistent finishes chosen in our showroom</li>
             <li>One project manager from design to walkthrough</li>
           </ul>
-          <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/whole-home-remodeling">Whole-home remodeling →</Link></div>
+          <div className="btns"><Link className="btn btn-ink" href="/services/remodeling-services/whole-home-remodeling">Whole-home remodeling →</Link><Link className="btn" href="/services/remodeling-services/home-additions-adu">Additions & ADU/DADU →</Link></div>
         </div>
         <div className="sphoto" role="img" aria-label="An open kitchen and living space after a whole-home remodel" style={{ backgroundImage: "url(/images/wh-open-plan.webp)" }} />
       </section>

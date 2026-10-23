@@ -52,15 +52,23 @@ export const NAV: NavItem[] = [
         label: "Remodeling",
         href: "/services/remodeling-services",
         children: [
-          { label: "Whole-Home Remodeling", href: "/services/remodeling-services/whole-home-remodeling" },
           { label: "Kitchen Remodeling", href: "/services/remodeling-services/kitchen-remodeling" },
-          { label: "10-Day Kitchen Program", href: "/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program" },
-          { label: "Cabinet Refacing", href: "/services/remodeling-services/kitchen-remodeling/cabinet-refacing" },
           { label: "Bathroom Remodeling", href: "/services/remodeling-services/bathroom-remodeling" },
-          { label: "Fast Bath Program", href: "/services/remodeling-services/bathroom-remodeling/fast-bath-program" },
+          { label: "Whole Home Remodeling", href: "/services/remodeling-services/whole-home-remodeling" },
+          { label: "Home Additions & ADU/DADU", href: "/services/remodeling-services/home-additions-adu" },
+          // the 10-Day Kitchen, Cabinet Refacing and Fast Bath pages are reached from this one
+          { label: "Remodeling Packages", href: "/services/remodeling-services/remodeling-packages" },
         ],
       },
-      { label: "Construction", href: "/services/construction-services" },
+      {
+        label: "Construction",
+        href: "/services/construction-services",
+        children: [
+          { label: "New Construction", href: "/services/construction-services/new-construction" },
+          { label: "Commercial Construction", href: "/services/construction-services/commercial-construction" },
+          { label: "Tenant Improvements", href: "/services/construction-services/commercial-construction/tenant-improvements-ti" },
+        ],
+      },
       { label: "Design", href: "/services/design-services" },
     ],
   },

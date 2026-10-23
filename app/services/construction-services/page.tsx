@@ -8,9 +8,9 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services/construction-services" },
-  title: "Commercial Construction & Tenant Improvements",
+  title: "Construction Services | New, Commercial & Tenant Improvements",
   description:
-    "Commercial construction and tenant improvements (TI) in the South Sound for tenants, landlords and brokers, designed, supplied and built by one Lacey, WA team.",
+    "New construction, commercial construction and tenant improvements (TI) in the South Sound, designed, supplied and built by one Lacey, WA team.",
 };
 
 export default function ConstructionPage() {
@@ -20,10 +20,11 @@ export default function ConstructionPage() {
         eyebrow="Construction services"
         title={<>Commercial spaces, <em>built right.</em></>}
         image="/images/showroom.webp"
-        lede="Commercial construction and tenant improvements for tenants, landlords and brokers, with the same design, supply and build team behind our residential work."
+        lede="New construction, commercial construction and tenant improvements, with the same design, supply and build team behind our residential work."
         crumbs={[{ label: "Services", href: "/services" }, { label: "Construction", href: "/services/construction-services" }]}
       >
         <Link className="btn btn-chrome" href="/contact">Discuss your project →</Link>
+        <Link className="btn" href="/services/construction-services/new-construction">New construction</Link>
         <Link className="btn" href="/services/construction-services/commercial-construction">Commercial construction</Link>
         <Link className="btn" href="/services/construction-services/commercial-construction/tenant-improvements-ti">Tenant improvements</Link>
       </PageHero>

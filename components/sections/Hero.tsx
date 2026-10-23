@@ -2,15 +2,13 @@ import Image from "next/image";
 import { HERO, TRUST, WALK } from "@/lib/home";
 import { SITE } from "@/lib/site";
 
-// Scroll walk-in: the page pins while scrolling walks you through the showroom doors.
-// lib/site-effects.js drives it from scroll progress; with reduced motion it is a still hero.
+// Homepage hero: a full-screen showroom photo with the headline; the page scrolls straight on into the next section.
 export default function Hero() {
   return (
-    <section className="walk" id="hero" data-frames={WALK.frames} data-dir={WALK.dir} data-phone-dir={WALK.phoneDir}>
+    <section className="walk" id="hero">
       <div className="walk-stick">
         <div className="walk-media" aria-hidden="true">
           <Image className="walk-poster" src={WALK.poster} alt="" fill preload sizes="100vw" />
-          <canvas className="walk-canvas"></canvas>
         </div>
         <div className="walk-shade" aria-hidden="true"></div>
         {WALK.doors && (
@@ -32,15 +30,6 @@ export default function Hero() {
               <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
               <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
             </div>
-          </div>
-        </div>
-        <div className="walk-cue" aria-hidden="true"><span>Scroll to step inside</span><i></i></div>
-        <div className="walk-end">
-          <div className="eyebrow">Heritage Design Center · Lacey</div>
-          <h2 className="h2">Step inside <em>the showroom.</em></h2>
-          <div className="btns">
-            <a className="btn btn-chrome" href="/contact">Book a showroom visit →</a>
-            <a className="btn" href="/contact">Book a consultation</a>
           </div>
         </div>
       </div>

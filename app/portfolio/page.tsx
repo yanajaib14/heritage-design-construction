@@ -7,8 +7,8 @@ import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
-  title: "Portfolio | Kitchens & Bathrooms",
-  description: "Kitchens and bathrooms designed and built by Heritage Design & Construction across the South Sound.",
+  title: "Portfolio | Kitchens, Bathrooms & Whole Home Remodels",
+  description: "Kitchens, bathrooms and whole-home remodels designed and built by Heritage Design & Construction across the South Sound.",
 };
 
 export default function PortfolioPage() {
@@ -18,7 +18,7 @@ export default function PortfolioPage() {
         eyebrow="Portfolio"
         title={<>Spaces we&apos;ve <em>designed and built.</em></>}
         image="/images/pf-oslo.webp"
-        lede="A selection of kitchens and bathrooms from our team. Whole-home and commercial projects are coming soon."
+        lede="Kitchens, bathrooms and whole-home remodels from our team across the South Sound. Pick a category to see its projects."
        
         crumbs={[{ label: "Portfolio", href: "/portfolio" }]}
       >

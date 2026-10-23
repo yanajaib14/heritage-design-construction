@@ -213,7 +213,7 @@ export default function BathroomPage() {
         <Link className="btn" href={`${B}/fast-bath-program/bathroom-ai-estimator`}>Get an estimate</Link>
       </Split>
 
-      <Portfolio />
+      <Portfolio start="bath" />
 
       <section className="band bg-paper on-light">
         <div className="wrap">

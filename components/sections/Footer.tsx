@@ -7,17 +7,16 @@ const COLS = [
     title: "Remodeling",
     links: [
       ["Kitchen Remodeling", "/services/remodeling-services/kitchen-remodeling"],
-      ["10-Day Kitchen Program", "/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program"],
-      ["Cabinet Refacing", "/services/remodeling-services/kitchen-remodeling/cabinet-refacing"],
-      ["Whole Home Remodeling", "/services/remodeling-services/whole-home-remodeling"],
       ["Bathroom Remodeling", "/services/remodeling-services/bathroom-remodeling"],
-      ["Fast Bath", "/services/remodeling-services/bathroom-remodeling/fast-bath-program"],
-      ["Bathroom AI Estimator", "/services/remodeling-services/bathroom-remodeling/fast-bath-program/bathroom-ai-estimator"],
+      ["Whole Home Remodeling", "/services/remodeling-services/whole-home-remodeling"],
+      ["Home Additions & ADU/DADU", "/services/remodeling-services/home-additions-adu"],
+      ["Remodeling Packages", "/services/remodeling-services/remodeling-packages"],
     ],
   },
   {
     title: "Construction",
     links: [
+      ["New Construction", "/services/construction-services/new-construction"],
       ["Commercial Construction", "/services/construction-services/commercial-construction"],
       ["Tenant Improvements", "/services/construction-services/commercial-construction/tenant-improvements-ti"],
     ],
