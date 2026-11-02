@@ -7,7 +7,8 @@ export const OLD_SITE_PATHS: [string, string][] = [
   ["/", "/"],
   ["/10-day-kitchen-program", `${K}/10-day-kitchen-program`],
   ["/kitchen-remodel", K],
-  // city pages are on hold, so old city URLs go to the kitchen page for now
+  // old city URLs go to the matching city page once it exists, otherwise to the kitchen page
+  ["/kitchen-remodel/olympia", "/about/service-areas/olympia"],
   ["/kitchen-remodel/:city", K],
   ["/bathroom-remodel", B],
   ["/fast-bath", `${B}/fast-bath-program`],

@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import Contact from "@/components/sections/Contact";
 import { SITE } from "@/lib/site";
+import { cityHref } from "@/lib/cities";
 
 // The towns we serve, grouped by county.
 const COUNTIES = [
@@ -55,7 +56,17 @@ export default function ServiceAreasPage() {
               <li key={c.n}>
                 <span className="sa2-n">{String(i + 1).padStart(2, "0")}</span>
                 <h3>{c.n}</h3>
-                <p>{c.towns.join(" · ")}</p>
+                <p>
+                  {c.towns.map((t, j) => {
+                    const href = cityHref(t.replace(/ \(.*\)$/, ""));
+                    return (
+                      <span key={t}>
+                        {j > 0 && " · "}
+                        {href ? <Link href={href}>{t}</Link> : t}
+                      </span>
+                    );
+                  })}
+                </p>
               </li>
             ))}
           </ol>

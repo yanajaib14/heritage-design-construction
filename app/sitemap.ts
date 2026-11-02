@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/site";
+import { CITY_PAGES } from "@/lib/cities";
 
 // Every page in the app folder (dynamic routes excluded), read at build time so new pages are picked up.
 function routes(dir: string, base = ""): string[] {
@@ -16,7 +17,7 @@ function routes(dir: string, base = ""): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const all = ["", ...routes(path.join(process.cwd(), "app"))];
+  const all = ["", ...routes(path.join(process.cwd(), "app")), ...CITY_PAGES.map((c) => `/about/service-areas/${c.slug}`)];
   return all.map((r) => ({
     url: `${BASE_URL}${r || "/"}`,
     changeFrequency: "monthly",

@@ -220,7 +220,7 @@ export function Faq({ eyebrow = "Questions", title, items, bg = "paper" }: { eye
           "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: items
-            .filter((it) => !it.a.startsWith("["))
+            .filter((it) => !it.a.includes("["))
             .map((it) => ({ "@type": "Question", name: it.q, acceptedAnswer: { "@type": "Answer", text: it.a } })),
         }}
       />
