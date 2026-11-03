@@ -6,7 +6,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import { Cards, Faq, Intro, Steps, Tbd } from "@/components/ui/Blocks";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import Contact from "@/components/sections/Contact";
-import { CITY_PAGES, cityPage } from "@/lib/cities";
+import { CITY_PAGES, cityHref, cityPage } from "@/lib/cities";
 import { PROJECTS } from "@/lib/portfolio";
 import { BASE_URL, SITE } from "@/lib/site";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     alternates: { canonical: `/about/service-areas/${c.slug}` },
     title: `Remodeling in ${c.name}, WA | Kitchens, Baths & Whole Homes`,
-    description: `Kitchen, bathroom and whole-home remodeling in ${c.name}, WA from a family-owned design-build team based in Lacey. Visit our showroom or book a consultation.`,
+    description: `Kitchen, bathroom and whole-home remodeling in ${c.name}, WA from a family-owned design-build team ${c.driveTime} away in Lacey. Visit our showroom or book a consultation.`,
   };
 }
 
@@ -57,12 +57,18 @@ export default async function CityPage({ params }: Props) {
         {c.intro.map((p) => (
           <p key={p}>{p.includes("[") ? <Tbd>{p}</Tbd> : p}</p>
         ))}
-        <ul className="city-areas" aria-label={`Parts of ${c.name} we work in`}>
-          {c.areas.map((a) => (
-            <li key={a}>{a.startsWith("[") ? <Tbd>{a}</Tbd> : a}</li>
-          ))}
-        </ul>
+        <dl className="city-facts">
+          <div><dt>Showroom</dt><dd>{c.driveTime[0].toUpperCase() + c.driveTime.slice(1)} away in Lacey</dd></div>
+          <div><dt>County</dt><dd>{c.county}</dd></div>
+          <div><dt>Permits</dt><dd>{c.permits}</dd></div>
+        </dl>
       </Intro>
+
+      <Steps
+        eyebrow={`${c.name} neighborhoods`}
+        title={<>Knowing the homes <em>we work on.</em></>}
+        steps={c.neighborhoods.map((n) => ({ title: n.name, text: n.note }))}
+      />
 
       <Cards
         eyebrow={`Services in ${c.name}`}
@@ -76,12 +82,6 @@ export default async function CityPage({ params }: Props) {
           { icon: "clock", title: "Remodeling packages", text: "10-Day Kitchen, Cabinet Refacing and Fast Bath.", href: `${R}/remodeling-packages`, cta: "Packages" },
           { icon: "pencil", title: "Design services", text: "Plans and selections made in our showroom.", href: "/services/design-services", cta: "Design" },
         ]}
-      />
-
-      <Steps
-        eyebrow={`${c.name} homes`}
-        title={<>Knowing the homes <em>we work on.</em></>}
-        steps={c.homes.map((h) => ({ title: h.title, text: h.text.startsWith("[") ? <Tbd>{h.text}</Tbd> : h.text }))}
       />
 
       <section className="band bg-off on-light">
@@ -107,6 +107,22 @@ export default async function CityPage({ params }: Props) {
       <ServiceAreas city={c.name} />
 
       <Faq title={<>{c.name} <em>questions.</em></>} items={c.faq} />
+
+      <section className="band bg-paper on-light city-near">
+        <div className="wrap">
+          <div className="eyebrow">Also serving nearby</div>
+          <ul>
+            {c.nearby.map((n) => (
+              <li key={n}>
+                <Link href={cityHref(n) ?? "/about/service-areas"}>{n}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/about/service-areas">All service areas →</Link>
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <Contact title={<>Let’s talk about <em>your {c.name} home.</em></>} />
 
