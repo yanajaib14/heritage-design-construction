@@ -1491,3 +1491,4 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
   .btn{white-space:normal;text-align:center;line-height:1.35;max-width:100%}
   .cc-call{flex-wrap:wrap;max-width:100%}
 }
+footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.45)}

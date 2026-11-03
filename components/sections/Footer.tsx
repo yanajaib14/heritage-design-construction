@@ -1,5 +1,23 @@
 import Link from "next/link";
 import { CITIES, SITE } from "@/lib/site";
+import { cityHref } from "@/lib/cities";
+
+// The towns we serve; the ones with their own page are links.
+function CityList() {
+  return (
+    <p className="cities">
+      {CITIES.map((c, i) => {
+        const href = cityHref(c);
+        return (
+          <span key={c}>
+            {i > 0 && " · "}
+            {href ? <Link href={href}>{c}</Link> : c}
+          </span>
+        );
+      })}
+    </p>
+  );
+}
 
 // Construction and Design share a column, each with its own heading.
 const COLS = [
@@ -91,7 +109,7 @@ export default function Footer() {
             <h4>
               <Link href="/about/service-areas">Service areas</Link>
             </h4>
-            <p className="cities">{CITIES.join(" · ")}</p>
+            <CityList />
           </div>
           {/* phones: the same links folded into tap-to-open groups */}
           <div className="foot-acc">
@@ -113,7 +131,7 @@ export default function Footer() {
             </details>
             <details>
               <summary>Service areas</summary>
-              <p className="cities">{CITIES.join(" · ")}</p>
+              <CityList />
               <Link className="foot-acc-more" href="/about/service-areas">See all service areas →</Link>
             </details>
           </div>
