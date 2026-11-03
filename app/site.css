@@ -434,8 +434,8 @@ section{position:relative}
 .areas .left{display:grid;gap:24px}
 .areas .left p{color:var(--muted);font-size:17px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags button{padding:10px 16px;border:1px solid #c4c1ba;background:transparent;color:var(--ink);font:500 13.5px var(--body);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
-.tags button:hover,.tags button.on{background:var(--ink);color:var(--offwhite);border-color:var(--ink)}
+.tags button,.tags a{text-decoration:none;display:inline-block;padding:10px 16px;border:1px solid #c4c1ba;background:transparent;color:var(--ink);font:500 13.5px var(--body);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
+.tags button:hover,.tags button.on,.tags a:hover,.tags a.on{background:var(--ink);color:var(--offwhite);border-color:var(--ink)}
 /* areas map: Google Maps style */
 .map{position:relative;background:#F2EFE9;min-width:0;overflow:hidden;box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);border-radius:8px}
 .map svg{display:block;width:100%;height:auto;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}

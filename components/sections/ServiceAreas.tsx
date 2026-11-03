@@ -1,5 +1,7 @@
 import type React from "react";
-import { CITY_PAGES } from "@/lib/cities";
+import { CITY_PAGES, cityHref } from "@/lib/cities";
+
+const CITY_TAGS = ["Olympia", "Lacey", "Tumwater", "Tacoma", "Puyallup", "Lakewood", "University Place", "Gig Harbor", "Federal Way", "Auburn", "Bonney Lake", "Spanaway", "Steilacoom", "Centralia", "Chehalis", "DuPont", "Graham", "Yelm", "Shelton", "Fife"];
 
 export default function ServiceAreas({ city }: { city?: string }) {
   return (
@@ -10,7 +12,14 @@ export default function ServiceAreas({ city }: { city?: string }) {
       <div className="eyebrow">Service areas</div>
       <h2 className="h2">Building across <em>the South Sound.</em></h2>
       <p>Based in Lacey, serving Thurston, Pierce, south King, Lewis and Mason counties.</p>
-      <div className="tags" id="cityTags"><button type="button" data-city="Olympia">Olympia</button><button type="button" data-city="Lacey">Lacey</button><button type="button" data-city="Tumwater">Tumwater</button><button type="button" data-city="Tacoma">Tacoma</button><button type="button" data-city="Puyallup">Puyallup</button><button type="button" data-city="Lakewood">Lakewood</button><button type="button" data-city="University Place">University Place</button><button type="button" data-city="Gig Harbor">Gig Harbor</button><button type="button" data-city="Federal Way">Federal Way</button><button type="button" data-city="Auburn">Auburn</button><button type="button" data-city="Bonney Lake">Bonney Lake</button><button type="button" data-city="Spanaway">Spanaway</button><button type="button" data-city="Steilacoom">Steilacoom</button><button type="button" data-city="Centralia">Centralia</button><button type="button" data-city="Chehalis">Chehalis</button><button type="button" data-city="DuPont">DuPont</button><button type="button" data-city="Graham">Graham</button><button type="button" data-city="Yelm">Yelm</button><button type="button" data-city="Shelton">Shelton</button><button type="button" data-city="Fife">Fife</button></div>
+      <div className="tags" id="cityTags">{CITY_TAGS.map((c) => {
+        const href = cityHref(c);
+        return href ? (
+          <a key={c} href={href} data-city={c} className="has-page">{c} <span aria-hidden="true">→</span></a>
+        ) : (
+          <button key={c} type="button" data-city={c}>{c}</button>
+        );
+      })}</div>
     </div>
     <div className="map" id="areaMap" data-city={city} data-pages={JSON.stringify(Object.fromEntries(CITY_PAGES.map((p) => [p.name, `/about/service-areas/${p.slug}`])))}>
       <svg viewBox="0 0 600 700" id="gmap" role="img" aria-label="Map of the South Sound cities we serve">

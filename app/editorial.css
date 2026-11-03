@@ -1501,3 +1501,4 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .bg-graph .rq .pager button,.ct-rev .rq .pager button{border-color:rgba(242,240,236,.55);color:#f2f0ec}
 .bg-graph .rq .pager button:hover{background:#f2f0ec;color:#111212}
 .bg-graph .ed-aside,.bg-graph .td-scope .no li{color:var(--mutedDark)}
+.tags a.has-page span{display:inline-block;margin-left:4px;transition:transform .2s}.tags a.has-page:hover span{transform:translateX(3px)}
