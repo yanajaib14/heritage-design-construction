@@ -29,7 +29,7 @@ export const CITY_PAGES: CityPage[] = [
     driveTime: "about 10 minutes",
     permits: "City of Olympia, or Thurston County outside city limits",
     hero: "/images/pf-coastal.webp",
-    lede: "Kitchen, bathroom and whole-home remodeling for Olympia homes, designed and built by one team from our showroom about 10 minutes away in Lacey.",
+    lede: "Kitchens, bathrooms and whole-home remodels for Olympia homes, designed in our showroom 10 minutes away in Lacey and built by our own crew.",
     intro: [
       "Olympia homes range from historic South Capitol houses and Downtown condos to Westside ramblers and newer infill around the city core. Homeowners here often want brighter kitchens, more storage, better traffic flow, and bathrooms that feel cleaner without losing the home's original feel.",
       "Older houses may need extra planning around small footprints, dated wiring or hidden plumbing. Mid-century homes often benefit from opening up the room and replacing older cabinets with simpler, more efficient storage.",
