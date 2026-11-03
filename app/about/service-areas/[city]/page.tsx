@@ -165,7 +165,7 @@ export default async function CityPage({ params }: Props) {
           <div>
             <div className="eyebrow">What clients say</div>
             <h2 className="h2">In their <em>own words.</em></h2>
-            <p className="ct-rev-note"><Tbd>[Add a review from a {c.name} client.]</Tbd></p>
+            <p className="ct-rev-note"><Tbd>[Add a review from a client in {c.name}.]</Tbd></p>
           </div>
           <Quotes list={reviewsFor().filter((r) => !r.placeholder)} />
         </div>

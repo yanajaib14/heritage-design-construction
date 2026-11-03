@@ -1492,3 +1492,12 @@ header.site:not(.solid) .logo img{width:clamp(270px,33vw,480px);filter:brightnes
   .cc-call{flex-wrap:wrap;max-width:100%}
 }
 footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.45)}
+
+/* Reviews and fine print on dark bands: keep names, counters and arrows readable */
+.bg-graph .rq,.ct-rev .rq{border-top-color:rgba(242,240,236,.35)}
+.bg-graph .rq blockquote{color:#f2f0ec}
+.bg-graph .rq figcaption,.ct-rev .rq figcaption{color:#d6d4cf}
+.bg-graph .rq .rq-n,.ct-rev .rq .rq-n{color:#d6d4cf}
+.bg-graph .rq .pager button,.ct-rev .rq .pager button{border-color:rgba(242,240,236,.55);color:#f2f0ec}
+.bg-graph .rq .pager button:hover{background:#f2f0ec;color:#111212}
+.bg-graph .ed-aside,.bg-graph .td-scope .no li{color:var(--mutedDark)}
