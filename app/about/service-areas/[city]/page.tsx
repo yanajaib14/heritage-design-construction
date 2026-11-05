@@ -27,11 +27,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     alternates: { canonical: `/about/service-areas/${c.slug}` },
     title: `${c.name} Kitchen & Bath Remodeling | Design-Build Contractor, ${c.name} WA`,
-    description: `Kitchen, bathroom and whole-home remodeling in ${c.name}, WA. Family-owned since 2004, 800+ projects, 5-year warranty, and a design showroom ${c.driveTime} away in Lacey.`,
+    description: c.lede,
   };
 }
 
 const R = "/services/remodeling-services";
+const BA = {
+  kitchen: { t: "Same home.", em: "A new kitchen.", before: "/images/ba-kitchen-before.webp", after: "/images/ba-kitchen-after.webp", beforeAlt: "The kitchen before the remodel", afterAlt: "The same kitchen after the remodel" },
+  bath: { t: "Same room.", em: "A new bathroom.", before: "/images/ba-bath-before.webp", after: "/images/ba-bath-after.webp", beforeAlt: "The bathroom before the remodel", afterAlt: "The same bathroom after the remodel" },
+  refacing: { t: "Same cabinets.", em: "A whole new look.", before: "/images/rf-before.webp", after: "/images/rf-after.webp", beforeAlt: "Kitchen cabinets before refacing", afterAlt: "The same cabinets after refacing" },
+  fastbath: { t: "A new bathroom,", em: "without the long remodel.", before: "/images/fb-before.webp", after: "/images/fb-after.webp", beforeAlt: "The bathroom before a Fast Bath upgrade", afterAlt: "The same bathroom after a Fast Bath upgrade" },
+};
 const SERVICES = [
   { t: "Kitchen remodeling", p: "New layouts, custom cabinetry, stone and lighting, designed in our showroom.", href: `${R}/kitchen-remodeling` },
   { t: "Bathroom remodeling", p: "Primary suites, guest baths and walk-in showers.", href: `${R}/bathroom-remodeling` },
@@ -44,13 +50,28 @@ export default async function CityPage({ params }: Props) {
   const c = cityPage((await params).city);
   if (!c) notFound();
   const url = `/about/service-areas/${c.slug}`;
+  const home = c.slug === "lacey";
+  // small rotations so the shared parts of the page do not read word for word the same on every city
+  const v = CITY_PAGES.indexOf(c);
+  const pick = <T,>(list: T[]) => list[v % list.length];
   const drive = c.driveTime[0].toUpperCase() + c.driveTime.slice(1);
+  const ba = BA[c.ba];
   const hoods = c.neighborhoods.map((n) => n.name);
   const reasons: [string, string][] = [
-    ["A showroom close to home", `Our Lacey showroom is ${c.driveTime} from ${c.name}. See cabinets, stone, tile and fixtures in person and choose them in one visit.`],
-    ["One team, design to build", "Your designer, your materials and our own crew, under one roof from the first sketch to the final walkthrough."],
+    home
+      ? ["A showroom in your own town", "Our showroom is right here on Martin Way. See cabinets, stone, tile and fixtures in person and choose them in one visit."]
+      : ["A showroom close to home", `Our Lacey showroom is ${c.driveTime} from ${c.name}. See cabinets, stone, tile and fixtures in person and choose them in one visit.`],
+    pick([
+      ["One team, design to build", "Your designer, your materials and our own crew, under one roof from the first sketch to the final walkthrough."],
+      ["Our own crew on site", `The people who design your ${c.name} remodel hand it to our own crew, not a chain of subcontractors you have never met.`],
+      ["Design and build together", "The same team plans the space, orders the materials and builds it, so nothing gets lost between the drawing and the job site."],
+    ] as [string, string][]),
     [`We know ${c.name} homes`, `From ${hoods.slice(0, -1).join(", ")} to ${hoods[hoods.length - 1]}, we plan around the way homes here were built.`],
-    ["Permits handled", `We coordinate permits and inspections with the ${c.permits}.`],
+    pick([
+      ["Permits handled", `We coordinate permits and inspections with the ${c.permits}.`],
+      ["Permits and inspections, covered", `When the work needs a permit, we prepare it and work with the ${c.permits} through final inspection.`],
+      ["Local permits, managed for you", `Plumbing, electrical or structural work in ${c.name} usually needs a permit. We handle it with the ${c.permits}.`],
+    ] as [string, string][]),
   ];
   const directions = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(`${c.name}, WA`)}&destination=${encodeURIComponent(`${SITE.street}, ${SITE.city}, ${SITE.region} ${SITE.zip}`)}`;
 
@@ -58,7 +79,7 @@ export default async function CityPage({ params }: Props) {
     <>
       <PageHero
         eyebrow={`${c.name}, WA · ${c.county}`}
-        title={<>{c.name}&apos;s design-build <em>remodeling team.</em></>}
+        title={<>{c.title[0]} <em>{c.title[1]}</em></>}
         image={c.hero}
         lede={c.lede}
         crumbs={[
@@ -77,7 +98,7 @@ export default async function CityPage({ params }: Props) {
             ["2004", "Family owned since"],
             ["800+", "Projects completed"],
             ["5-Year", "Warranty on our work"],
-            [c.driveTime.replace("about ", ""), `From ${c.name} to our showroom`],
+            home ? ["Lacey", "Home of our showroom"] : [c.driveTime.replace("about ", ""), `From ${c.name} to our showroom`],
           ].map(([n, b]) => (
             <li key={b}>
               <strong className="chrome-text">{n}</strong>
@@ -95,7 +116,7 @@ export default async function CityPage({ params }: Props) {
           </figure>
           <div>
             <div className="eyebrow">Why {c.name} chooses Heritage</div>
-            <h2 className="h2">Remodeling in {c.name}, <em>done properly.</em></h2>
+            <h2 className="h2">{c.why[0]} <em>{c.why[1]}</em></h2>
             <ol className="ct-list">
               {reasons.map(([t, p], i) => (
                 <li key={t}>
@@ -113,17 +134,17 @@ export default async function CityPage({ params }: Props) {
         <div className="wrap ct-ba-grid">
           <div className="ct-ba-copy">
             <div className="eyebrow">A recent transformation</div>
-            <h2 className="h2">Same home. <em>A new kitchen.</em></h2>
+            <h2 className="h2">{ba.t} <em>{ba.em}</em></h2>
             <p>{c.intro[0]}</p>
             <p className="ct-ba-tag"><Tbd>[Name the {c.name} project shown here, or swap in one from {c.name}.]</Tbd></p>
             <Link className="link" href="/portfolio">See more of our work →</Link>
           </div>
           <BeforeAfter
             className="ct-ba-photo"
-            before="/images/ba-kitchen-before.webp"
-            after="/images/ba-kitchen-after.webp"
-            beforeAlt="The kitchen before the remodel"
-            afterAlt="The same kitchen after the remodel"
+            before={ba.before}
+            after={ba.after}
+            beforeAlt={ba.beforeAlt}
+            afterAlt={ba.afterAlt}
           />
         </div>
       </section>
@@ -138,7 +159,7 @@ export default async function CityPage({ params }: Props) {
         <div className="wrap ct-svc-grid">
           <div>
             <div className="eyebrow">Services in {c.name}</div>
-            <h2 className="h2">Everything for <em>your {c.name} home.</em></h2>
+            <h2 className="h2">{pick([<>Everything for <em>your {c.name} home.</em></>, <>Remodeling services <em>in {c.name}.</em></>, <>What we build <em>in {c.name}.</em></>])}</h2>
             {c.intro.slice(1).map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -175,15 +196,19 @@ export default async function CityPage({ params }: Props) {
         <div className="wrap ct-visit-grid">
           <div>
             <div className="eyebrow">Visit the showroom</div>
-            <h2 className="h2">{drive} <em>from {c.name}.</em></h2>
-            <p>Walk through kitchens and baths, hold the samples in your hand, and leave with a plan. Bring your measurements or photos and we will take it from there.</p>
+            <h2 className="h2">{home ? <>Right here <em>in Lacey.</em></> : <>{drive} <em>from {c.name}.</em></>}</h2>
+            <p>{pick([
+              "Walk through kitchens and baths, hold the samples in your hand, and leave with a plan. Bring your measurements or photos and we will take it from there.",
+              `Cabinet lines, slab and quartz samples, tile and fixtures, all in one room. ${c.name} homeowners usually make every selection in a single visit.`,
+              "See the materials in real light before you commit. Book a time and a designer will walk you through the options for your home.",
+            ])}</p>
             <dl>
               <div><dt>Address</dt><dd>{SITE.street}, {SITE.city}, {SITE.region} {SITE.zip}</dd></div>
               <div><dt>Hours</dt><dd>{SITE.hours}</dd></div>
               <div><dt>Phone</dt><dd><a href={SITE.tel}>{SITE.phone}</a></dd></div>
             </dl>
             <div className="btns">
-              <a className="btn btn-chrome" href={directions} target="_blank" rel="noopener">Directions from {c.name} →</a>
+              <a className="btn btn-chrome" href={home ? SITE.directions : directions} target="_blank" rel="noopener">{home ? "Get directions →" : `Directions from ${c.name} →`}</a>
               <Link className="btn" href="/about/showroom">About the showroom</Link>
             </div>
           </div>
@@ -214,7 +239,11 @@ export default async function CityPage({ params }: Props) {
       <ConsultCta
         id="consult"
         title={<>Start your {c.name} <em>remodel.</em></>}
-        text={`Tell us a little about your home and we will set up a free consultation, in your ${c.name} home or at our Lacey showroom.`}
+        text={pick([
+          `Tell us a little about your home and we will set up a free consultation, in your ${c.name} home or at our Lacey showroom.`,
+          `Share a few details and we will call to book a free consultation at your ${c.name} home or in the showroom.`,
+          `A free, no-pressure first meeting: we come to your ${c.name} home, or you visit us in Lacey.`,
+        ])}
         steps={[
           { t: "Consultation", p: "We visit your home or meet you at the showroom to talk through the project." },
           { t: "Design & selections", p: "Your designer draws the plan and you choose every finish in one place." },
