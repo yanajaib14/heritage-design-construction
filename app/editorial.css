@@ -1833,3 +1833,12 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .city-pop .phero .lede,.city-pop .ch .lede{color:#fff;font-size:clamp(17px,1.35vw,20px);line-height:1.6;max-width:50ch;text-shadow:0 1px 18px rgba(0,0,0,.5)}
 .city-pop .phero .btn-chrome,.city-pop .ch .btn-chrome{box-shadow:0 14px 40px -16px rgba(255,255,255,.45)}
 .city-pop .ch-olympia .ch-bg::after{background:radial-gradient(60% 55% at 50% 68%,rgba(12,13,13,.78) 0%,rgba(12,13,13,.45) 60%,transparent 100%),linear-gradient(180deg,rgba(12,13,13,.6) 0%,rgba(12,13,13,.3) 30%,rgba(12,13,13,.55) 60%,rgba(12,13,13,.92) 100%)}
+
+/* ---- Service-area city list: plain names, underline on hover ---- */
+.tags{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 28px;margin-top:8px}
+.tags button,.tags a{border:0;background:none;padding:9px 0;text-align:left;justify-self:start;font:500 13.5px var(--body);letter-spacing:.14em;color:#3a3c3f;text-decoration:none;background-image:linear-gradient(90deg,#8d9095,#d9dbde,#8d9095);background-repeat:no-repeat;background-size:0 1px;background-position:0 calc(100% - 4px);transition:background-size .3s,color .2s}
+.tags button:hover,.tags button.on,.tags a:hover,.tags a.on{background:linear-gradient(90deg,#8d9095,#d9dbde,#8d9095) no-repeat 0 calc(100% - 4px)/100% 1px;color:var(--ink);border:0}
+.tags .on{font-weight:700}
+.tags a.has-page span{color:#8d9095}
+@media (max-width:380px){.tags{gap:0 16px}.tags button,.tags a{font-size:12.5px;letter-spacing:.08em}}
+@media (max-width:560px){.tags a.has-page span{display:inline;margin-left:0}}

@@ -15,7 +15,7 @@ export default function ServiceAreas({ city }: { city?: string }) {
       <div className="tags" id="cityTags">{CITY_TAGS.map((c) => {
         const href = cityHref(c);
         return href ? (
-          <a key={c} href={href} data-city={c} className="has-page">{c} <span aria-hidden="true">→</span></a>
+          <a key={c} href={href} data-city={c} className="has-page">{c}{"\u00a0"}<span aria-hidden="true">→</span></a>
         ) : (
           <button key={c} type="button" data-city={c}>{c}</button>
         );
