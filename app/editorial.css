@@ -1850,3 +1850,36 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .ct-svc-list i{grid-column:2}
 .tour-stops p{margin-left:0}
 .city-pop .rq-n{display:none}
+
+/* ---- City trust bar: a floating stone slab over the hero's lower edge ---- */
+.city-pop .ct-trust{background:transparent;border:0;position:relative;z-index:3;margin-top:calc(-1 * clamp(48px,6vw,88px));padding-bottom:clamp(8px,1.5vw,20px)}
+.city-pop .ct-trust::before{display:none}
+.city-pop .ct-trust .tb2-row{position:relative;padding:0;grid-template-columns:1.15fr 1fr 1fr 1fr;background:
+  radial-gradient(120% 160% at 0% 0%,rgba(255,255,255,.9),transparent 60%),
+  linear-gradient(115deg,#f7f6f3 0%,#ecebe7 38%,#f4f3f0 62%,#e6e4df 100%);
+  box-shadow:0 40px 80px -40px rgba(8,9,9,.55),0 2px 0 rgba(255,255,255,.6) inset;border:1px solid #d9d6cf}
+.city-pop .ct-trust .tb2-row::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:linear-gradient(90deg,#7d8186,#eceef0 30%,#9a9da2 55%,#f4f5f6 78%,#80848a)}
+.city-pop .ct-trust .tb2-row li{justify-items:start;text-align:left;gap:12px;padding:clamp(26px,2.6vw,40px) clamp(20px,2.4vw,36px);overflow:hidden;transition:background .4s}
+.city-pop .ct-trust .tb2-row li+li::before{top:22%;bottom:22%;background:#cfccc5}
+.city-pop .ct-trust .tb2-row li::after{content:"";position:absolute;left:clamp(20px,2.4vw,36px);right:clamp(20px,2.4vw,36px);bottom:0;height:2px;background:linear-gradient(90deg,#8d9095,#e9ebed,#8d9095);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.city-pop .ct-trust .tb2-row li:hover::after{transform:scaleX(1)}
+.city-pop .ct-trust .tb2-row strong{font-size:clamp(34px,3.2vw,50px)}
+.city-pop .ct-trust .tb2-row i{display:none}
+.city-pop .ct-trust .tb2-row span{font-size:12.5px;letter-spacing:.2em;color:#55585c;max-width:22ch;line-height:1.5}
+/* first cell: dark graphite, the anchor of the slab */
+.city-pop .ct-trust .tb2-row li:first-child{background:linear-gradient(150deg,#2a2c2e 0%,#141516 70%);color:#f2f0ec}
+.city-pop .ct-trust .tb2-row li:first-child strong{background:linear-gradient(100deg,#f5f6f7 0%,#a9acb0 45%,#ffffff 60%,#8f9297 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.city-pop .ct-trust .tb2-row li:first-child span{color:#c9c6bf}
+.city-pop .ct-trust .tb2-row li:first-child+li::before{display:none}
+@media (max-width:860px){
+  .city-pop .ct-trust{margin-top:-36px}
+  .city-pop .ct-trust .tb2-row{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:0}
+  .city-pop .ct-trust .tb2-row li{padding:22px 18px}
+  .city-pop .ct-trust .tb2-row li:nth-child(3)::before{display:none}
+  .city-pop .ct-trust .tb2-row li:nth-child(n+3){border-top:1px solid #d6d3cc}
+  .city-pop .ct-trust .tb2-row strong{font-size:clamp(28px,8vw,36px)}
+  .city-pop .ct-trust .tb2-row span{font-size:11.5px;letter-spacing:.14em}
+}
+.city-pop .ct-trust{padding-bottom:0;margin-bottom:calc(-1 * clamp(40px,4.5vw,72px))}
+.city-pop .ct-trust+*{padding-top:calc(clamp(40px,4.5vw,72px) + clamp(64px,8vw,120px))}
+@media (max-width:860px){.city-pop .ct-trust{margin-bottom:-40px}.city-pop .ct-trust+*{padding-top:104px}}
