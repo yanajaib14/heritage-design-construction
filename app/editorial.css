@@ -1842,3 +1842,11 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .tags a.has-page span{color:#8d9095}
 @media (max-width:380px){.tags{gap:0 16px}.tags button,.tags a{font-size:12.5px;letter-spacing:.08em}}
 @media (max-width:560px){.tags a.has-page span{display:inline;margin-left:0}}
+.city-pop .steps .n{display:none}
+/* City pages: no small index numbers (Ben, 2026-11-10) */
+.ct-list li,.tf-asks li,.tour-stops button{grid-template-columns:minmax(0,1fr)}
+.ct-svc-list a{grid-template-columns:minmax(0,1fr) 24px}
+.ct-svc-list small{grid-column:1}
+.ct-svc-list i{grid-column:2}
+.tour-stops p{margin-left:0}
+.city-pop .rq-n{display:none}

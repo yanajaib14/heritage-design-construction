@@ -58,8 +58,7 @@ export default function ShowroomTour({ stops, tourUrl, tourVideo }: { stops: Sto
           ))
         )}
         {mode === "photos" && <div className="tour-bar">
-          <span>{String(i + 1).padStart(2, "0")} / {String(stops.length).padStart(2, "0")}</span>
-          <button type="button" onClick={() => go(i - 1)} aria-label="Previous stop">←</button>
+                    <button type="button" onClick={() => go(i - 1)} aria-label="Previous stop">←</button>
           <button type="button" onClick={() => go(i + 1)} aria-label="Next stop">→</button>
         </div>}
         {auto && !open3d && <i className="tour-progress" key={i} aria-hidden="true"></i>}
@@ -68,7 +67,6 @@ export default function ShowroomTour({ stops, tourUrl, tourVideo }: { stops: Sto
         {stops.map((s, n) => (
           <li key={s.t} className={n === i ? "on" : undefined}>
             <button type="button" onClick={() => { setMode("photos"); go(n); }} aria-current={n === i}>
-              <span>{String(n + 1).padStart(2, "0")}</span>
               <b>{s.t}</b>
             </button>
             <p>{s.p}</p>

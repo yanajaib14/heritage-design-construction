@@ -151,7 +151,6 @@ export default async function CityPage({ params }: Props) {
           <ol className="ct-list">
             {reasons.map(([t, p], i) => (
               <li key={t}>
-                <span>{String(i + 1).padStart(2, "0")}</span>
                 <h3>{t}</h3>
                 <p>{p}</p>
               </li>
@@ -233,7 +232,6 @@ export default async function CityPage({ params }: Props) {
             <li key={s.t}>
               <Link href={s.href}>
                 <figure><Image src={s.img} alt="" fill sizes="(max-width: 860px) 50vw, 20vw" /></figure>
-                <span>{String(i + 1).padStart(2, "0")}</span>
                 <b>{s.t}</b>
                 <small>{s.p[(v + i) % 3]}</small>
                 <i aria-hidden="true">Explore →</i>
@@ -258,7 +256,6 @@ export default async function CityPage({ params }: Props) {
           {SERVICES.map((s, i) => (
             <li key={s.t}>
               <Link href={s.href}>
-                <span>{String(i + 1).padStart(2, "0")}</span>
                 <b>{s.t}</b>
                 <small>{s.p[(v + i) % 3]}</small>
                 <i aria-hidden="true">→</i>
@@ -352,7 +349,7 @@ export default async function CityPage({ params }: Props) {
                 <div className="ct-gal-img">
                   <Image src={g.src} alt={g.alt} fill sizes={n === 0 ? "(max-width: 860px) 100vw, 58vw" : "(max-width: 860px) 50vw, 30vw"} />
                 </div>
-                <figcaption><span>{String(n + 1).padStart(2, "0")}</span>{g.label}</figcaption>
+                <figcaption>{g.label}</figcaption>
               </figure>
             ))}
           </div>
@@ -391,7 +388,6 @@ export default async function CityPage({ params }: Props) {
           <ol className="ct-asks-list">
             {f.asks.map((a, n) => (
               <li key={a.t}>
-                <span>{String(n + 1).padStart(2, "0")}</span>
                 <h3>{a.t}</h3>
                 <p>{a.p}</p>
               </li>

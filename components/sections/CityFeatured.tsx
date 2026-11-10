@@ -106,7 +106,6 @@ export function TacomaFeature({ f, name }: { f: Featured; name: string }) {
             <ol>
               {f.asks.map((a, n) => (
                 <li key={a.t}>
-                  <span>{String(n + 1).padStart(2, "0")}</span>
                   <div>
                     <h3>{a.t}</h3>
                     <p>{a.p}</p>
@@ -146,7 +145,6 @@ export function OlympiaFeature({ f, name }: { f: Featured; name: string }) {
                   <Image src={f.gallery[n % f.gallery.length].src} alt={f.gallery[n % f.gallery.length].alt} fill sizes="(max-width: 860px) 100vw, 50vw" />
                 </figure>
                 <div>
-                  <span>{String(n + 1).padStart(2, "0")}</span>
                   <h3>{a.t}</h3>
                   <p>{a.p}</p>
                 </div>
@@ -179,7 +177,6 @@ export function UpFeature({ f, name }: { f: Featured; name: string }) {
           <ol>
             {f.asks.map((a, n) => (
               <li key={a.t}>
-                <span className="chrome-text">{String(n + 1).padStart(2, "0")}</span>
                 <h3>{a.t}</h3>
                 <p>{a.p}</p>
               </li>
