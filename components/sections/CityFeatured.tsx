@@ -172,7 +172,7 @@ export function UpFeature({ f, name }: { f: Featured; name: string }) {
           </div>
         </div>
       </section>
-      <section className="band bg-graph uf-asks" key="uf-asks">
+      <section className="band bg-sand on-light uf-asks" key="uf-asks">
         <div className="wrap">
           <div className="eyebrow">{name} projects</div>
           <h2 className="h2">{f.asksTitle[0]} <em>{f.asksTitle[1]}</em></h2>

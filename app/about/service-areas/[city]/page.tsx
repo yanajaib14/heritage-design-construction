@@ -191,10 +191,10 @@ export default async function CityPage({ params }: Props) {
   ]);
   // Layouts 0 and 2 show neighborhoods as a numbered timeline; 1 and 3 as a ruled index beside a photo.
   const hoods = L % 2 === 0 ? (
-    <Steps key="hoods" eyebrow={`${c.name} neighborhoods`} title={hoodsTitle} bg={L === 2 ? "paper" : "graph"}
+    <Steps key="hoods" eyebrow={`${c.name} neighborhoods`} title={hoodsTitle} bg={L === 2 ? "paper" : "off"}
       steps={c.neighborhoods.map((n) => ({ title: n.name, text: n.note }))} />
   ) : (
-    <section key="hoods" className="band bg-graph ct-hoods">
+    <section key="hoods" className="band bg-paper on-light ct-hoods">
       <div className="wrap ct-hoods-grid">
         <div className="ct-hoods-head">
           <div className="eyebrow">{c.name} neighborhoods</div>
@@ -251,7 +251,7 @@ export default async function CityPage({ params }: Props) {
   );
 
   const rev = (
-    <section key="rev" className="band bg-graph ct-rev">
+    <section key="rev" className="band bg-sand on-light ct-rev">
       <div className="wrap ct-rev-grid">
         <div>
           <div className="eyebrow">{p3(["What clients say", "Reviews", "From our clients"])}</div>
@@ -326,7 +326,7 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {home && (
-        <section className="band bg-graph ct-tour" id="tour">
+        <section className="band bg-sand on-light ct-tour" id="tour">
           <div className="wrap">
             <div className="ct-tour-head">
               <div>
@@ -387,7 +387,7 @@ export default async function CityPage({ params }: Props) {
   if (L === 1 || L === 3) trust.unshift(trust.pop()!);
 
   return (
-    <>
+    <div className="city-pop">
       {D && f?.heroImg ? (
         <CityHero design={D} eyebrow={`${c.name}, WA · ${c.county}`} title={<>{c.title[0]} <em>{c.title[1]}</em></>}
           lede={c.lede} image={f.heroImg.src} alt={f.heroImg.alt} url={url} name={c.name}>
@@ -467,6 +467,6 @@ export default async function CityPage({ params }: Props) {
           areaServed: { "@type": "City", name: `${c.name}, WA`, containedInPlace: { "@type": "AdministrativeArea", name: `${c.county}, WA` } },
         }}
       />
-    </>
+    </div>
   );
 }

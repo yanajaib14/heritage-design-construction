@@ -1692,3 +1692,85 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .tour-soon b{font:400 clamp(26px,2.6vw,36px)/1.1 var(--display);color:#fff}
 .tour-soon .tbd{background:rgba(255,255,255,.12);white-space:normal}
 .tour-play{display:grid;place-items:center;width:72px;height:72px;border:1px solid rgba(242,240,236,.7);color:#fff;font-size:20px;padding-left:4px}
+
+/* ---- City pages: brighter, warmer scheme (Ben, 2026-11-10: "too dark, make it pop") ---- */
+.city-pop{--brass:#B8925A;--brass-lt:#E6C99A;--sand:#EFE8DC;--sand2:#E5DACA;--brassgrad:linear-gradient(100deg,#a07a42 0%,#d9b77f 35%,#f3e1bd 55%,#c9a266 80%,#a37d45 100%)}
+.bg-sand{background:#EFE8DC}
+/* hero: let the photo show, warm accents, brass primary button */
+.city-pop .phero .bgimg::after{background:linear-gradient(90deg,rgba(15,16,16,.82) 0%,rgba(15,16,16,.55) 38%,rgba(15,16,16,.12) 72%,rgba(15,16,16,0) 100%),linear-gradient(180deg,rgba(15,16,16,.45) 0%,transparent 26%,transparent 70%,rgba(15,16,16,.45) 100%)}
+.city-pop .ch-olympia .ch-bg::after{background:linear-gradient(180deg,rgba(15,16,16,.5) 0%,rgba(15,16,16,.05) 30%,rgba(15,16,16,.25) 58%,rgba(15,16,16,.82) 100%)}
+.city-pop .ch-tacoma figure::after{display:none}
+.city-pop .ch-tacoma,.city-pop .ch-up{background:radial-gradient(90% 120% at 0% 0%,#2b2d30 0%,#17181a 60%)}
+.city-pop .phero .eyebrow,.city-pop .ch .eyebrow{color:var(--brass-lt)}
+.city-pop .phero h1 em,.city-pop .ch h1 em{background:var(--brassgrad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.city-pop .phero .lede,.city-pop .ch .lede{color:#f2efe9}
+.city-pop .btn-chrome{background:var(--brassgrad);background-size:160% 100%;color:#1a1612;border-color:rgba(255,236,200,.5);box-shadow:0 12px 36px -14px rgba(201,162,102,.7);transition:background-position .5s,filter .25s}
+.city-pop .btn-chrome:hover{background:var(--brassgrad);background-size:160% 100%;background-position:100% 0;filter:brightness(1.06)}
+.city-pop .phero .btn:not(.btn-chrome),.city-pop .ch .btn:not(.btn-chrome){border-color:rgba(255,255,255,.75);color:#fff;background:rgba(255,255,255,.06)}
+.city-pop .phero .btn:not(.btn-chrome):hover,.city-pop .ch .btn:not(.btn-chrome):hover{background:#fff;color:var(--ink)}
+.city-pop .phero::after{background:var(--brassgrad);opacity:.9}
+/* trust bar: light sand with ink numbers and brass rules */
+.city-pop .tb2{background:linear-gradient(180deg,#F6F1E8 0%,#EFE8DC 100%);color:var(--ink);border-top:0;border-bottom:1px solid #e0d6c6}
+.city-pop .tb2::before{height:3px;top:0;background:var(--brassgrad)}
+.city-pop .tb2-row strong{background:none;-webkit-text-fill-color:currentColor;color:#1a1814}
+.city-pop .tb2-row li+li::before{background:linear-gradient(180deg,transparent,rgba(160,122,66,.45),transparent)}
+.city-pop .tb2-row i{height:2px;width:36px;background:var(--brassgrad)}
+.city-pop .tb2-row span{color:#5d554a}
+/* consultation CTA: warm light band, white form card */
+.city-pop .cc{background:radial-gradient(80% 90% at 100% 0%,#F7F1E6 0%,transparent 60%),linear-gradient(160deg,#EFE6D6 0%,#E3D5BF 100%);color:var(--ink)}
+.city-pop .cc::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--brassgrad)}
+.city-pop .cc .eyebrow{color:#8a6a3a}
+.city-pop .cc h2{color:#16140f}
+.city-pop .cc h2 em{background:linear-gradient(100deg,#8a6430,#b8925a 50%,#8a6430);-webkit-background-clip:text;background-clip:text;color:transparent}
+.city-pop .cc-lede{color:#4a4338}
+.city-pop .cc-steps li:not(:last-child)::before{background:rgba(138,106,58,.35)}
+.city-pop .cc-steps span{border-color:#a07a42;color:#6e5226;background:#fbf7f0}
+.city-pop .cc-steps b,.city-pop .cc-call{color:#16140f}
+.city-pop .cc-call svg{color:#a07a42}
+.city-pop .cc-steps p{color:#544c40}
+.city-pop .cc-foot{border-top-color:rgba(138,106,58,.3)}
+.city-pop .cc-trust{color:#7a6e5d}
+.city-pop .cc-card{background:#fff;box-shadow:0 40px 80px -36px rgba(90,64,28,.45);border-top:3px solid #b8925a}
+.city-pop .cc-alt{color:#544c40}
+.city-pop .cc-alt a{color:#16140f;text-decoration-color:rgba(138,106,58,.6)}
+/* eyebrows and italic accents in light sections pick up the brass */
+.city-pop .on-light .eyebrow{color:#8a6a3a}
+.city-pop .on-light .h2 em,.city-pop .on-light h2 em{color:#8a6430}
+/* sections moved from dark to light */
+.city-pop .ct-rev .rq{border-top-color:rgba(138,106,58,.35)}
+.city-pop .ct-rev .rq figcaption,.city-pop .ct-rev .rq .rq-n{color:#5d554a}
+.city-pop .ct-rev .rq button{color:var(--ink);border-color:rgba(17,18,18,.35)}
+.city-pop .ct-rev-note .tbd{background:rgba(160,122,66,.14)}
+.city-pop .ct-hoods-head p,.city-pop .ct-hoods-list p{color:#4a4740}
+.city-pop .ct-hoods-list{border-top-color:#d6d3cc}
+.city-pop .ct-hoods-list li{border-bottom-color:#d6d3cc}
+.city-pop .ct-hoods-list h3{color:var(--ink)}
+.city-pop .uf-asks ol{border-top-color:#d3c7b3}
+.city-pop .uf-asks li{border-bottom-color:#d3c7b3}
+.city-pop .uf-asks li:nth-child(odd){border-right-color:#d3c7b3}
+.city-pop .uf-asks h3{color:var(--ink)}
+.city-pop .uf-asks p{color:#4a4740}
+.city-pop .uf-asks li>span{background:linear-gradient(100deg,#8a6430,#c9a266 50%,#8a6430);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+/* showroom visit band: warm stone instead of near-black */
+.city-pop .ct-visit{background:#2a2622;color:#f4efe7}
+.city-pop .ct-visit .eyebrow{color:var(--brass-lt)}
+.city-pop .ct-visit .h2 em{color:var(--brass-lt)}
+.city-pop .tf-state .eyebrow,.city-pop .ct-tour .eyebrow{color:var(--brass-lt)}
+.city-pop .tf-h em,.city-pop .ct-tour .h2 em{color:var(--brass-lt)}
+.city-pop .tour-tabs button.on{border-bottom-color:var(--brass-lt)}
+.city-pop .tour-progress{background:var(--brass-lt)}
+/* Lacey showroom tour on a light band */
+.city-pop .ct-tour .ct-tour-head p{color:#4a4338}
+.city-pop .ct-tour .eyebrow{color:#8a6a3a}
+.city-pop .ct-tour .h2 em{color:#8a6430}
+.city-pop .ct-tour .tour-tabs{border-bottom-color:#d3c7b3}
+.city-pop .ct-tour .tour-tabs button{color:#7a6e5d}
+.city-pop .ct-tour .tour-tabs button.on,.city-pop .ct-tour .tour-tabs button:hover{color:#16140f;border-bottom-color:#a07a42}
+.city-pop .ct-tour .tour-stage{box-shadow:0 40px 80px -40px rgba(90,64,28,.55)}
+.city-pop .ct-tour .tour-stops{border-top-color:#d3c7b3}
+.city-pop .ct-tour .tour-stops li{border-bottom-color:#d3c7b3}
+.city-pop .ct-tour .tour-stops button{color:#8a8072}
+.city-pop .ct-tour .tour-stops li.on button,.city-pop .ct-tour .tour-stops button:hover{color:#16140f}
+.city-pop .ct-tour .tour-stops li.on span{color:#a07a42}
+.city-pop .ct-tour .tour-stops p{color:#4a4338}
+.city-pop .ct-tour .tour-progress{background:var(--brass-lt)}
