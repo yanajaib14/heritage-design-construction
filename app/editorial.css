@@ -1822,3 +1822,14 @@ footer .cities a{color:#fff;text-decoration:underline;text-underline-offset:3px;
 .ct-svt-list i{font-style:normal;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#232425;padding-top:6px;border-top:1px solid #d6d3cc}
 @media(max-width:1100px){.ct-svt-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:860px){.ct-svt-head{grid-template-columns:minmax(0,1fr)}.ct-svt-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* City heroes: darker, even scrim behind the text and solid silver accents so every word reads (Ben, 2026-11-10) */
+.city-pop .phero{min-height:min(88svh,820px);display:grid;align-items:center}
+.city-pop .phero .bgimg::after{background:linear-gradient(90deg,rgba(12,13,13,.92) 0%,rgba(12,13,13,.82) 32%,rgba(12,13,13,.5) 58%,rgba(12,13,13,.2) 100%),linear-gradient(180deg,rgba(12,13,13,.55) 0%,transparent 28%,transparent 64%,rgba(12,13,13,.75) 100%)}
+.city-pop .ch-olympia .ch-bg::after{background:linear-gradient(180deg,rgba(12,13,13,.6) 0%,rgba(12,13,13,.25) 28%,rgba(12,13,13,.62) 55%,rgba(12,13,13,.94) 100%)}
+.city-pop .ch-tacoma figure::after{display:block;background:linear-gradient(90deg,rgba(12,13,13,.55),transparent 35%)}
+.city-pop .phero h1,.city-pop .ch h1{color:#fff;letter-spacing:.01em;text-shadow:0 2px 30px rgba(0,0,0,.45)}
+.city-pop .phero h1 em,.city-pop .ch h1 em{background:none;-webkit-text-fill-color:currentColor;color:#d9dbde;text-transform:none}
+.city-pop .phero .eyebrow,.city-pop .ch .eyebrow{color:#e6e7e9;font-weight:600}
+.city-pop .phero .lede,.city-pop .ch .lede{color:#fff;font-size:clamp(17px,1.35vw,20px);line-height:1.6;max-width:50ch;text-shadow:0 1px 18px rgba(0,0,0,.5)}
+.city-pop .phero .btn-chrome,.city-pop .ch .btn-chrome{box-shadow:0 14px 40px -16px rgba(255,255,255,.45)}
+.city-pop .ch-olympia .ch-bg::after{background:radial-gradient(60% 55% at 50% 68%,rgba(12,13,13,.78) 0%,rgba(12,13,13,.45) 60%,transparent 100%),linear-gradient(180deg,rgba(12,13,13,.6) 0%,rgba(12,13,13,.3) 30%,rgba(12,13,13,.55) 60%,rgba(12,13,13,.92) 100%)}

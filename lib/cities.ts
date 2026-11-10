@@ -88,7 +88,7 @@ export const CITY_PAGES: CityPage[] = [
     county: "Thurston County",
     driveTime: "a few minutes",
     permits: "City of Lacey, or Thurston County outside city limits",
-    hero: "/images/pf-midnight.webp",
+    hero: "/images/hero-showroom.webp",
     ba: "bath",
     title: ["Remodeling in Lacey,", "designed and built."],
     why: ["A better way", "to remodel in Lacey."],

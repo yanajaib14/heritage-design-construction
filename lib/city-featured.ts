@@ -37,11 +37,11 @@ const DESIGN_FAQ = {
 export const FEATURED: Record<string, Featured> = {
   tacoma: {
     design: "tacoma",
-    heroImg: { src: "/images/pf-midnight.webp", alt: "A dark-cabinet kitchen with stone counters" },
+    heroImg: { src: "/images/pf-quartz.webp", alt: "A kitchen with marble backsplash, quartz counters and gray cabinetry" },
     statement: ["Tacoma's best homes", "deserve a finished, considered remodel."],
     statementText:
       "From North End Craftsman homes to view properties above Ruston Way and Browns Point, Tacoma homeowners ask for more than new cabinets. They want custom storage, real stone, lighting that is planned, and details that respect the age and character of the house. We design all of it with you, show it to you in 3D, and build it with our own crew.",
-    gallery: [GALLERY.forest, GALLERY.quartz, GALLERY.bathview, GALLERY.open],
+    gallery: [GALLERY.forest, GALLERY.essential, GALLERY.bathview, GALLERY.open],
     asksTitle: ["What Tacoma homeowners", "ask us for."],
     asks: [
       { t: "Period character, updated", p: "Craftsman and Tudor homes get kitchens with modern function and trim, millwork and cabinet doors that suit the house." },
@@ -57,7 +57,7 @@ export const FEATURED: Record<string, Featured> = {
   },
   olympia: {
     design: "olympia",
-    heroImg: { src: "/images/pf-coastal.webp", alt: "A bright coastal-style kitchen" },
+    heroImg: { src: "/images/pricing-large.webp", alt: "A large kitchen with a marble waterfall island and wood cabinetry" },
     statement: ["Olympia remodels,", "designed around the house you love."],
     statementText:
       "Olympia has some of the South Sound's most distinctive homes: historic South Capitol houses, wooded lots on Cooper Point, waterfront homes toward Boston Harbor, and Eastside bungalows full of character. Our showroom is 10 minutes away, so you can meet your designer, see the materials in person and come back as often as the project needs.",
