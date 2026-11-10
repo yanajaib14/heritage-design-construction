@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./home.css";
 import Hero, { TrustBand } from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Programs from "@/components/sections/Programs";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <div className="hm">
       <Hero />
       {/* the rest of the page rises over the pinned hero as one continuous panel */}
       <div className="home-story">
@@ -32,6 +33,6 @@ export default function Home() {
           }}
         />
       </div>
-    </>
+    </div>
   );
 }
