@@ -9,7 +9,7 @@ export type Featured = {
   // Large editorial statement near the top of the page.
   statement: [string, string];
   statementText: string;
-  gallery: { src: string; alt: string }[];
+  gallery: { src: string; alt: string; label?: string }[];
   // What homeowners in this city ask us for most.
   asksTitle: [string, string];
   asks: { t: string; p: string }[];
@@ -17,16 +17,16 @@ export type Featured = {
 };
 
 const GALLERY = {
-  forest: { src: "/images/pf-forest.webp", alt: "A finished custom kitchen with wood cabinetry" },
-  midnight: { src: "/images/pf-midnight.webp", alt: "A dark-cabinet kitchen with stone counters" },
-  oslo: { src: "/images/pf-oslo.webp", alt: "A light, modern kitchen remodel" },
-  quartz: { src: "/images/pf-quartz.webp", alt: "A kitchen with quartz counters and an island" },
-  bathview: { src: "/images/pf-bathview.webp", alt: "A remodeled bathroom with a large window" },
-  coastal: { src: "/images/pf-coastal.webp", alt: "A bright coastal-style kitchen" },
-  essential: { src: "/images/pf-essential.webp", alt: "A clean, simple kitchen remodel" },
-  university: { src: "/images/pf-university.webp", alt: "A remodeled kitchen with an open layout" },
-  zen: { src: "/images/bath-zen.webp", alt: "A calm, spa-style bathroom" },
-  open: { src: "/images/wh-open-plan.webp", alt: "An open-plan kitchen and living space" },
+  forest: { src: "/images/pf-forest.webp", alt: "A finished custom kitchen with wood cabinetry", label: "Kitchen" },
+  midnight: { src: "/images/pf-midnight.webp", alt: "A dark-cabinet kitchen with stone counters", label: "Kitchen" },
+  oslo: { src: "/images/pf-oslo.webp", alt: "A bathroom vanity with green tile and an arched mirror", label: "Bathroom" },
+  quartz: { src: "/images/pf-quartz.webp", alt: "A kitchen with quartz counters and an island", label: "Kitchen" },
+  bathview: { src: "/images/pf-bathview.webp", alt: "A remodeled bathroom with a large window", label: "Bathroom" },
+  coastal: { src: "/images/pf-coastal.webp", alt: "A bright coastal-style kitchen", label: "Kitchen" },
+  essential: { src: "/images/pf-essential.webp", alt: "A clean, simple kitchen remodel", label: "Kitchen" },
+  university: { src: "/images/pf-university.webp", alt: "A remodeled kitchen with an open layout", label: "Kitchen" },
+  zen: { src: "/images/bath-zen.webp", alt: "A calm, spa-style bathroom", label: "Bathroom" },
+  open: { src: "/images/wh-open-plan.webp", alt: "An open-plan kitchen and living space", label: "Whole home" },
 };
 
 const DESIGN_FAQ = {
@@ -99,7 +99,7 @@ export const FEATURED: Record<string, Featured> = {
     statement: ["The showroom is in Lacey.", "So is the team that builds your remodel."],
     statementText:
       "Lacey is home. Our designers and our showroom are right here on Martin Way, so you can stop in after work, come back as often as you need while you decide, and meet the team building your project before work begins.",
-    gallery: [GALLERY.quartz, GALLERY.forest, GALLERY.zen, GALLERY.oslo],
+    gallery: [GALLERY.quartz, GALLERY.zen, GALLERY.forest, GALLERY.oslo, GALLERY.bathview, GALLERY.midnight],
     asksTitle: ["What Lacey homeowners", "ask us for."],
     asks: [
       { t: "A kitchen in 10 business days", p: "Same-layout kitchens through our 10-Day Kitchen program, designed and staged before day one." },

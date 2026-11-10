@@ -44,28 +44,28 @@ const BA = {
   fastbath: { t: "A new bathroom,", em: "without the long remodel.", before: "/images/fb-before.webp", after: "/images/fb-after.webp", beforeAlt: "The bathroom before a Fast Bath upgrade", afterAlt: "The same bathroom after a Fast Bath upgrade" },
 };
 // Each service has three wordings; a city page takes one, so the list does not repeat word for word.
-const SERVICES: { t: string; href: string; p: [string, string, string] }[] = [
-  { t: "Kitchen remodeling", href: `${R}/kitchen-remodeling`, p: [
+const SERVICES: { t: string; href: string; img: string; p: [string, string, string] }[] = [
+  { t: "Kitchen remodeling", img: "/images/kitchens.webp", href: `${R}/kitchen-remodeling`, p: [
     "New layouts, custom cabinetry, stone and lighting, designed in our showroom.",
     "From a fresh look on the same footprint to a full open-plan rebuild.",
     "Cabinets, counters, flooring and lighting, planned and built by one team.",
   ] },
-  { t: "Bathroom remodeling", href: `${R}/bathroom-remodeling`, p: [
+  { t: "Bathroom remodeling", img: "/images/bath-zen.webp", href: `${R}/bathroom-remodeling`, p: [
     "Primary suites, guest baths and walk-in showers.",
     "Tile showers, freestanding tubs, new vanities and better storage.",
     "From a quick hall-bath refresh to a full primary suite.",
   ] },
-  { t: "Whole home remodeling", href: `${R}/whole-home-remodeling`, p: [
+  { t: "Whole home remodeling", img: "/images/wh-open-plan.webp", href: `${R}/whole-home-remodeling`, p: [
     "Several rooms, one plan, one crew and one schedule.",
     "Kitchen, baths and living spaces updated together, in one project.",
     "One design for the whole house, built in a planned sequence.",
   ] },
-  { t: "Additions & ADU/DADU", href: `${R}/home-additions-adu`, p: [
+  { t: "Additions & ADU/DADU", img: "/images/svc-remodel.webp", href: `${R}/home-additions-adu`, p: [
     "More room, or a separate unit on your lot.",
     "A bigger kitchen, a new suite, or a backyard cottage.",
     "Space for family, guests or rental income, designed to fit your lot.",
   ] },
-  { t: "Design services", href: "/services/design-services", p: [
+  { t: "Design services", img: "/images/svc-design.webp", href: "/services/design-services", p: [
     "Plans, 3D renderings and every selection in one place.",
     "See your remodel in 3D before any work begins.",
     "Measured plans, renderings and a full selections list.",
@@ -217,7 +217,34 @@ export default async function CityPage({ params }: Props) {
     </section>
   );
 
-  const svc = (
+  // Lacey shows services as photo columns so the section does not read like the numbered list above it.
+  const svcTiles = (
+    <section key="svc" className="band bg-off on-light ct-svt">
+      <div className="wrap">
+        <div className="ct-svt-head">
+          <div>
+            <div className="eyebrow">What we do in {c.name}</div>
+            <h2 className="h2">Everything for <em>your {c.name} home.</em></h2>
+          </div>
+          <div>{c.intro.slice(1).map((p) => <p key={p}>{p}</p>)}</div>
+        </div>
+        <ul className="ct-svt-list">
+          {SERVICES.map((s, i) => (
+            <li key={s.t}>
+              <Link href={s.href}>
+                <figure><Image src={s.img} alt="" fill sizes="(max-width: 860px) 50vw, 20vw" /></figure>
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                <b>{s.t}</b>
+                <small>{s.p[(v + i) % 3]}</small>
+                <i aria-hidden="true">Explore →</i>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+  const svcList = (
     <section key="svc" className={`band ${L === 3 ? "bg-off" : "bg-paper"} on-light ct-svc${L === 2 ? " ct-flip" : ""}`}>
       <div className="wrap ct-svc-grid">
         <div>
@@ -242,6 +269,8 @@ export default async function CityPage({ params }: Props) {
       </div>
     </section>
   );
+
+  const svc = home ? svcTiles : svcList;
 
   const programs = (
     <Programs key="programs"
@@ -316,13 +345,26 @@ export default async function CityPage({ params }: Props) {
             <Link className="link" href="/portfolio">See our finished work →</Link>
           </div>
         </div>
+        {home ? (
+          <div className="wrap ct-gal">
+            {f.gallery.map((g, n) => (
+              <figure key={g.src} className={`g${n + 1}`}>
+                <div className="ct-gal-img">
+                  <Image src={g.src} alt={g.alt} fill sizes={n === 0 ? "(max-width: 860px) 100vw, 58vw" : "(max-width: 860px) 50vw, 30vw"} />
+                </div>
+                <figcaption><span>{String(n + 1).padStart(2, "0")}</span>{g.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        ) : (
         <div className="ct-mosaic">
-          {f.gallery.map((g) => (
-            <figure key={g.src}>
-              <Image src={g.src} alt={g.alt} fill sizes="(max-width: 860px) 50vw, 25vw" />
-            </figure>
-          ))}
-        </div>
+            {f.gallery.map((g) => (
+              <figure key={g.src}>
+                <Image src={g.src} alt={g.alt} fill sizes="(max-width: 860px) 50vw, 25vw" />
+              </figure>
+            ))}
+          </div>
+          )}
       </section>
 
       {home && (
