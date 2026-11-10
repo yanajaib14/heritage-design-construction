@@ -14,6 +14,8 @@ export const SITE = {
   zip: "98516",
   hours: "Mon–Fri 9:00–5:30 · Saturday by appointment",
   directions: "https://www.google.com/maps/dir/?api=1&destination=8695+Martin+Way+E+%23101+Lacey+WA+98516",
+  // 3D showroom tour (for example a Matterport link). Empty until there is one; the Lacey page shows a placeholder.
+  tourUrl: "",
 };
 
 // Absolute address used for canonical links, the sitemap and share images. Set NEXT_PUBLIC_SITE_URL once the

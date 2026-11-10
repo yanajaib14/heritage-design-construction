@@ -11,6 +11,9 @@ import { Faq, Steps, Tbd } from "@/components/ui/Blocks";
 import Programs from "@/components/sections/Programs";
 import { Quotes } from "@/components/sections/Stories";
 import { CITY_PAGES, cityHref, cityPage } from "@/lib/cities";
+import { FEATURED, TOUR } from "@/lib/city-featured";
+import Brands from "@/components/sections/Brands";
+import ShowroomTour from "@/components/ui/ShowroomTour";
 import { reviewsFor } from "@/lib/reviews";
 import { BASE_URL, SITE } from "@/lib/site";
 
@@ -129,6 +132,7 @@ export default async function CityPage({ params }: Props) {
   // Four layouts rotate across the city pages: the sections come in a different order,
   // and photos, sides and the neighborhood treatment change with them.
   const L = v % 4;
+  const f = FEATURED[c.slug];
   const c3 = Math.floor(v / 4) % 3; // second rotation so copy and layout do not move in lockstep
   const p3 = <T,>(list: T[]) => list[(v + c3) % list.length];
   const [whyImg, whyAlt] = WHY_IMG[v % WHY_IMG.length];
@@ -291,7 +295,66 @@ export default async function CityPage({ params }: Props) {
     <Faq key="faq"
       eyebrow={p3(["Questions", "FAQ", "Common questions"])}
       title={pick([<>{c.name} <em>questions.</em></>, <>Asked by {c.name} <em>homeowners.</em></>, <>Before you start <em>in {c.name}.</em></>])}
-      items={c.faq} bg={L === 3 ? "off" : "paper"} />
+      items={f ? [...c.faq, ...f.extraFaq] : c.faq} bg={L === 3 ? "off" : "paper"} />
+  );
+
+  const featured = f && (
+    <>
+      <section className="band bg-paper on-light ct-state">
+        <div className="wrap">
+          <div className="eyebrow">{home ? "Our hometown" : `High-end remodeling in ${c.name}`}</div>
+          <h2 className="ct-state-h">{f.statement[0]} <em>{f.statement[1]}</em></h2>
+          <div className="ct-state-row">
+            <p>{f.statementText}</p>
+            <Link className="link" href="/portfolio">See our finished work →</Link>
+          </div>
+        </div>
+        <div className="ct-mosaic">
+          {f.gallery.map((g) => (
+            <figure key={g.src}>
+              <Image src={g.src} alt={g.alt} fill sizes="(max-width: 860px) 50vw, 25vw" />
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {home && (
+        <section className="band bg-graph ct-tour" id="tour">
+          <div className="wrap">
+            <div className="ct-tour-head">
+              <div>
+                <div className="eyebrow">Walk through the showroom</div>
+                <h2 className="h2">Take the tour <em>before you visit.</em></h2>
+              </div>
+              <p>Five stops, from the first conversation to the final selections. This is where every Heritage remodel is planned.</p>
+            </div>
+            <ShowroomTour stops={TOUR} tourUrl={SITE.tourUrl || undefined} />
+          </div>
+        </section>
+      )}
+
+      <section className="band bg-off on-light ct-asks">
+        <div className="wrap">
+          <div className="ct-asks-head">
+            <div className="eyebrow">{c.name} projects</div>
+            <h2 className="h2">{f.asksTitle[0]} <em>{f.asksTitle[1]}</em></h2>
+          </div>
+          <ol className="ct-asks-list">
+            {f.asks.map((a, n) => (
+              <li key={a.t}>
+                <span>{String(n + 1).padStart(2, "0")}</span>
+                <h3>{a.t}</h3>
+                <p>{a.p}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="ct-brands">
+        <Brands />
+      </section>
+    </>
   );
 
   const ORDER: Record<number, ReactNode[]> = {
@@ -323,7 +386,7 @@ export default async function CityPage({ params }: Props) {
         ]}
       >
         <a className="btn btn-chrome" href="#consult">{p3(["Book a free consultation →", "Schedule a free consultation →", "Get a free consultation →"])}</a>
-        <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
+        {home ? <a className="btn" href="#tour">Tour the showroom</a> : <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>}
       </PageHero>
 
       <div className="tb2 ct-trust">
@@ -337,6 +400,8 @@ export default async function CityPage({ params }: Props) {
           ))}
         </ul>
       </div>
+
+      {featured}
 
       {ORDER[L]}
 
