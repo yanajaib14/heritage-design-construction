@@ -18,20 +18,31 @@ export default function Contact({
   // Homepage closer: a full-bleed finished room under a dark wash, so it reads apart from the light showroom split above it
   if (backdrop) {
     return (
-      <section className="cta6" id="contact">
+      <section className="cta6 cta7" id="contact">
         <Image className="cta6-bg" src={backdrop.src} alt={backdrop.alt} fill sizes="100vw" />
-        <div className="wrap cta6-inner">
-          <div className="eyebrow">Complimentary consultation</div>
-          <h2>{title ?? <>Let’s build <em>something exceptional.</em></>}</h2>
-          <p>{text}</p>
-          <div className="cta6-btns">
-            <a className="btn btn-chrome btn-xl cta6-main" href="/contact">Book a consultation <i aria-hidden="true">→</i></a>
-            <a className="btn btn-xl" href={SITE.tel}>Call {SITE.phone}</a>
+        <div className="wrap cta7-grid">
+          <div className="cta7-copy">
+            <div className="eyebrow">Complimentary consultation</div>
+            <h2>{title ?? <>Let’s build <em>something exceptional.</em></>}</h2>
+            <p>{text}</p>
+            <div className="cta6-btns">
+              <a className="btn btn-chrome btn-xl cta6-main" href="/contact">Book a consultation <i aria-hidden="true">→</i></a>
+              <a className="btn btn-xl" href={SITE.tel}>Call {SITE.phone}</a>
+            </div>
+            <ul className="cta6-trust">
+              <li>No obligation</li>
+              <li>5-year warranty</li>
+            </ul>
           </div>
-          <ul className="cta6-trust">
-            <li>No obligation</li>
-            <li>5-year warranty</li>
-          </ul>
+          <aside className="cta7-card" aria-label="Visit the showroom">
+            <span className="cta7-k">Visit the showroom</span>
+            <dl>
+              <div><dt>Address</dt><dd><a href={SITE.directions} target="_blank" rel="noopener">{SITE.street}<br />{SITE.city}, {SITE.region} {SITE.zip}</a></dd></div>
+              <div><dt>Hours</dt><dd>Mon–Fri 9:00–5:30<br />Saturday by appointment</dd></div>
+              <div><dt>Call</dt><dd><a href={SITE.tel}>{SITE.phone}</a></dd></div>
+            </dl>
+            <a className="cta7-dir" href={SITE.directions} target="_blank" rel="noopener">Get directions <span aria-hidden="true">↗</span></a>
+          </aside>
         </div>
       </section>
     );

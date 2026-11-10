@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { BA_PROJECTS, GALLERY } from "@/lib/home";
 import BeforeAfter from "@/components/ui/BeforeAfter";
+import ProjectGallery from "@/components/ui/ProjectGallery";
 
-// Homepage portfolio: a kitchen and a bathroom before/after side by side, then a carousel of
-// finished projects. Arrows step through the carousel; a photo opens large in a viewer.
+// Homepage portfolio: a kitchen and a bathroom before/after side by side, then a filterable
+// gallery of finished projects; a photo opens large in a viewer.
 export default function HomePortfolio() {
   return (
     <section className="band bg-graph hpf3" id="portfolio">
@@ -24,31 +24,7 @@ export default function HomePortfolio() {
             </figure>
           ))}
         </div>
-        <div className="hpf3-gal" id="hpfGal">
-          <div className="hpf3-bar">
-            <h3>More finished projects</h3>
-            <div className="hpf3-arrows">
-              <button type="button" className="hpf3-prev" aria-label="Previous projects">←</button>
-              <button type="button" className="hpf3-next" aria-label="Next projects">→</button>
-            </div>
-          </div>
-          <ul className="hpf3-track">
-            {GALLERY.map((g, i) => (
-              <li key={g.img}>
-                <button type="button" data-i={i} aria-label={`View larger: ${g.alt}`}>
-                  <Image src={g.img} alt={g.alt} fill sizes="(max-width: 860px) 80vw, 33vw" />
-                </button>
-              </li>
-            ))}
-          </ul>
-          <dialog className="hpf3-view" aria-label="Project photo">
-            <img alt="" />
-            <button type="button" className="hpf3-x" aria-label="Close">×</button>
-            <button type="button" className="hpf3-vp" aria-label="Previous photo">←</button>
-            <button type="button" className="hpf3-vn" aria-label="Next photo">→</button>
-            <p className="hpf3-count" aria-live="polite"></p>
-          </dialog>
-        </div>
+        <ProjectGallery photos={GALLERY} />
         <div className="hpf3-foot"><a className="btn btn-chrome" href="/portfolio">View the full portfolio →</a></div>
       </div>
     </section>

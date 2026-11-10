@@ -1,0 +1,29 @@
+/* Footer readability (site-wide): larger type, brighter text on graphite, more space between links,
+   service areas as a two-column list instead of one run-on line. Loaded after editorial.css. */
+footer{background:#1c1d1f;color:#e6e4df;font-size:15.5px;line-height:1.6;padding-block:clamp(64px,7vw,96px) 40px;border-top:1px solid rgba(216,217,219,.14);position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:linear-gradient(90deg,transparent,#8a8d92 20%,#f4f4f5 50%,#8a8d92 80%,transparent)}
+.foot h4,.foot h4 a{font:600 13.5px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#fff;text-decoration:none;margin:0 0 20px}
+.foot h4::after{content:"";display:block;width:28px;height:1px;margin-top:12px;background:linear-gradient(90deg,#c9cbce,#6f7277)}
+.foot ul{gap:12px}
+.foot a,.foot li,.foot p{color:#ecebe6}
+.foot .foot-col a,.foot .cities a{font-size:15.5px;line-height:1.4;text-decoration:none}
+.foot .foot-col a:hover,.foot .cities a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.55)}
+footer .cities{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;font-size:15px;line-height:1.35;color:#d9d7d2}
+footer .cities a{color:#ecebe6;text-decoration:none}
+.foot-visit{border-top-color:rgba(255,255,255,.18)}
+.foot-visit div{border-bottom-color:rgba(255,255,255,.18);padding:14px 0}
+.foot-visit dt{color:#d4d2cc;font-size:12.5px}
+.foot-visit dd{color:#fff;font-size:15.5px}
+.foot-visit .tbd{color:#d4d2cc}
+.legal{margin-top:64px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);font-size:14.5px;line-height:1.7;letter-spacing:.02em;color:#d9d7d2;gap:12px 28px}
+.legal b{color:#fff;font-weight:600}
+.legal a{color:#fff;text-underline-offset:3px}
+footer .tbd{background:rgba(255,255,255,.1);color:#e6e4df}
+@media (min-width:1001px){.foot{gap:44px}.foot-visit dd{font-size:15px}}
+@media (max-width:860px){
+  .foot-acc summary{font-size:14px;color:#fff;padding:20px 0}
+  .foot-acc li a{color:#ecebe6;font-size:15.5px}
+  .foot-acc .cities{margin:0 0 16px;font-size:15px;color:#d9d7d2}
+  .foot-acc .cities a{font-size:15px}
+  .legal{font-size:14px;margin-top:12px}
+}

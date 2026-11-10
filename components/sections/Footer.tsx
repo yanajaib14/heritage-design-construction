@@ -2,20 +2,15 @@ import Link from "next/link";
 import { CITIES, SITE } from "@/lib/site";
 import { cityHref } from "@/lib/cities";
 
-// The towns we serve; the ones with their own page are links.
+// The towns we serve, as a two-column list; the ones with their own page are links.
 function CityList() {
   return (
-    <p className="cities">
-      {CITIES.map((c, i) => {
+    <ul className="cities">
+      {CITIES.map((c) => {
         const href = cityHref(c);
-        return (
-          <span key={c}>
-            {i > 0 && " · "}
-            {href ? <Link href={href}>{c}</Link> : c}
-          </span>
-        );
+        return <li key={c}>{href ? <Link href={href}>{c}</Link> : c}</li>;
       })}
-    </p>
+    </ul>
   );
 }
 
