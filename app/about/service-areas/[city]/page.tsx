@@ -14,6 +14,7 @@ import { CITY_PAGES, cityHref, cityPage } from "@/lib/cities";
 import { FEATURED, TOUR } from "@/lib/city-featured";
 import Brands from "@/components/sections/Brands";
 import ShowroomTour from "@/components/ui/ShowroomTour";
+import { CityHero, OlympiaFeature, TacomaFeature, UpFeature } from "@/components/sections/CityFeatured";
 import { reviewsFor } from "@/lib/reviews";
 import { BASE_URL, SITE } from "@/lib/site";
 
@@ -298,7 +299,13 @@ export default async function CityPage({ params }: Props) {
       items={f ? [...c.faq, ...f.extraFaq] : c.faq} bg={L === 3 ? "off" : "paper"} />
   );
 
-  const featured = f && (
+  const brands = (
+    <section className="ct-brands" key="brands">
+      <Brands />
+    </section>
+  );
+  const D = f?.design;
+  const featured = !D && f && (
     <>
       <section className="band bg-paper on-light ct-state">
         <div className="wrap">
@@ -324,11 +331,11 @@ export default async function CityPage({ params }: Props) {
             <div className="ct-tour-head">
               <div>
                 <div className="eyebrow">Walk through the showroom</div>
-                <h2 className="h2">Take the tour <em>before you visit.</em></h2>
+                <h2 className="h2">Walk the showroom <em>from home.</em></h2>
               </div>
-              <p>Five stops, from the first conversation to the final selections. This is where every Heritage remodel is planned.</p>
+              <p>Step through the showroom in 3D, watch the video tour, or click through the five stops from first conversation to final selections. This is where every Heritage remodel is planned.</p>
             </div>
-            <ShowroomTour stops={TOUR} tourUrl={SITE.tourUrl || undefined} />
+            <ShowroomTour stops={TOUR} tourUrl={SITE.tourUrl || undefined} tourVideo={SITE.tourVideo || undefined} />
           </div>
         </section>
       )}
@@ -357,6 +364,13 @@ export default async function CityPage({ params }: Props) {
     </>
   );
 
+  // Tacoma, Olympia and University Place have their own designs and section order.
+  const DESIGN_ORDER: Record<string, ReactNode[]> = f && D ? {
+    tacoma: [<TacomaFeature key="tf" f={f} name={c.name} />, why, baBlock, rev, hoods, svc, brands, faq, visit, programs],
+    olympia: [<OlympiaFeature key="of" f={f} name={c.name} />, hoods, baBlock, why, brands, svc, visit, rev, faq, programs],
+    up: [<UpFeature key="uf" f={f} name={c.name} />, baBlock, brands, why, svc, rev, hoods, faq, visit],
+  } : {};
+
   const ORDER: Record<number, ReactNode[]> = {
     0: [why, baBlock, hoods, svc, programs, rev, visit, faq],
     1: [baBlock, why, svc, hoods, rev, programs, faq, visit],
@@ -374,6 +388,13 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <>
+      {D && f?.heroImg ? (
+        <CityHero design={D} eyebrow={`${c.name}, WA · ${c.county}`} title={<>{c.title[0]} <em>{c.title[1]}</em></>}
+          lede={c.lede} image={f.heroImg.src} alt={f.heroImg.alt} url={url} name={c.name}>
+        <a className="btn btn-chrome" href="#consult">{p3(["Book a free consultation →", "Schedule a free consultation →", "Get a free consultation →"])}</a>
+        {home ? <a className="btn" href="#tour">Tour the showroom</a> : <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>}
+        </CityHero>
+      ) : (
       <PageHero
         eyebrow={`${c.name}, WA · ${c.county}`}
         title={<>{c.title[0]} <em>{c.title[1]}</em></>}
@@ -388,8 +409,9 @@ export default async function CityPage({ params }: Props) {
         <a className="btn btn-chrome" href="#consult">{p3(["Book a free consultation →", "Schedule a free consultation →", "Get a free consultation →"])}</a>
         {home ? <a className="btn" href="#tour">Tour the showroom</a> : <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>}
       </PageHero>
+      )}
 
-      <div className="tb2 ct-trust">
+      <div className={`tb2 ct-trust${D ? ` ct-trust-${D}` : ""}`}>
         <ul className="wrap tb2-row">
           {trust.map(([n, b]) => (
             <li key={b}>
@@ -403,7 +425,7 @@ export default async function CityPage({ params }: Props) {
 
       {featured}
 
-      {ORDER[L]}
+      {D ? DESIGN_ORDER[D] : ORDER[L]}
 
       <section className="band bg-paper on-light city-near">
         <div className="wrap">

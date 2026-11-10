@@ -16,6 +16,8 @@ export const SITE = {
   directions: "https://www.google.com/maps/dir/?api=1&destination=8695+Martin+Way+E+%23101+Lacey+WA+98516",
   // 3D showroom tour (for example a Matterport link). Empty until there is one; the Lacey page shows a placeholder.
   tourUrl: "",
+  // Showroom video from the professional shoot (an .mp4 in /public/videos, or a YouTube/Vimeo embed link). Empty until then.
+  tourVideo: "",
 };
 
 // Absolute address used for canonical links, the sitemap and share images. Set NEXT_PUBLIC_SITE_URL once the
