@@ -28,14 +28,14 @@ const PROGRAMS = [
   },
 ];
 
-export default function Programs() {
+export default function Programs({ eyebrow = "Signature programs", title = <>Fast, <em>without cutting corners.</em></> }: { eyebrow?: string; title?: React.ReactNode } = {}) {
   return (
     <section className="band bg-off on-light progs" id="programs">
       <div className="wrap">
         <div className="sec-head">
           <div className="left">
-            <div className="eyebrow">Signature programs</div>
-            <h2 className="h2">Fast, <em>without cutting corners.</em></h2>
+            <div className="eyebrow">{eyebrow}</div>
+            <h2 className="h2">{title}</h2>
           </div>
         </div>
         <div className="progs-grid">
