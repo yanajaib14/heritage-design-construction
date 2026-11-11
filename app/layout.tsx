@@ -5,6 +5,7 @@ import "./site.css";
 import "./pages.css";
 import "./motion.css";
 import "./editorial.css";
+import "./footer.css";
 import Header from "@/components/sections/Header";
 import MenuSheet from "@/components/sections/MenuSheet";
 import MobileBar from "@/components/MobileBar";
