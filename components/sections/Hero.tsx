@@ -2,6 +2,14 @@ import Image from "next/image";
 import { HERO, TRUST, WALK } from "@/lib/home";
 import { SITE } from "@/lib/site";
 
+// Project picker in the hero: each tile opens the consultation form with that project chosen.
+const PICKS = [
+  { id: "kitchen", t: "Kitchen", s: "Custom or 10-Day", icon: <path d="M4 20h16M5 20V9h14v11M5 13h14M9 9V5h6v4M9 16.5h1.5M13.5 16.5H15" /> },
+  { id: "bathroom", t: "Bathroom", s: "Remodel or Fast Bath", icon: <path d="M4 12h16v2.5a4.5 4.5 0 0 1-4.5 4.5h-7A4.5 4.5 0 0 1 4 14.5V12ZM6 12V6.5A2.5 2.5 0 0 1 8.5 4 2.5 2.5 0 0 1 11 6.5M8 19l-1 2M16 19l1 2" /> },
+  { id: "whole-home", t: "Whole home", s: "Remodels & additions", icon: <path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5" /> },
+  { id: "commercial", t: "Commercial", s: "Builds & tenant improvements", icon: <path d="M4 20V6l8-2v16M12 8h8v12M4 20h16M7 8h2M7 11.5h2M7 15h2M15 11.5h2M15 15h2" /> },
+];
+
 // Homepage hero: a full-screen showroom photo with the headline; the page scrolls straight on into the next section.
 export default function Hero() {
   return (
@@ -17,20 +25,38 @@ export default function Hero() {
             <i className="r"><b></b></i>
           </div>
         )}
-        <div className="wrap walk-intro">
-          <div className="eyebrow lead">{HERO.eyebrow}</div>
-          <h1>
-            <span className="one">{HERO.kicker}</span>
-            <span className="ln"><span>{HERO.title}</span></span>
-            <span className="ln"><em>{HERO.titleEm}</em></span>
-          </h1>
-          <div className="walk-foot">
+        <div className="wrap walk-intro hx">
+          <div className="hx-copy">
+            <div className="eyebrow lead">{HERO.eyebrow}</div>
+            <h1>
+              <span className="one">{HERO.kicker}</span>
+              <span className="ln"><span>{HERO.title}</span></span>
+              <span className="ln"><em>{HERO.titleEm}</em></span>
+            </h1>
             <p className="lede">{HERO.sub}</p>
             <div className="btns">
               <a className="btn btn-chrome" href="/contact">Book a consultation →</a>
               <a className="btn" href={SITE.tel}>Call {SITE.phone}</a>
             </div>
           </div>
+          <nav className="hx-pick" aria-label="Start with your project">
+            <p className="hx-pick-k">What are you planning?</p>
+            <ul>
+              {PICKS.map((p) => (
+                <li key={p.id}>
+                  <a href={`/contact?project=${p.id}#consultation-request`}>
+                    <span className="hx-ico" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">{p.icon}</svg>
+                    </span>
+                    <b>{p.t}</b>
+                    <small>{p.s}</small>
+                    <i aria-hidden="true">→</i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="hx-pick-foot">Kitchens in as little as <b>10 business days</b> · <a href="/services/remodeling-services/kitchen-remodeling/10-day-kitchen-program">See the 10-Day Kitchen</a></p>
+          </nav>
         </div>
       </div>
     </section>

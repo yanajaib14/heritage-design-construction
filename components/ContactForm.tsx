@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CITIES, SITE } from "@/lib/site";
 
 const TYPES = [
@@ -15,9 +15,23 @@ const TYPES = [
   "Not sure yet",
 ];
 
+// ?project=… from the homepage project picker pre-selects the project type.
+const PICKED: Record<string, string> = {
+  kitchen: "Custom kitchen remodel",
+  "10-day": "10-Day Kitchen Program",
+  bathroom: "Bathroom remodel",
+  "whole-home": "Whole-home remodel",
+  commercial: "Commercial / tenant improvement",
+};
+
 // Consultation request. Not connected to a form or scheduling tool yet: the owner still has to choose one.
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const typeRef = useRef<HTMLSelectElement>(null);
+  useEffect(() => {
+    const picked = PICKED[new URLSearchParams(location.search).get("project") ?? ""];
+    if (picked && typeRef.current) typeRef.current.value = picked;
+  }, []);
   if (sent)
     return (
       <div className="form-done" role="status">
@@ -50,7 +64,7 @@ export default function ContactForm() {
       </label>
       <label className="full">
         Project type
-        <select name="type" defaultValue="">
+        <select name="type" defaultValue="" ref={typeRef}>
           <option value="" disabled>What are you planning?</option>
           {TYPES.map((t) => (
             <option key={t}>{t}</option>

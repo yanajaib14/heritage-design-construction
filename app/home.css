@@ -277,3 +277,42 @@
 @media (max-width:960px){.cta7-grid{grid-template-columns:1fr}.hm .cta7::before{background:linear-gradient(180deg,rgba(10,11,11,.7),rgba(10,11,11,.85))}}
 @media (max-width:640px){.hm .cta7 .cta6-btns{align-self:stretch}.cta7-card dl div{grid-template-columns:1fr;gap:4px}}
 @media (prefers-reduced-motion:reduce){.hm .cta7 .cta6-bg{animation:none}}
+
+/* ---------- hero: headline left, project picker right ---------- */
+.hm .walk-intro.hx{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,460px);gap:clamp(36px,4.5vw,80px);align-items:end;padding-top:clamp(140px,18vh,190px);padding-bottom:clamp(56px,10vh,110px)}
+.hx-copy{display:grid;gap:26px;justify-items:start}
+.hm .hx h1{font-size:clamp(46px,6vw,104px);line-height:.96}
+.hm .hx .lede{font-size:clamp(16px,1.2vw,18.5px);line-height:1.7;color:#e9e7e2;max-width:52ch;padding-top:26px;border-top:1px solid rgba(216,217,219,.3)}
+.hm .hx .btns .btn:not(.btn-chrome){color:#fff;border-color:rgba(255,255,255,.7)}
+.hm .hx .btns .btn:not(.btn-chrome):hover{background:#fff;color:#111212}
+.hx-pick{position:relative;padding:clamp(22px,2.2vw,32px);-webkit-backdrop-filter:blur(16px) saturate(1.1);backdrop-filter:blur(16px) saturate(1.1);
+  border:1px solid transparent;background-image:linear-gradient(rgba(17,18,19,.93),rgba(17,18,19,.93)),linear-gradient(100deg,#6f7277,#e9eaec 30%,#8a8d92 55%,#f4f4f5 80%,#7c7f84);background-origin:border-box;background-clip:padding-box,border-box;
+  box-shadow:0 50px 100px -40px rgba(0,0,0,.9);animation:hxin 1.1s cubic-bezier(.2,.8,.2,1) .5s backwards}
+@keyframes hxin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hx-pick-k{margin:0 0 18px;font:600 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:14px}
+.hx-pick-k::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(216,217,219,.5),transparent)}
+.hx-pick ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hx-pick li a{position:relative;display:grid;grid-template-columns:1fr;row-gap:4px;align-content:start;height:100%;box-sizing:border-box;padding:18px 18px 18px;color:#fff;text-decoration:none;background:rgba(242,240,236,.05);border:1px solid rgba(201,198,191,.24);transition:background .35s,border-color .35s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.hx-pick li a:hover,.hx-pick li a:focus-visible{background:rgba(242,240,236,.12);border-color:#e4e6e8;transform:translateY(-2px)}
+.hx-ico{margin-bottom:10px;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#eceded;border:1px solid transparent;
+  background:radial-gradient(circle at 50% 30%,#2f3032,#18191a) padding-box,conic-gradient(from 200deg,#6f7277,#f4f4f5,#8a8d92,#e3e4e6,#6f7277) border-box}
+.hx-pick li b{font:400 21px/1.15 var(--display);color:#fff}
+.hx-pick li small{font-size:12.5px;line-height:1.35;color:#d9d7d2}
+.hx-pick li i{position:absolute;top:14px;right:14px;font-style:normal;font-size:14px;color:#d9d7d2;transition:transform .35s,color .35s}
+.hx-pick li a:hover i{transform:translateX(3px);color:#fff}
+.hx-pick-foot{margin:18px 0 0;padding-top:16px;border-top:1px solid rgba(216,217,219,.2);font-size:14px;line-height:1.5;color:#e4e2dd}
+.hx-pick-foot b{color:#fff;font-weight:600}
+.hx-pick-foot a{color:#fff;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.5);white-space:nowrap}
+.hm .walk-shade{background:linear-gradient(90deg,rgba(15,16,16,.84) 0%,rgba(15,16,16,.5) 50%,rgba(15,16,16,.55) 100%),linear-gradient(180deg,rgba(15,16,16,.55),transparent 30%,transparent 55%,rgba(15,16,16,.8))}
+@media (max-width:1100px){.hm .walk-intro.hx{grid-template-columns:1fr;align-items:start}.hx-pick{max-width:640px}}
+@media (max-width:560px){
+  .hm .walk-intro.hx{padding-top:120px;gap:30px}
+  .hm .hx h1{font-size:clamp(42px,12vw,56px)}
+  .hx-pick{padding:18px}
+  .hx-pick li a{padding:14px 12px}
+  .hx-ico{width:38px;height:38px;margin-bottom:6px}
+  .hx-ico svg{width:19px;height:19px}
+  .hx-pick li b{font-size:18px}
+  .hx-pick-foot a{white-space:normal}
+}
+@media (prefers-reduced-motion:reduce){.hx-pick{animation:none}}
