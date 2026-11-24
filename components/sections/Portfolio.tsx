@@ -13,7 +13,7 @@ export default function Portfolio({ start = "kitchen" }: { start?: ProjectKind }
         <div className="filters pf3-tabs" role="group" aria-label="Project category">
           {KINDS.map((c) => (
             <button key={c.k} type="button" data-f={c.k} aria-pressed={c.k === start}>
-              {c.label} <small>{PROJECTS.filter((p) => p.kind === c.k).length}</small>
+              {c.label}
             </button>
           ))}
         </div>

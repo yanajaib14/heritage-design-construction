@@ -23,7 +23,7 @@ const GALLERY = {
   quartz: { src: "/images/pf-quartz.webp", alt: "A kitchen with quartz counters and an island", label: "Kitchen" },
   bathview: { src: "/images/pf-bathview.webp", alt: "A remodeled bathroom with a large window", label: "Bathroom" },
   coastal: { src: "/images/pf-coastal.webp", alt: "A bright coastal-style kitchen", label: "Kitchen" },
-  essential: { src: "/images/pf-essential.webp", alt: "A clean, simple kitchen remodel", label: "Kitchen" },
+  essential: { src: "/images/pf-essential.webp", alt: "A spa-style bathroom with a glass shower", label: "Bathroom" },
   university: { src: "/images/pf-university.webp", alt: "A remodeled kitchen with an open layout", label: "Kitchen" },
   zen: { src: "/images/bath-zen.webp", alt: "A calm, spa-style bathroom", label: "Bathroom" },
   open: { src: "/images/wh-open-plan.webp", alt: "An open-plan kitchen and living space", label: "Whole home" },

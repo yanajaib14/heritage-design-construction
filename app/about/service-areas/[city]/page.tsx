@@ -14,6 +14,7 @@ import { CITY_PAGES, cityHref, cityPage } from "@/lib/cities";
 import { FEATURED, TOUR } from "@/lib/city-featured";
 import Brands from "@/components/sections/Brands";
 import ShowroomTour from "@/components/ui/ShowroomTour";
+import { placeOf } from "@/lib/portfolio";
 import { CityHero, OlympiaFeature, TacomaFeature, UpFeature } from "@/components/sections/CityFeatured";
 import { reviewsFor } from "@/lib/reviews";
 import { BASE_URL, SITE } from "@/lib/site";
@@ -349,7 +350,7 @@ export default async function CityPage({ params }: Props) {
                 <div className="ct-gal-img">
                   <Image src={g.src} alt={g.alt} fill sizes={n === 0 ? "(max-width: 860px) 100vw, 58vw" : "(max-width: 860px) 50vw, 30vw"} />
                 </div>
-                <figcaption>{g.label}</figcaption>
+                <figcaption>{g.label} – {placeOf(g.src) || "[City]"}</figcaption>
               </figure>
             ))}
           </div>
