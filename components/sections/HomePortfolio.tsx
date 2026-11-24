@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BA_PROJECTS, GALLERY } from "@/lib/home";
 import BeforeAfter from "@/components/ui/BeforeAfter";
+import { placeOf } from "@/lib/portfolio";
 
 // Homepage portfolio: a kitchen and a bathroom before/after side by side, then a carousel of
 // finished projects. Arrows step through the carousel; a photo opens large in a viewer.
@@ -19,7 +20,7 @@ export default function HomePortfolio() {
               <BeforeAfter before={p.before} after={p.after} beforeAlt={p.beforeAlt} afterAlt={p.afterAlt} sizes="(max-width: 860px) 100vw, 50vw" />
               <figcaption>
                 <span className="hpf3-n">{String(i + 1).padStart(2, "0")}</span>
-                <span><b>{p.t}</b><small>{p.p}</small></span>
+                <span><b>{p.t} – {placeOf(p.after) || <span className="tbd">[City]</span>}</b><small>{p.p}</small></span>
               </figcaption>
             </figure>
           ))}
@@ -35,7 +36,7 @@ export default function HomePortfolio() {
           <ul className="hpf3-track">
             {GALLERY.map((g, i) => (
               <li key={g.img}>
-                <button type="button" data-i={i} aria-label={`View larger: ${g.alt}`}>
+                <button type="button" data-i={i} data-place={placeOf(g.img) || "[City]"} aria-label={`View larger: ${g.alt}`}>
                   <Image src={g.img} alt={g.alt} fill sizes="(max-width: 860px) 80vw, 33vw" />
                 </button>
               </li>
