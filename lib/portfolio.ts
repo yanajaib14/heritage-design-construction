@@ -1,5 +1,6 @@
 // Finished projects shown on the portfolio. Each is named for its type and the city it was built in;
-// set `city` once the owner confirms it (an empty city shows a [City] placeholder).
+// Cities come from the matching project photos on the old 10daykitchens.com portfolio; an empty city
+// shows a [City] placeholder until the owner confirms where that project was built.
 export type ProjectKind = "kitchen" | "bath" | "whole";
 
 export const KINDS: { k: ProjectKind; label: string; name: string }[] = [
@@ -9,11 +10,11 @@ export const KINDS: { k: ProjectKind; label: string; name: string }[] = [
 ];
 
 export const PROJECTS: { kind: ProjectKind; img: string; alt: string; city: string }[] = [
-  { kind: "kitchen", img: "/images/pf-university.webp", alt: "A transitional white kitchen", city: "" },
-  { kind: "kitchen", img: "/images/pf-midnight.webp", alt: "A navy kitchen with a quartz island", city: "" },
+  { kind: "kitchen", img: "/images/pf-university.webp", alt: "A transitional white kitchen", city: "University Place" },
+  { kind: "kitchen", img: "/images/pf-midnight.webp", alt: "A navy kitchen with a quartz island", city: "South Sound" },
   { kind: "kitchen", img: "/images/pf-quartz.webp", alt: "A kitchen with a slab quartz backsplash", city: "" },
-  { kind: "kitchen", img: "/images/pf-forest.webp", alt: "A contemporary kitchen with a large island", city: "" },
-  { kind: "kitchen", img: "/images/pf-coastal.webp", alt: "A transitional chef's kitchen", city: "" },
+  { kind: "kitchen", img: "/images/pf-forest.webp", alt: "A contemporary kitchen with a large island", city: "Olympia" },
+  { kind: "kitchen", img: "/images/pf-coastal.webp", alt: "A transitional chef's kitchen", city: "Steilacoom" },
   { kind: "bath", img: "/images/pf-oslo.webp", alt: "A walk-in wet room shower with large-format tile", city: "" },
   { kind: "bath", img: "/images/pf-essential.webp", alt: "A spa-style primary bathroom", city: "" },
   { kind: "bath", img: "/images/pf-bathview.webp", alt: "A bathroom with a clawfoot tub", city: "" },
